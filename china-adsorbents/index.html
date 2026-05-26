@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>China Adsorbents | Molecular Sieve & Activated Alumina Supplier</title>
-    <meta name="description" content="Professional supplier of molecular sieve, activated alumina, and ceramic balls for PSA oxygen, air separation, natural gas drying and industrial purification systems.">
+    <meta name="description" content="Professional supplier of molecular sieve and activated alumina for PSA oxygen, air separation, natural gas drying and industrial purification systems.">
+    
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
@@ -13,57 +14,31 @@
         img { max-width: 100%; display: block; }
         .container { width: 90%; max-width: 1300px; margin: auto; }
         
-        /* Language Switcher - Dropdown */
+        /* Language Switcher - 合并成单个下拉框 */
         .lang-switcher {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            min-width: 120px;
+            position: fixed; top: 20px; right: 20px; z-index: 1000;
         }
         .lang-select {
-            width: 100%;
-            padding: 10px 15px;
+            padding: 8px 30px 8px 12px;
             background: #071926;
             color: white;
             border: none;
-            border-radius: 8px;
-            font-weight: 600;
+            border-radius: 6px;
+            font-weight: 500;
             font-size: 14px;
             cursor: pointer;
             appearance: none;
             -webkit-appearance: none;
             -moz-appearance: none;
-            text-align: center;
-            transition: 0.3s;
-        }
-        .lang-select:hover {
-            background: #0f2f47;
-        }
-        .lang-select:focus {
-            outline: none;
-            box-shadow: 0 0 0 2px rgba(46, 196, 255, 0.3);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 8px center;
         }
         
         /* Header */
-        header {
-            background: #071926;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px 0;
-        }
-        .logo {
-            color: #fff;
-            font-size: 28px;
-            font-weight: 800;
-        }
+        header { background: #071926; position: sticky; top: 0; z-index: 999; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; }
+        .logo { color: #fff; font-size: 28px; font-weight: 800; }
         .logo span { color: #2ec4ff; }
         .nav-links { display: flex; gap: 30px; }
         .nav-links a { color: #fff; font-weight: 500; transition: 0.3s; }
@@ -93,184 +68,122 @@
         .section-title h2 { font-size: 42px; margin-bottom: 15px; color: #071926; }
         .section-title p { color: #666; max-width: 700px; margin: auto; }
         
-        /* Products */
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 30px;
-        }
-        .product-card {
-            background: #fff;
-            border-radius: 18px;
-            overflow: hidden;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-            transition: 0.3s;
+        /* Products - 核心优化：图片完整显示 */
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
+        .product-card { 
+            background: #fff; 
+            border-radius: 18px; 
+            overflow: hidden; 
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08); 
+            transition: 0.3s; 
+            display: flex; 
+            flex-direction: column;
         }
         .product-card:hover { transform: translateY(-8px); }
+        
+        /* 关键优化：图片完整显示，不裁切 */
         .product-card img { 
             width: 100%; 
-            height: 240px; 
-            object-fit: contain; /* 修改为contain确保图片完整显示 */
-            padding: 20px; /* 添加内边距防止图片贴边 */
-            background: #f8f9fa; /* 添加背景色 */
+            height: auto; 
+            max-height: 240px; /* 限制最大高度，避免过高 */
+            object-fit: contain; /* 完整显示图片，不裁切 */
+            object-position: center; /* 图片居中 */
+            margin: 0 auto; /* 水平居中 */
+            padding: 15px; /* 增加内边距，避免贴边 */
+            background: #f8f9fa; /* 浅色背景，突出图片 */
         }
-        .product-content { padding: 25px; }
-        .product-content h3 { margin-bottom: 12px; color: #071926; }
-        .product-content p { color: #666; font-size: 15px; }
         
-        /* More Products Card Special Styling */
-        .more-products-card {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #10293d, #071926);
-            color: #fff;
+        .product-content { 
+            padding: 25px; 
+            flex-grow: 1; /* 让内容区域填充剩余空间 */
+            display: flex; 
+            flex-direction: column; 
+        }
+        .product-content h3 { margin-bottom: 12px; color: #071926; }
+        .product-content p { color: #666; font-size: 15px; flex-grow: 1; }
+        .tds-link { color: #2ec4ff; font-weight: 600; display: inline-block; margin-top: 15px; }
+        
+        /* More Products Notice */
+        .more-products-notice {
             text-align: center;
-            padding: 40px 25px;
+            margin-top: 40px;
+            padding: 20px;
+            background: #e8f4fc;
+            border-radius: 12px;
+            color: #071926;
+            font-weight: 600;
+            font-size: 18px;
         }
-        .more-products-card h3 { 
-            color: #2ec4ff; 
-            margin-bottom: 15px; 
-            font-size: 22px; 
-        }
-        .more-products-card p { 
-            color: #c1d0db; 
-            font-size: 14px; 
-            margin-bottom: 30px; 
-            line-height: 1.5; 
-        }
-        .more-products-card .btn { 
-            padding: 12px 28px; 
-            font-size: 15px; 
-            border-radius: 8px; 
-            background: #2ec4ff; 
-            color: #071926; 
-            font-weight: 700; 
-            text-decoration: none; 
+        .more-products-notice a {
+            color: #2ec4ff;
+            text-decoration: underline;
         }
         
         /* Applications */
         .applications { background: #071926; color: #fff; }
         .applications .section-title h2 { color: #fff; }
         .applications .section-title p { color: #c1d0db; }
-        .app-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-        }
-        .app-card {
-            background: #10293d;
-            border-radius: 16px;
-            padding: 30px;
-            transition: 0.3s;
-        }
+        .app-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; }
+        .app-card { background: #10293d; border-radius: 16px; padding: 30px; transition: 0.3s; }
         .app-card:hover { background: #15364f; }
         .app-card h4 { color: #2ec4ff; margin-bottom: 12px; }
         
         /* About */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .about-image img { 
+            border-radius: 18px; 
+            width: 100%; 
+            height: auto; 
+            object-fit: contain; /* 关于我们图片也完整显示 */
+            max-height: 400px; /* 限制高度 */
         }
-        .about-image img { border-radius: 18px; width: 100%; height: auto; }
         .about-text h2 { font-size: 42px; margin-bottom: 20px; color: #071926; }
         .about-text p { margin-bottom: 18px; color: #555; }
         .feature { margin-bottom: 12px; font-weight: 600; }
         
         /* Inquiry & Contact */
-        .inquiry-wrapper {
-            max-width: 850px;
-            margin: auto;
-            background: #fff;
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-        }
+        .inquiry-wrapper { max-width: 850px; margin: auto; background: #fff; padding: 50px; border-radius: 20px; box-shadow: 0 5px 25px rgba(0,0,0,0.08); }
         .form-group { margin-bottom: 22px; }
         .form-group label { display: block; margin-bottom: 8px; font-weight: 600; }
-        .form-control {
-            width: 100%;
-            padding: 15px;
-            border: 1px solid #d9d9d9;
-            border-radius: 10px;
-            font-size: 16px;
-        }
+        .form-control { width: 100%; padding: 15px; border: 1px solid #d9d9d9; border-radius: 10px; font-size: 16px; }
         textarea.form-control { resize: none; }
-        .submit-btn {
-            background: #071926;
-            color: #fff;
-            border: none;
-            padding: 16px 34px;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+        .submit-btn { background: #071926; color: #fff; border: none; padding: 16px 34px; border-radius: 10px; font-size: 16px; font-weight: 700; cursor: pointer; transition: 0.3s; width: 100%; }
         .submit-btn:hover { background: #0f2f47; }
         
-        .contact-box {
-            background: #071926;
-            color: #fff;
-            border-radius: 20px;
-            padding: 60px;
-            text-align: center;
-        }
+        .contact-box { background: #071926; color: #fff; border-radius: 20px; padding: 60px; text-align: center; }
         .contact-box h2 { font-size: 42px; margin-bottom: 20px; }
         .contact-box p { margin-bottom: 12px; font-size: 18px; }
         
         /* Footer & WhatsApp */
-        footer {
-            background: #05131d;
-            color: #c4d0d9;
-            text-align: center;
-            padding: 25px 0;
-            font-size: 14px;
-        }
-        .whatsapp {
-            position: fixed;
-            right: 25px;
-            bottom: 25px;
-            width: 65px;
-            height: 65px;
-            border-radius: 50%;
-            background: #25d366;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 30px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.25);
-            z-index: 999;
-        }
+        footer { background: #05131d; color: #c4d0d9; text-align: center; padding: 25px 0; font-size: 14px; }
+        .whatsapp { position: fixed; right: 25px; bottom: 25px; width: 65px; height: 65px; border-radius: 50%; background: #25d366; color: #fff; display: flex; justify-content: center; align-items: center; font-size: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.25); z-index: 999; }
         
-        /* Responsive */
+        /* Responsive - 小屏幕优化 */
         @media (max-width: 900px) {
             .hero h1 { font-size: 42px; }
             .about-grid { grid-template-columns: 1fr; }
             .nav-links { display: none; }
             .contact-box { padding: 40px 25px; }
             .inquiry-wrapper { padding: 35px 25px; }
-            .lang-switcher { top: 10px; right: 10px; min-width: 110px; }
-            .lang-select { padding: 8px 12px; font-size: 13px; }
-            .more-products-card { padding: 30px 20px; }
-            .more-products-card h3 { font-size: 20px; }
-            .product-card img { 
-                height: 200px; /* 在移动端减小图片高度 */
-                padding: 15px;
+            .lang-switcher { top: 10px; right: 10px; }
+            
+            /* 小屏幕下图片高度调整 */
+            .product-card img {
+                max-height: 180px;
+                padding: 10px;
+            }
+            .about-image img {
+                max-height: 300px;
             }
         }
     </style>
 </head>
-
 <body>
-    <!-- Language Switcher - Dropdown -->
+
+    <!-- Language Switcher -->
     <div class="lang-switcher">
         <select class="lang-select" id="languageSelect">
-            <option value="en" selected>English</option>
+            <option value="en">English</option>
             <option value="zh">中文</option>
             <option value="es">Español</option>
             <option value="de">Deutsch</option>
@@ -298,7 +211,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1 data-key="hero.title">Industrial Adsorbents & Drying Solutions</h1>
-                <p data-key="hero.subtitle">Professional supplier of Molecular Sieve, Activated Alumina, and Ceramic Balls for PSA Oxygen, Air Separation, Natural Gas Drying and Industrial Purification Systems.</p>
+                <p data-key="hero.subtitle">Professional supplier of Molecular Sieve and Activated Alumina for PSA Oxygen, Air Separation, Natural Gas Drying and Industrial Purification Systems.</p>
                 <div class="hero-buttons">
                     <a href="#inquiry" class="btn btn-primary" data-key="hero.getQuote">Get A Quote</a>
                     <a href="https://wa.me/8613701931410" class="btn btn-outline" data-key="hero.whatsapp">WhatsApp Us</a>
@@ -312,69 +225,68 @@
         <div class="container">
             <div class="section-title">
                 <h2 data-key="products.title">Our Products</h2>
-                <p data-key="products.subtitle">High performance adsorbents, desiccants and ceramic products for industrial drying, purification and gas separation applications.</p>
+                <p data-key="products.subtitle">High performance adsorbents and desiccants for industrial drying, purification and gas separation applications.</p>
             </div>
             <div class="products-grid">
-                <!-- 产品1：3A分子筛 -->
+                <!-- 3A -->
                 <div class="product-card">
-                    <img src="3A.png" alt="3A Molecular Sieve">
+                    <img src="3A.png" alt="3A Molecular Sieve for Ethanol Dehydration">
                     <div class="product-content">
-                        <h3 data-key="products.3a_title">3A Molecular Sieve</h3>
-                        <p data-key="products.3a_desc">Suitable for drying unsaturated hydrocarbons, ethanol dehydration and petrochemical applications.</p>
+                        <h3>3A Molecular Sieve</h3>
+                        <p data-key="products.3a">Suitable for drying unsaturated hydrocarbons, ethanol dehydration and petrochemical applications.</p>
+                        <a href="products/3a.html" class="tds-link" data-key="products.viewTDS">View TDS →</a>
                     </div>
                 </div>
-
-                <!-- 产品2：4A分子筛 -->
+                <!-- 4A -->
                 <div class="product-card">
-                    <img src="4A.png" alt="4A Molecular Sieve">
+                    <img src="4A.png" alt="4A Molecular Sieve for Air Drying">
                     <div class="product-content">
-                        <h3 data-key="products.4a_title">4A Molecular Sieve</h3>
-                        <p data-key="products.4a_desc">Widely used for air drying, refrigerants, solvents and gas dehydration systems.</p>
+                        <h3>4A Molecular Sieve</h3>
+                        <p data-key="products.4a">Widely used for air drying, refrigerants, solvents and gas dehydration systems.</p>
+                        <a href="products/4a.html" class="tds-link" data-key="products.viewTDS">View TDS →</a>
                     </div>
                 </div>
-
-                <!-- 产品3：5A分子筛 -->
+                <!-- 5A -->
                 <div class="product-card">
-                    <img src="5A.png" alt="5A Molecular Sieve">
+                    <img src="5A.png" alt="5A Molecular Sieve for PSA Hydrogen">
                     <div class="product-content">
-                        <h3 data-key="products.5a_title">5A Molecular Sieve</h3>
-                        <p data-key="products.5a_desc">Applied in PSA hydrogen systems, air purification and industrial gas drying.</p>
+                        <h3>5A Molecular Sieve</h3>
+                        <p data-key="products.5a">Applied in PSA hydrogen systems, air purification and industrial gas drying.</p>
+                        <a href="products/5a.html" class="tds-link" data-key="products.viewTDS">View TDS →</a>
                     </div>
                 </div>
-
-                <!-- 产品4：13X分子筛 -->
+                <!-- 13X -->
                 <div class="product-card">
-                    <img src="13X.png" alt="13X Molecular Sieve">
+                    <img src="13X.png" alt="13X Molecular Sieve for CO2 Removal">
                     <div class="product-content">
-                        <h3 data-key="products.13x_title">13X Molecular Sieve</h3>
-                        <p data-key="products.13x_desc">Ideal for air separation plants, CO₂ removal and natural gas purification.</p>
+                        <h3>13X Molecular Sieve</h3>
+                        <p data-key="products.13x">Ideal for air separation plants, CO₂ removal and natural gas purification.</p>
+                        <a href="products/13x.html" class="tds-link" data-key="products.viewTDS">View TDS →</a>
                     </div>
                 </div>
-
-                <!-- 产品5：活性氧化铝 -->
+                <!-- Activated Alumina -->
                 <div class="product-card">
-                    <img src="alumina.png" alt="Activated Alumina">
+                    <img src="alumina.png" alt="Activated Alumina for Compressed Air">
                     <div class="product-content">
-                        <h3 data-key="products.alumina_title">Activated Alumina</h3>
-                        <p data-key="products.alumina_desc">High adsorption activated alumina for compressed air and PSA systems.</p>
+                        <h3>Activated Alumina</h3>
+                        <p data-key="products.alumina">High adsorption activated alumina for compressed air and PSA systems.</p>
+                        <a href="products/alumina.html" class="tds-link" data-key="products.viewTDS">View TDS →</a>
                     </div>
                 </div>
-
-                <!-- 产品6：惰性氧化铝瓷球 -->
+                <!-- Inert Ceramic Balls -->
                 <div class="product-card">
-                    <img src="cq.png" alt="Inert Ceramic Balls">
+                    <img src="inert-ceramic-balls.jpg" alt="Inert Ceramic Balls for Catalyst Support">
                     <div class="product-content">
-                        <h3 data-key="products.ceramic_title">Inert Ceramic Balls</h3>
-                        <p data-key="products.ceramic_desc">Used as catalyst support and covering materials in reactors and tower packing, with excellent thermal and pressure resistance.</p>
+                        <h3>Inert Ceramic Balls</h3>
+                        <p data-key="products.ceramic">Used as catalyst support and covering materials in reactors and tower packing.</p>
+                        <a href="#inquiry" class="tds-link" data-key="products.requestQuote">Request Quote →</a>
                     </div>
                 </div>
-
-                <!-- 产品7：更多产品提示卡片 -->
-                <div class="product-card more-products-card">
-                    <h3 data-key="products.more_title">More Adsorbents & Ceramic Balls</h3>
-                    <p data-key="products.more_desc">If you need more detailed product specifications, samples, or customized packaging requirements, please feel free to contact us!</p>
-                    <a href="#inquiry" class="btn" data-key="products.more_btn">Contact Us Now</a>
-                </div>
+            </div>
+            
+            <!-- 更多产品请联系我们 -->
+            <div class="more-products-notice" data-key="products.more">
+                Looking for other specifications or custom solutions? <a href="#inquiry">Contact us</a> for more products and OEM services.
             </div>
         </div>
     </section>
@@ -387,30 +299,10 @@
                 <p data-key="applications.subtitle">Our products are widely used in multiple industrial fields worldwide.</p>
             </div>
             <div class="app-grid">
-                <div class="app-card">
-                    <h4 data-key="applications.psa_title">PSA Oxygen</h4>
-                    <p data-key="applications.psa_desc">Oxygen generation and air separation systems.</p>
-                </div>
-                <div class="app-card">
-                    <h4 data-key="applications.gas_title">Natural Gas Drying</h4>
-                    <p data-key="applications.gas_desc">Deep dehydration and desulfurization solutions.</p>
-                </div>
-                <div class="app-card">
-                    <h4 data-key="applications.air_title">Compressed Air</h4>
-                    <p data-key="applications.air_desc">Industrial compressed air purification systems.</p>
-                </div>
-                <div class="app-card">
-                    <h4 data-key="applications.petro_title">Petrochemical</h4>
-                    <p data-key="applications.petro_desc">Gas purification and catalytic drying applications.</p>
-                </div>
-                <div class="app-card">
-                    <h4 data-key="applications.hydrogen_title">Hydrogen Purification</h4>
-                    <p data-key="applications.hydrogen_desc">PSA hydrogen and industrial gas separation.</p>
-                </div>
-                <div class="app-card">
-                    <h4 data-key="applications.electronics_title">Electronics Industry</h4>
-                    <p data-key="applications.electronics_desc">Moisture control and drying for precision industries.</p>
-                </div>
+                <div class="app-card"><h4>PSA Oxygen</h4><p data-key="applications.psa">Oxygen generation and air separation systems.</p></div>
+                <div class="app-card"><h4>Natural Gas Drying</h4><p data-key="applications.gas">Deep dehydration and desulfurization solutions.</p></div>
+                <div class="app-card"><h4>Compressed Air</h4><p data-key="applications.air">Industrial compressed air purification systems.</p></div>
+                <div class="app-card"><h4>Petrochemical</h4><p data-key="applications.petro">Gas purification and catalytic drying applications.</p></div>
             </div>
         </div>
     </section>
@@ -420,13 +312,12 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image">
-                    <img src="./banner.png" alt="China Adsorbents">
+                    <img src="./banner.png" alt="China Adsorbents Factory Banner">
                 </div>
                 <div class="about-text">
                     <h2 data-key="about.title">About China Adsorbents</h2>
-                    <p data-key="about.p1">China Adsorbents is a professional supplier of molecular sieve, activated alumina, and ceramic balls products for industrial drying, purification and gas separation.</p>
+                    <p data-key="about.p1">China Adsorbents is a professional supplier of molecular sieve and activated alumina products for industrial drying, purification and gas separation.</p>
                     <p data-key="about.p2">Our products are widely used in PSA oxygen systems, nitrogen generators, compressed air dryers, petrochemical plants and natural gas dehydration systems.</p>
-                    <p data-key="about.p3">We provide stable quality, competitive pricing, OEM support and worldwide delivery for global customers.</p>
                     <div class="feature" data-key="about.feature1">✔ Stable Quality Control</div>
                     <div class="feature" data-key="about.feature2">✔ Fast Worldwide Delivery</div>
                     <div class="feature" data-key="about.feature3">✔ OEM & Custom Packaging</div>
@@ -447,22 +338,20 @@
                 <form action="https://formsubmit.co/zhumajing@gmail.com" method="POST">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_subject" value="New Inquiry From China Adsorbents Website">
+                    <input type="hidden" name="_redirect" value="https://china-adsorbents.pages.dev/thank-you.html"> 
                     
                     <div class="form-group">
                         <label data-key="form.name">Your Name</label>
                         <input type="text" name="name" class="form-control" required>
                     </div>
-                    
                     <div class="form-group">
                         <label data-key="form.email">Email Address</label>
                         <input type="email" name="email" class="form-control" required>
                     </div>
-                    
                     <div class="form-group">
                         <label data-key="form.whatsapp">WhatsApp</label>
                         <input type="text" name="whatsapp" class="form-control">
                     </div>
-                    
                     <div class="form-group">
                         <label data-key="form.product">Product Interested</label>
                         <select name="product" class="form-control">
@@ -472,15 +361,12 @@
                             <option>13X Molecular Sieve</option>
                             <option>Activated Alumina</option>
                             <option>Inert Ceramic Balls</option>
-                            <option>Other Products</option>
                         </select>
                     </div>
-                    
                     <div class="form-group">
                         <label data-key="form.message">Inquiry Details</label>
                         <textarea name="message" rows="6" class="form-control" required></textarea>
                     </div>
-                    
                     <button type="submit" class="submit-btn" data-key="form.submit">Send Inquiry</button>
                 </form>
             </div>
@@ -492,7 +378,7 @@
         <div class="container">
             <div class="contact-box">
                 <h2 data-key="contact.title">Contact Us</h2>
-                <p data-key="contact.question">Looking for reliable adsorbents, ceramic balls and drying solutions?</p>
+                <p data-key="contact.question">Looking for reliable adsorbents and drying solutions?</p>
                 <p>WhatsApp: +86 13701931410</p>
                 <p>Email: zhumajing@gmail.com</p>
                 <br>
@@ -501,431 +387,162 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <span data-key="footer">© 2026 China Adsorbents. All Rights Reserved.</span>
     </footer>
 
-    <!-- WhatsApp -->
     <a class="whatsapp" href="https://wa.me/8613701931410">☎</a>
 
     <!-- JavaScript -->
     <script>
-        // 多语言内容定义
         const translations = {
             en: {
-                'nav.products': 'Products',
-                'nav.applications': 'Applications',
-                'nav.about': 'About',
-                'nav.inquiry': 'Inquiry',
-                'nav.contact': 'Contact',
-                'hero.title': 'Industrial Adsorbents & Drying Solutions',
-                'hero.subtitle': 'Professional supplier of Molecular Sieve, Activated Alumina, and Ceramic Balls for PSA Oxygen, Air Separation, Natural Gas Drying and Industrial Purification Systems.',
-                'hero.getQuote': 'Get A Quote',
-                'hero.whatsapp': 'WhatsApp Us',
-                'products.title': 'Our Products',
-                'products.subtitle': 'High performance adsorbents, desiccants and ceramic products for industrial drying, purification and gas separation applications.',
-                'products.3a_title': '3A Molecular Sieve',
-                'products.3a_desc': 'Suitable for drying unsaturated hydrocarbons, ethanol dehydration and petrochemical applications.',
-                'products.4a_title': '4A Molecular Sieve',
-                'products.4a_desc': 'Widely used for air drying, refrigerants, solvents and gas dehydration systems.',
-                'products.5a_title': '5A Molecular Sieve',
-                'products.5a_desc': 'Applied in PSA hydrogen systems, air purification and industrial gas drying.',
-                'products.13x_title': '13X Molecular Sieve',
-                'products.13x_desc': 'Ideal for air separation plants, CO₂ removal and natural gas purification.',
-                'products.alumina_title': 'Activated Alumina',
-                'products.alumina_desc': 'High adsorption activated alumina for compressed air and PSA systems.',
-                'products.ceramic_title': 'Inert Ceramic Balls',
-                'products.ceramic_desc': 'Used as catalyst support and covering materials in reactors and tower packing, with excellent thermal and pressure resistance.',
-                'products.more_title': 'More Adsorbents & Ceramic Balls',
-                'products.more_desc': 'If you need more detailed product specifications, samples, or customized packaging requirements, please feel free to contact us!',
-                'products.more_btn': 'Contact Us Now',
-                'applications.title': 'Applications',
-                'applications.subtitle': 'Our products are widely used in multiple industrial fields worldwide.',
-                'applications.psa_title': 'PSA Oxygen',
-                'applications.psa_desc': 'Oxygen generation and air separation systems.',
-                'applications.gas_title': 'Natural Gas Drying',
-                'applications.gas_desc': 'Deep dehydration and desulfurization solutions.',
-                'applications.air_title': 'Compressed Air',
-                'applications.air_desc': 'Industrial compressed air purification systems.',
-                'applications.petro_title': 'Petrochemical',
-                'applications.petro_desc': 'Gas purification and catalytic drying applications.',
-                'applications.hydrogen_title': 'Hydrogen Purification',
-                'applications.hydrogen_desc': 'PSA hydrogen and industrial gas separation.',
-                'applications.electronics_title': 'Electronics Industry',
-                'applications.electronics_desc': 'Moisture control and drying for precision industries.',
-                'about.title': 'About China Adsorbents',
-                'about.p1': 'China Adsorbents is a professional supplier of molecular sieve, activated alumina, and ceramic balls products for industrial drying, purification and gas separation.',
-                'about.p2': 'Our products are widely used in PSA oxygen systems, nitrogen generators, compressed air dryers, petrochemical plants and natural gas dehydration systems.',
-                'about.p3': 'We provide stable quality, competitive pricing, OEM support and worldwide delivery for global customers.',
-                'about.feature1': '✔ Stable Quality Control',
-                'about.feature2': '✔ Fast Worldwide Delivery',
-                'about.feature3': '✔ OEM & Custom Packaging',
-                'about.feature4': '✔ Professional Technical Support',
-                'inquiry.title': 'Send Inquiry',
-                'inquiry.subtitle': 'Contact us for pricing, technical support and product solutions.',
-                'form.name': 'Your Name',
-                'form.email': 'Email Address',
-                'form.whatsapp': 'WhatsApp',
-                'form.product': 'Product Interested',
-                'form.message': 'Inquiry Details',
-                'form.submit': 'Send Inquiry',
-                'contact.title': 'Contact Us',
-                'contact.question': 'Looking for reliable adsorbents, ceramic balls and drying solutions?',
-                'contact.whatsapp': 'Chat On WhatsApp',
+                'nav.products': 'Products', 'nav.applications': 'Applications', 'nav.about': 'About', 'nav.inquiry': 'Inquiry', 'nav.contact': 'Contact',
+                'hero.title': 'Industrial Adsorbents & Drying Solutions', 'hero.subtitle': 'Professional supplier of Molecular Sieve and Activated Alumina for PSA Oxygen, Air Separation, Natural Gas Drying and Industrial Purification Systems.', 'hero.getQuote': 'Get A Quote', 'hero.whatsapp': 'WhatsApp Us',
+                'products.title': 'Our Products', 'products.subtitle': 'High performance adsorbents and desiccants for industrial drying, purification and gas separation applications.',
+                'products.3a': 'Suitable for drying unsaturated hydrocarbons, ethanol dehydration and petrochemical applications.', 
+                'products.4a': 'Widely used for air drying, refrigerants, solvents and gas dehydration systems.', 
+                'products.5a': 'Applied in PSA hydrogen systems, air purification and industrial gas drying.', 
+                'products.13x': 'Ideal for air separation plants, CO₂ removal and natural gas purification.', 
+                'products.alumina': 'High adsorption activated alumina for compressed air and PSA systems.',
+                'products.ceramic': 'Used as catalyst support and covering materials in reactors and tower packing.',
+                'products.viewTDS': 'View TDS →', 'products.requestQuote': 'Request Quote →',
+                'products.more': 'Looking for other specifications or custom solutions? Contact us for more products and OEM services.',
+                'applications.title': 'Applications', 'applications.subtitle': 'Our products are widely used in multiple industrial fields worldwide.',
+                'applications.psa': 'Oxygen generation and air separation systems.', 'applications.gas': 'Deep dehydration and desulfurization solutions.', 'applications.air': 'Industrial compressed air purification systems.', 'applications.petro': 'Gas purification and catalytic drying applications.',
+                'about.title': 'About China Adsorbents', 'about.p1': 'China Adsorbents is a professional supplier of molecular sieve and activated alumina products for industrial drying, purification and gas separation.', 'about.p2': 'Our products are widely used in PSA oxygen systems, nitrogen generators, compressed air dryers, petrochemical plants and natural gas dehydration systems.', 'about.feature1': '✔ Stable Quality Control', 'about.feature2': '✔ Fast Worldwide Delivery', 'about.feature3': '✔ OEM & Custom Packaging', 'about.feature4': '✔ Professional Technical Support',
+                'inquiry.title': 'Send Inquiry', 'inquiry.subtitle': 'Contact us for pricing, technical support and product solutions.',
+                'form.name': 'Your Name', 'form.email': 'Email Address', 'form.whatsapp': 'WhatsApp', 'form.product': 'Product Interested', 'form.message': 'Inquiry Details', 'form.submit': 'Send Inquiry',
+                'contact.title': 'Contact Us', 'contact.question': 'Looking for reliable adsorbents and drying solutions?', 'contact.whatsapp': 'Chat On WhatsApp',
                 'footer': '© 2026 China Adsorbents. All Rights Reserved.'
             },
             zh: {
-                'nav.products': '产品中心',
-                'nav.applications': '应用领域',
-                'nav.about': '关于我们',
-                'nav.inquiry': '在线询价',
-                'nav.contact': '联系我们',
-                'hero.title': '工业吸附剂与干燥解决方案',
-                'hero.subtitle': '专业供应分子筛、活性氧化铝和陶瓷球，用于PSA制氧、空分、天然气干燥和工业净化系统。',
-                'hero.getQuote': '获取报价',
-                'hero.whatsapp': 'WhatsApp咨询',
-                'products.title': '我们的产品',
-                'products.subtitle': '高性能吸附剂、干燥剂和陶瓷产品，适用于工业干燥、净化和气体分离应用。',
-                'products.3a_title': '3A分子筛',
-                'products.3a_desc': '适用于不饱和烃干燥、乙醇脱水及石化应用。',
-                'products.4a_title': '4A分子筛',
-                'products.4a_desc': '广泛用于空气干燥、制冷剂、溶剂和气体脱水系统。',
-                'products.5a_title': '5A分子筛',
-                'products.5a_desc': '应用于PSA氢气系统、空气净化和工业气体干燥。',
-                'products.13x_title': '13X分子筛',
-                'products.13x_desc': '适用于空分装置、CO₂去除和天然气净化。',
-                'products.alumina_title': '活性氧化铝',
-                'products.alumina_desc': '高吸附性能活性氧化铝，适用于压缩空气和PSA系统。',
-                'products.ceramic_title': '惰性陶瓷球',
-                'products.ceramic_desc': '用作反应器和塔填料的催化剂载体和覆盖材料，具有优异的耐热性和耐压性。',
-                'products.more_title': '更多吸附剂和陶瓷球',
-                'products.more_desc': '如果您需要更详细的产品规格、样品或定制包装要求，请随时联系我们！',
-                'products.more_btn': '立即联系我们',
-                'applications.title': '应用领域',
-                'applications.subtitle': '我们的产品广泛应用于全球多个工业领域。',
-                'applications.psa_title': 'PSA制氧',
-                'applications.psa_desc': '氧气生产和空分系统。',
-                'applications.gas_title': '天然气干燥',
-                'applications.gas_desc': '深度脱水和脱硫解决方案。',
-                'applications.air_title': '压缩空气',
-                'applications.air_desc': '工业压缩空气净化系统。',
-                'applications.petro_title': '石化行业',
-                'applications.petro_desc': '气体净化和催化干燥应用。',
-                'applications.hydrogen_title': '氢气纯化',
-                'applications.hydrogen_desc': 'PSA氢气和工业气体分离。',
-                'applications.electronics_title': '电子行业',
-                'applications.electronics_desc': '精密工业的湿度控制和干燥。',
-                'about.title': '关于我们',
-                'about.p1': '中国吸附剂是分子筛、活性氧化铝和陶瓷球产品的专业供应商，专注于工业干燥、净化和气体分离领域。',
-                'about.p2': '我们的产品广泛应用于PSA制氧系统、氮气发生器、压缩空气干燥器、石化工厂和天然气脱水系统。',
-                'about.p3': '我们为全球客户提供稳定质量、有竞争力的价格、OEM支持和全球交付服务。',
-                'about.feature1': '✔ 稳定质量控制',
-                'about.feature2': '✔ 全球快速交付',
-                'about.feature3': '✔ OEM和定制包装',
-                'about.feature4': '✔ 专业技术支持',
-                'inquiry.title': '发送询盘',
-                'inquiry.subtitle': '请联系我们获取价格、技术支持和产品解决方案。',
-                'form.name': '您的姓名',
-                'form.email': '邮箱地址',
-                'form.whatsapp': 'WhatsApp',
-                'form.product': '感兴趣的产品',
-                'form.message': '询盘详情',
-                'form.submit': '发送询盘',
-                'contact.title': '联系我们',
-                'contact.question': '寻找可靠的吸附剂、陶瓷球和干燥解决方案？',
-                'contact.whatsapp': 'WhatsApp聊天',
+                'nav.products': '产品中心', 'nav.applications': '应用领域', 'nav.about': '关于我们', 'nav.inquiry': '在线询价', 'nav.contact': '联系我们',
+                'hero.title': '工业吸附剂与干燥解决方案', 'hero.subtitle': '专业供应分子筛和活性氧化铝，用于PSA制氧、空分、天然气干燥和工业净化系统。', 'hero.getQuote': '获取报价', 'hero.whatsapp': 'WhatsApp咨询',
+                'products.title': '我们的产品', 'products.subtitle': '高性能吸附剂和干燥剂，适用于工业干燥、净化和气体分离应用。',
+                'products.3a': '适用于不饱和烃干燥、乙醇脱水及石化应用。', 
+                'products.4a': '广泛用于空气干燥、制冷剂、溶剂和气体脱水系统。', 
+                'products.5a': '应用于PSA氢气系统、空气净化和工业气体干燥。', 
+                'products.13x': '适用于空分装置、CO₂去除和天然气净化。', 
+                'products.alumina': '高吸附性能活性氧化铝，适用于压缩空气和PSA系统。',
+                'products.ceramic': '用作反应器和塔填料中的催化剂支撑和覆盖材料。',
+                'products.viewTDS': '查看TDS →', 'products.requestQuote': '获取报价 →',
+                'products.more': '寻找其他规格或定制方案？联系我们获取更多产品和OEM服务。',
+                'applications.title': '应用领域', 'applications.subtitle': '我们的产品广泛应用于全球多个工业领域。',
+                'applications.psa': '氧气生产和空分系统。', 'applications.gas': '深度脱水和脱硫解决方案。', 'applications.air': '工业压缩空气净化系统。', 'applications.petro': '气体净化和催化干燥应用。',
+                'about.title': '关于我们', 'about.p1': '中国吸附剂是分子筛和活性氧化铝产品的专业供应商，专注于工业干燥、净化和气体分离领域。', 'about.p2': '我们的产品广泛应用于PSA制氧系统、氮气发生器、压缩空气干燥器、石化厂和天然气脱水系统。', 'about.feature1': '✔ 稳定质量控制', 'about.feature2': '✔ 全球快速交付', 'about.feature3': '✔ OEM与定制包装', 'about.feature4': '✔ 专业技术支持',
+                'inquiry.title': '发送询盘', 'inquiry.subtitle': '请联系我们获取价格、技术支持和产品方案。',
+                'form.name': '您的姓名', 'form.email': '邮箱地址', 'form.whatsapp': 'WhatsApp', 'form.product': '感兴趣的产品', 'form.message': '询盘详情', 'form.submit': '发送询盘',
+                'contact.title': '联系我们', 'contact.question': '寻找可靠的吸附剂和干燥解决方案？', 'contact.whatsapp': 'WhatsApp聊天',
                 'footer': '© 2026 中国吸附剂 版权所有'
             },
             es: {
-                'nav.products': 'Productos',
-                'nav.applications': 'Aplicaciones',
-                'nav.about': 'Nosotros',
-                'nav.inquiry': 'Consulta',
-                'nav.contact': 'Contacto',
-                'hero.title': 'Adsorbentes Industriales y Soluciones de Secado',
-                'hero.subtitle': 'Proveedor profesional de tamices moleculares, alúmina activada y bolas cerámicas para sistemas PSA de oxígeno, separación de aire, secado de gas natural y purificación industrial.',
-                'hero.getQuote': 'Obtener Cotización',
-                'hero.whatsapp': 'WhatsApp',
-                'products.title': 'Nuestros Productos',
-                'products.subtitle': 'Adsorbentes, desecantes y productos cerámicos de alto rendimiento para aplicaciones de secado, purificación y separación de gases industriales.',
-                'products.3a_title': 'Tamiz Molecular 3A',
-                'products.3a_desc': 'Adecuado para secado de hidrocarburos no saturados, deshidratación de etanol y aplicaciones petroquímicas.',
-                'products.4a_title': 'Tamiz Molecular 4A',
-                'products.4a_desc': 'Ampliamente utilizado en secado de aire, refrigerantes, solventes y sistemas de deshidratación de gases.',
-                'products.5a_title': 'Tamiz Molecular 5A',
-                'products.5a_desc': 'Aplicado en sistemas PSA de hidrógeno, purificación de aire y secado de gases industriales.',
-                'products.13x_title': 'Tamiz Molecular 13X',
-                'products.13x_desc': 'Ideal para plantas de separación de aire, eliminación de CO₂ y purificación de gas natural.',
-                'products.alumina_title': 'Alúmina Activada',
-                'products.alumina_desc': 'Alúmina activada de alta adsorción para aire comprimido y sistemas PSA.',
-                'products.ceramic_title': 'Bolas Cerámicas Inertes',
-                'products.ceramic_desc': 'Se utiliza como soporte de catalizador y material de cobertura en reactores y empaques de torres, con excelente resistencia térmica y a la presión.',
-                'products.more_title': 'Más Adsorbentes y Bolas Cerámicas',
-                'products.more_desc': 'Si necesita especificaciones de productos más detalladas, muestras o requisitos de empaque personalizados, ¡no dude en contactarnos!',
-                'products.more_btn': 'Contáctenos Ahora',
-                'applications.title': 'Aplicaciones',
-                'applications.subtitle': 'Nuestros productos se utilizan ampliamente en múltiples campos industriales en todo el mundo.',
-                'applications.psa_title': 'PSA de Oxígeno',
-                'applications.psa_desc': 'Sistemas de generación de oxígeno y separación de aire.',
-                'applications.gas_title': 'Secado de Gas Natural',
-                'applications.gas_desc': 'Soluciones de deshidratación profunda y desulfuración.',
-                'applications.air_title': 'Aire Comprimido',
-                'applications.air_desc': 'Sistemas industriales de purificación de aire comprimido.',
-                'applications.petro_title': 'Petroquímica',
-                'applications.petro_desc': 'Aplicaciones de purificación de gases y secado catalítico.',
-                'applications.hydrogen_title': 'Purificación de Hidrógeno',
-                'applications.hydrogen_desc': 'PSA de hidrógeno y separación de gases industriales.',
-                'applications.electronics_title': 'Industria Electrónica',
-                'applications.electronics_desc': 'Control de humedad y secado para industrias de precisión.',
-                'about.title': 'Sobre Nosotros',
-                'about.p1': 'China Adsorbents es un proveedor profesional de tamices moleculares, productos de alúmina activada y bolas cerámicas para secado industrial, purificación y separación de gases.',
-                'about.p2': 'Nuestros productos se utilizan ampliamente en sistemas PSA de oxígeno, generadores de nitrógeno, secadores de aire comprimido, plantas petroquímicas y sistemas de deshidratación de gas natural.',
-                'about.p3': 'Proporcionamos calidad estable, precios competitivos, soporte OEM y entrega mundial para clientes globales.',
-                'about.feature1': '✔ Control de Calidad Estable',
-                'about.feature2': '✔ Entrega Mundial Rápida',
-                'about.feature3': '✔ OEM y Embalaje Personalizado',
-                'about.feature4': '✔ Soporte Técnico Profesional',
-                'inquiry.title': 'Enviar Consulta',
-                'inquiry.subtitle': 'Contáctenos para precios, soporte técnico y soluciones de productos.',
-                'form.name': 'Su Nombre',
-                'form.email': 'Correo Electrónico',
-                'form.whatsapp': 'WhatsApp',
-                'form.product': 'Producto de Interés',
-                'form.message': 'Detalles de la Consulta',
-                'form.submit': 'Enviar Consulta',
-                'contact.title': 'Contacto',
-                'contact.question': '¿Buscas adsorbentes, bolas cerámicas y soluciones de secado confiables?',
-                'contact.whatsapp': 'Chatear por WhatsApp',
+                'nav.products': 'Productos', 'nav.applications': 'Aplicaciones', 'nav.about': 'Sobre Nosotros', 'nav.inquiry': 'Consulta', 'nav.contact': 'Contacto',
+                'hero.title': 'Soluciones Industriales de Adsorción y Secado', 'hero.subtitle': 'Proveedor profesional de tamices moleculares y alúmina activada para oxígeno PSA, separación de aire, secado de gas natural y sistemas de purificación industrial.', 'hero.getQuote': 'Obtener Cotización', 'hero.whatsapp': 'WhatsApp',
+                'products.title': 'Nuestros Productos', 'products.subtitle': 'Adsorbentes y desecantes de alto rendimiento para aplicaciones de secado, purificación y separación de gases industriales.',
+                'products.3a': 'Adecuado para secado de hidrocarburos insaturados, deshidratación de etanol y aplicaciones petroquímicas.', 
+                'products.4a': 'Ampliamente utilizado para secado de aire, refrigerantes, solventes y sistemas de deshidratación de gas.', 
+                'products.5a': 'Aplicado en sistemas PSA de hidrógeno, purificación de aire y secado de gases industriales.', 
+                'products.13x': 'Ideal para plantas de separación de aire, eliminación de CO₂ y purificación de gas natural.', 
+                'products.alumina': 'Alúmina activada de alta adsorción para aire comprimido y sistemas PSA.',
+                'products.ceramic': 'Utilizado como soporte de catalizador y material de recubrimiento en reactores y empaquetado de torres.',
+                'products.viewTDS': 'Ver TDS →', 'products.requestQuote': 'Solicitar Cotización →',
+                'products.more': '¿Busca otras especificaciones o soluciones personalizadas? Contáctenos para más productos y servicios OEM.',
+                'applications.title': 'Aplicaciones', 'applications.subtitle': 'Nuestros productos se utilizan ampliamente en múltiples campos industriales en todo el mundo.',
+                'applications.psa': 'Generación de oxígeno y sistemas de separación de aire.', 'applications.gas': 'Soluciones de deshidratación profunda y desulfuración.', 'applications.air': 'Sistemas de purificación de aire comprimido industrial.', 'applications.petro': 'Purificación de gas y aplicaciones de secado catalítico.',
+                'about.title': 'Sobre China Adsorbents', 'about.p1': 'China Adsorbents es un proveedor profesional de tamices moleculares y productos de alúmina activada para secado industrial, purificación y separación de gases.', 'about.p2': 'Nuestros productos se utilizan ampliamente en sistemas PSA de oxígeno, generadores de nitrógeno, secadores de aire comprimido, plantas petroquímicas y sistemas de deshidratación de gas natural.', 'about.feature1': '✔ Control Estable de Calidad', 'about.feature2': '✔ Entrega Rápida Mundial', 'about.feature3': '✔ OEM y Embalaje Personalizado', 'about.feature4': '✔ Soporte Técnico Profesional',
+                'inquiry.title': 'Enviar Consulta', 'inquiry.subtitle': 'Contáctenos para precios, soporte técnico y soluciones de productos.',
+                'form.name': 'Su Nombre', 'form.email': 'Correo Electrónico', 'form.whatsapp': 'WhatsApp', 'form.product': 'Producto de Interés', 'form.message': 'Detalles de la Consulta', 'form.submit': 'Enviar Consulta',
+                'contact.title': 'Contáctenos', 'contact.question': '¿Busca soluciones confiables de adsorción y secado?', 'contact.whatsapp': 'Chatear por WhatsApp',
                 'footer': '© 2026 China Adsorbents. Todos los derechos reservados.'
             },
             de: {
-                'nav.products': 'Produkte',
-                'nav.applications': 'Anwendungen',
-                'nav.about': 'Über uns',
-                'nav.inquiry': 'Anfrage',
-                'nav.contact': 'Kontakt',
-                'hero.title': 'Industrielle Adsorbentien & Trocknungslösungen',
-                'hero.subtitle': 'Professioneller Lieferant von Molekularsieben, aktiviertem Aluminiumoxid und Keramikkugeln für PSA-Sauerstoff-, Luftzerlegungs-, Erdgastrocknungs- und Industriereinigungssysteme.',
-                'hero.getQuote': 'Angebot anfordern',
-                'hero.whatsapp': 'WhatsApp',
-                'products.title': 'Unsere Produkte',
-                'products.subtitle': 'Hochleistungsadsorbentien, Trocknungsmittel und Keramikprodukte für industrielle Trocknungs-, Reinigungs- und Gastrennungsanwendungen.',
-                'products.3a_title': '3A Molekularsieb',
-                'products.3a_desc': 'Geeignet für die Trocknung ungesättigter Kohlenwasserstoffe, Ethanoldehydratation und petrochemische Anwendungen.',
-                'products.4a_title': '4A Molekularsieb',
-                'products.4a_desc': 'Wird häufig für die Lufttrocknung, Kältemittel, Lösungsmittel und Gastrocknungssysteme eingesetzt.',
-                'products.5a_title': '5A Molekularsieb',
-                'products.5a_desc': 'Eingesetzt in PSA-Wasserstoffsystemen, Luftreinigung und industrieller Gastrocknung.',
-                'products.13x_title': '13X Molekularsieb',
-                'products.13x_desc': 'Ideal für Luftzerlegungsanlagen, CO₂-Entfernung und Erdgasreinigung.',
-                'products.alumina_title': 'Aktiviertes Aluminiumoxid',
-                'products.alumina_desc': 'Hochadsorptives aktiviertes Aluminiumoxid für Druckluft- und PSA-Systeme.',
-                'products.ceramic_title': 'Inerte Keramikkugeln',
-                'products.ceramic_desc': 'Wird als Katalysatorträger und Abdeckmaterial in Reaktoren und Turmpackungen verwendet, mit hervorragender thermischer und Druckbeständigkeit.',
-                'products.more_title': 'Weitere Adsorbentien und Keramikkugeln',
-                'products.more_desc': 'Wenn Sie detailliertere Produktspezifikationen, Muster oder individuelle Verpackungsanforderungen benötigen, zögern Sie bitte nicht, uns zu kontaktieren!',
-                'products.more_btn': 'Jetzt Kontaktieren',
-                'applications.title': 'Anwendungen',
-                'applications.subtitle': 'Unsere Produkte werden weltweit in zahlreichen industriellen Bereichen eingesetzt.',
-                'applications.psa_title': 'PSA Sauerstoff',
-                'applications.psa_desc': 'Sauerstofferzeugung und Luftzerlegungssysteme.',
-                'applications.gas_title': 'Erdgastrocknung',
-                'applications.gas_desc': 'Lösungen zur Tiefenentwässerung und Entschwefelung.',
-                'applications.air_title': 'Druckluft',
-                'applications.air_desc': 'Industrielle Druckluftreinigungsanlagen.',
-                'applications.petro_title': 'Petrochemie',
-                'applications.petro_desc': 'Gasreinigung und katalytische Trocknungsanwendungen.',
-                'applications.hydrogen_title': 'Wasserstoffreinigung',
-                'applications.hydrogen_desc': 'PSA-Wasserstoff und industrielle Gastrennung.',
-                'applications.electronics_title': 'Elektronikindustrie',
-                'applications.electronics_desc': 'Feuchtigkeitskontrolle und Trocknung für Präzisionsindustrien.',
-                'about.title': 'Über China Adsorbents',
-                'about.p1': 'China Adsorbents ist ein professioneller Lieferant von Molekularsieb-, aktivierten Aluminiumoxid- und Keramikkugelprodukten für industrielle Trocknungs-, Reinigungs- und Gastrennungsanwendungen.',
-                'about.p2': 'Unsere Produkte werden häufig in PSA-Sauerstoffsystemen, Stickstoffgeneratoren, Drucklufttrocknern, petrochemischen Anlagen und Erdgastrocknungssystemen eingesetzt.',
-                'about.p3': 'Wir bieten stabile Qualität, wettbewerbsfähige Preise, OEM-Support und weltweite Lieferung für globale Kunden.',
-                'about.feature1': '✔ Stabile Qualitätskontrolle',
-                'about.feature2': '✔ Schnelle weltweite Lieferung',
-                'about.feature3': '✔ OEM & individuelle Verpackung',
-                'about.feature4': '✔ Professionelle technische Unterstützung',
-                'inquiry.title': 'Anfrage senden',
-                'inquiry.subtitle': 'Kontaktieren Sie uns für Preise, technische Unterstützung und Produktlösungen.',
-                'form.name': 'Ihr Name',
-                'form.email': 'E-Mail-Adresse',
-                'form.whatsapp': 'WhatsApp',
-                'form.product': 'Interessiertes Produkt',
-                'form.message': 'Details der Anfrage',
-                'form.submit': 'Anfrage senden',
-                'contact.title': 'Kontaktieren Sie uns',
-                'contact.question': 'Suchen Sie nach zuverlässigen Adsorbentien, Keramikkugeln und Trocknungslösungen?',
-                'contact.whatsapp': 'WhatsApp Chat',
+                'nav.products': 'Produkte', 'nav.applications': 'Anwendungen', 'nav.about': 'Über Uns', 'nav.inquiry': 'Anfrage', 'nav.contact': 'Kontakt',
+                'hero.title': 'Industrielle Adsorbentien & Trocknungslösungen', 'hero.subtitle': 'Professioneller Lieferant von Molekularsieben und aktiviertem Aluminiumoxid für PSA-Sauerstoff, Luftzerlegung, Erdgastrocknung und industrielle Reinigungssysteme.', 'hero.getQuote': 'Angebot Anfordern', 'hero.whatsapp': 'WhatsApp',
+                'products.title': 'Unsere Produkte', 'products.subtitle': 'Hochleistungs-Adsorbentien und Trocknungsmittel für industrielle Trocknung, Reinigung und Gasseparationsanwendungen.',
+                'products.3a': 'Geeignet für die Trocknung ungesättigter Kohlenwasserstoffe, Ethanol-Dehydratation und petrochemische Anwendungen.', 
+                'products.4a': 'Wird häufig für Lufttrocknung, Kältemittel, Lösungsmittel und Gastrocknungssysteme eingesetzt.', 
+                'products.5a': 'Angewandt in PSA-Wasserstoffsystemen, Luftreinigung und industrieller Gastrocknung.', 
+                'products.13x': 'Ideal für Luftzerlegungsanlagen, CO₂-Entfernung und Erdgasreinigung.', 
+                'products.alumina': 'Hochadsorbierendes aktiviertes Aluminiumoxid für Druckluft und PSA-Systeme.',
+                'products.ceramic': 'Als Katalysatorträger und Abdeckmaterial in Reaktoren und Kolonnenpackungen verwendet.',
+                'products.viewTDS': 'TDS Ansehen →', 'products.requestQuote': 'Angebot Anfordern →',
+                'products.more': 'Suchen Sie nach anderen Spezifikationen oder kundenspezifischen Lösungen? Kontaktieren Sie uns für weitere Produkte und OEM-Dienstleistungen.',
+                'applications.title': 'Anwendungen', 'applications.subtitle': 'Unsere Produkte werden weltweit in mehreren industriellen Bereichen eingesetzt.',
+                'applications.psa': 'Sauerstofferzeugung und Luftzerlegungssysteme.', 'applications.gas': 'Tiefentfeuchtungs- und Entschwefelungslösungen.', 'applications.air': 'Industrielle Druckluftreinigungssysteme.', 'applications.petro': 'Gasreinigung und katalytische Trocknungsanwendungen.',
+                'about.title': 'Über China Adsorbents', 'about.p1': 'China Adsorbents ist ein professioneller Lieferant von Molekularsieben und aktiviertem Aluminiumoxid für industrielle Trocknung, Reinigung und Gasseparationsanwendungen.', 'about.p2': 'Unsere Produkte werden häufig in PSA-Sauerstoffsystemen, Stickstoffgeneratoren, Drucklufttrocknern, petrochemischen Anlagen und Erdgastrocknungssystemen eingesetzt.', 'about.feature1': '✔ Stabile Qualitätskontrolle', 'about.feature2': '✔ Schneller Welweiter Versand', 'about.feature3': '✔ OEM & Individuelle Verpackung', 'about.feature4': '✔ Professioneller Technischer Support',
+                'inquiry.title': 'Anfrage Senden', 'inquiry.subtitle': 'Kontaktieren Sie uns für Preise, technischen Support und Produktlösungen.',
+                'form.name': 'Ihr Name', 'form.email': 'E-Mail-Adresse', 'form.whatsapp': 'WhatsApp', 'form.product': 'Interessiertes Produkt', 'form.message': 'Anfragedetails', 'form.submit': 'Anfrage Senden',
+                'contact.title': 'Kontaktieren Sie Uns', 'contact.question': 'Suchen Sie nach zuverlässigen Adsorbentien und Trocknungslösungen?', 'contact.whatsapp': 'Über WhatsApp Chatten',
                 'footer': '© 2026 China Adsorbents. Alle Rechte vorbehalten.'
             },
             fr: {
-                'nav.products': 'Produits',
-                'nav.applications': 'Applications',
-                'nav.about': 'À propos',
-                'nav.inquiry': 'Demande',
-                'nav.contact': 'Contact',
-                'hero.title': 'Adsorbants Industriels & Solutions de Séchage',
-                'hero.subtitle': 'Fournisseur professionnel de tamis moléculaires, d\'alumine activée et de billes céramiques pour systèmes PSA d\'oxygène, séparation d\'air, séchage de gaz naturel et purification industrielle.',
-                'hero.getQuote': 'Obtenir un devis',
-                'hero.whatsapp': 'WhatsApp',
-                'products.title': 'Nos produits',
-                'products.subtitle': 'Adsorbants, déshydratants et produits céramiques haute performance pour applications de séchage, purification et séparation de gaz industriels.',
-                'products.3a_title': 'Tamis Moléculaire 3A',
-                'products.3a_desc': 'Adapté au séchage des hydrocarbures insaturés, à la déshydratation de l\'éthanol et aux applications pétrochimiques.',
-                'products.4a_title': 'Tamis Moléculaire 4A',
-                'products.4a_desc': 'Largement utilisé pour le séchage d\'air, les réfrigérants, les solvants et les systèmes de déshydratation de gaz.',
-                'products.5a_title': 'Tamis Moléculaire 5A',
-                'products.5a_desc': 'Appliqué dans les systèmes PSA hydrogène, la purification d\'air et le séchage de gaz industriels.',
-                'products.13x_title': 'Tamis Moléculaire 13X',
-                'products.13x_desc': 'Idéal pour les unités de séparation d\'air, l\'élimination du CO₂ et la purification du gaz naturel.',
-                'products.alumina_title': 'Alumine Activée',
-                'products.alumina_desc': 'Alumine activée à haute adsorption pour air comprimé et systèmes PSA.',
-                'products.ceramic_title': 'Billes Céramiques Inertes',
-                'products.ceramic_desc': 'Utilisé comme support de catalyseur et matériau de recouvrement dans les réacteurs et garnissages de colonnes, avec d\'excellentes résistances thermique et à la pression.',
-                'products.more_title': 'Plus d\'Adsorbants et de Billes Céramiques',
-                'products.more_desc': 'Si vous avez besoin de spécifications de produit plus détaillées, d\'échantillons ou d\'exigences d\'emballage personnalisées, n\'hésitez pas à nous contacter !',
-                'products.more_btn': 'Nous Contacter Maintenant',
-                'applications.title': 'Applications',
-                'applications.subtitle': 'Nos produits sont largement utilisés dans de multiples domaines industriels à travers le monde.',
-                'applications.psa_title': 'PSA Oxygène',
-                'applications.psa_desc': 'Systèmes de production d\'oxygène et de séparation d\'air.',
-                'applications.gas_title': 'Séchage de Gaz Naturel',
-                'applications.gas_desc': 'Solutions de déshydratation profonde et de désulfuration.',
-                'applications.air_title': 'Air Comprimé',
-                'applications.air_desc': 'Systèmes industriels de purification d\'air comprimé.',
-                'applications.petro_title': 'Pétrochimie',
-                'applications.petro_desc': 'Applications de purification de gaz et séchage catalytique.',
-                'applications.hydrogen_title': 'Purification d\'Hydrogène',
-                'applications.hydrogen_desc': 'PSA hydrogène et séparation de gaz industriels.',
-                'applications.electronics_title': 'Industrie Électronique',
-                'applications.electronics_desc': 'Contrôle de l\'humidité et séchage pour industries de précision.',
-                'about.title': 'À propos de China Adsorbents',
-                'about.p1': 'China Adsorbents est un fournisseur professionnel de tamis moléculaires, de produits d\'alumine activée et de billes céramiques pour le séchage, la purification et la séparation de gaz industriels.',
-                'about.p2': 'Nos produits sont largement utilisés dans les systèmes PSA d\'oxygène, les générateurs d\'azote, les sécheurs d\'air comprimé, les usines pétrochimiques et les systèmes de déshydratation du gaz naturel.',
-                'about.p3': 'Nous offrons une qualité stable, des prix compétitifs, un support OEM et une livraison mondiale pour les clients internationaux.',
-                'about.feature1': '✔ Contrôle qualité stable',
-                'about.feature2': '✔ Livraison mondiale rapide',
-                'about.feature3': '✔ OEM & emballage personnalisé',
-                'about.feature4': '✔ Support technique professionnel',
-                'inquiry.title': 'Envoyer une demande',
-                'inquiry.subtitle': 'Contactez-nous pour les prix, le support technique et les solutions produits.',
-                'form.name': 'Votre nom',
-                'form.email': 'Adresse e-mail',
-                'form.whatsapp': 'WhatsApp',
-                'form.product': 'Produit intéressant',
-                'form.message': 'Détails de la demande',
-                'form.submit': 'Envoyer la demande',
-                'contact.title': 'Nous contacter',
-                'contact.question': 'Vous cherchez des adsorbants, des billes céramiques et des solutions de séchage fiables ?',
-                'contact.whatsapp': 'Discuter sur WhatsApp',
-                'footer': '© 2026 China Adsorbents. Tous droits réservés.'
+                'nav.products': 'Produits', 'nav.applications': 'Applications', 'nav.about': 'À Propos', 'nav.inquiry': 'Demande de Devis', 'nav.contact': 'Contact',
+                'hero.title': 'Solutions d\'Adsorption Industrielle & de Séchage', 'hero.subtitle': 'Fournisseur professionnel de tamis moléculaires et d\'alumine activée pour l\'oxygène PSA, la séparation de l\'air, le séchage du gaz naturel et les systèmes de purification industrielle.', 'hero.getQuote': 'Obtenir un Devis', 'hero.whatsapp': 'WhatsApp',
+                'products.title': 'Nos Produits', 'products.subtitle': 'Adsorbants et dessicants haute performance pour les applications de séchage industriel, de purification et de séparation de gaz.',
+                'products.3a': 'Convient au séchage des hydrocarbures insaturés, à la déshydratation de l\'éthanol et aux applications pétrochimiques.', 
+                'products.4a': 'Utilisé pour le séchage de l\'air, les réfrigérants, les solvants et les systèmes de déshydratation des gaz.', 
+                'products.5a': 'Appliqué dans les systèmes d\'hydrogène PSA, la purification de l\'air et le séchage des gaz industriels.', 
+                'products.13x': 'Idéal pour les usines de séparation de l\'air, l\'élimination du CO₂ et la purification du gaz naturel.', 
+                'products.alumina': 'Alumine activée à haute adsorption pour l\'air comprimé et les systèmes PSA.',
+                'products.ceramic': 'Utilisé comme support de catalyseur et matériau de recouvrement dans les réacteurs et les garnissages de colonnes.',
+                'products.viewTDS': 'Voir TDS →', 'products.requestQuote': 'Demander un Devis →',
+                'products.more': 'Vous cherchez d\'autres spécifications ou solutions personnalisées? Contactez-nous pour plus de produits et services OEM.',
+                'applications.title': 'Applications', 'applications.subtitle': 'Nos produits sont largement utilisés dans plusieurs domaines industriels à travers le monde.',
+                'applications.psa': 'Génération d\'oxygène et systèmes de séparation de l\'air.', 'applications.gas': 'Solutions de déshydratation profonde et de désulfuration.', 'applications.air': 'Systèmes de purification de l\'air comprimé industriel.', 'applications.petro': 'Purification des gaz et applications de séchage catalytique.',
+                'about.title': 'À Propos de China Adsorbents', 'about.p1': 'China Adsorbents est un fournisseur professionnel de tamis moléculaires et de produits d\'alumine activée pour le séchage industriel, la purification et la séparation des gaz.', 'about.p2': 'Nos produits sont largement utilisés dans les systèmes d\'oxygène PSA, les générateurs d\'azote, les sécheurs d\'air comprimé, les usines pétrochimiques et les systèmes de déshydratation du gaz naturel.', 'about.feature1': '✔ Contrôle Stable de la Qualité', 'about.feature2': '✔ Livraison Rapide Mondiale', 'about.feature3': '✔ OEM & Emballage Personnalisé', 'about.feature4': '✔ Support Technique Professionnel',
+                'inquiry.title': 'Envoyer une Demande', 'inquiry.subtitle': 'Contactez-nous pour les prix, le support technique et les solutions de produits.',
+                'form.name': 'Votre Nom', 'form.email': 'Adresse E-mail', 'form.whatsapp': 'WhatsApp', 'form.product': 'Produit Intéressé', 'form.message': 'Détails de la Demande', 'form.submit': 'Envoyer la Demande',
+                'contact.title': 'Contactez-Nous', 'contact.question': 'Cherchez-vous des solutions fiables d\'adsorption et de séchage?', 'contact.whatsapp': 'Discuter sur WhatsApp',
+                'footer': '© 2026 China Adsorbents. Tous Droits Réservés.'
             },
             ru: {
-                'nav.products': 'Продукция',
-                'nav.applications': 'Применение',
-                'nav.about': 'О нас',
-                'nav.inquiry': 'Запрос',
-                'nav.contact': 'Контакты',
-                'hero.title': 'Промышленные адсорбенты и решения для осушки',
-                'hero.subtitle': 'Профессиональный поставщик молекулярных сит, активированного глинозема и керамических шариков для систем PSA кислорода, разделения воздуха, осушки природного газа и промышленной очистки.',
-                'hero.getQuote': 'Получить предложение',
-                'hero.whatsapp': 'WhatsApp',
-                'products.title': 'Наша продукция',
-                'products.subtitle': 'Высокоэффективные адсорбенты, осушители и керамические изделия для промышленного осушки, очистки и разделения газов.',
-                'products.3a_title': 'Молекулярное сито 3A',
-                'products.3a_desc': 'Подходит для осушки ненасыщенных углеводородов, дегидратации этанола и применения в нефтехимии.',
-                'products.4a_title': 'Молекулярное сито 4A',
-                'products.4a_desc': 'Широко используется для осушки воздуха, хладагентов, растворителей и систем осушки газов.',
-                'products.5a_title': 'Молекулярное сито 5A',
-                'products.5a_desc': 'Применяется в PSA системах водорода, очистке воздуха и промышленной осушке газов.',
-                'products.13x_title': 'Молекулярное сито 13X',
-                'products.13x_desc': 'Идеально подходит для установок разделения воздуха, удаления CO₂ и очистки природного газа.',
-                'products.alumina_title': 'Активированный глинозем',
-                'products.alumina_desc': 'Высокоадсорбирующий активированный глинозем для сжатого воздуха и PSA систем.',
-                'products.ceramic_title': 'Инертные керамические шарики',
-                'products.ceramic_desc': 'Используется в качестве носителя катализатора и покрывного материала в реакторах и насадках колонн, с отличной термостойкостью и устойчивостью к давлению.',
-                'products.more_title': 'Больше Адсорбентов и Керамических Шариков',
-                'products.more_desc': 'Если вам нужны более подробные спецификации продукции, образцы или требования к индивидуальной упаковке, пожалуйста, свяжитесь с нами!',
-                'products.more_btn': 'Связаться с нами',
-                'applications.title': 'Применение',
-                'applications.subtitle': 'Наши продукты широко используются в различных промышленных областях по всему миру.',
-                'applications.psa_title': 'PSA Кислород',
-                'applications.psa_desc': 'Системы генерации кислорода и разделения воздуха.',
-                'applications.gas_title': 'Осушка природного газа',
-                'applications.gas_desc': 'Решения для глубокой осушки и сероочистки.',
-                'applications.air_title': 'Сжатый воздух',
-                'applications.air_desc': 'Промышленные системы очистки сжатого воздуха.',
-                'applications.petro_title': 'Нефтехимия',
-                'applications.petro_desc': 'Очистка газов и каталитическая осушка.',
-                'applications.hydrogen_title': 'Очистка водорода',
-                'applications.hydrogen_desc': 'PSA водород и промышленное разделение газов.',
-                'applications.electronics_title': 'Электронная промышленность',
-                'applications.electronics_desc': 'Контроль влажности и осушка для прецизионных отраслей.',
-                'about.title': 'О компании China Adsorbents',
-                'about.p1': 'China Adsorbents - профессиональный поставщик молекулярных сит, продуктов из активированного глинозема и керамических шариков для промышленной осушки, очистки и разделения газов.',
-                'about.p2': 'Наши продукты широко используются в системах PSA кислорода, генераторах азота, осушителях сжатого воздуха, нефтехимических установках и системах осушки природного газа.',
-                'about.p3': 'Мы обеспечиваем стабильное качество, конкурентоспособные цены, поддержку OEM и мировую доставку для глобальных клиентов.',
-                'about.feature1': '✔ Стабильный контроль качества',
-                'about.feature2': '✔ Быстрая мировая доставка',
-                'about.feature3': '✔ OEM и индивидуальная упаковка',
-                'about.feature4': '✔ Профессиональная техническая поддержка',
-                'inquiry.title': 'Отправить запрос',
-                'inquiry.subtitle': 'Свяжитесь с нами для получения цен, технической поддержки и решений по продукции.',
-                'form.name': 'Ваше имя',
-                'form.email': 'Электронная почта',
-                'form.whatsapp': 'WhatsApp',
-                'form.product': 'Интересующий продукт',
-                'form.message': 'Детали запроса',
-                'form.submit': 'Отправить запрос',
-                'contact.title': 'Свяжитесь с нами',
-                'contact.question': 'Ищете надежные адсорбенты, керамические шарики и решения для осушки?',
-                'contact.whatsapp': 'Чат в WhatsApp',
-                'footer': '© 2026 China Adsorbents. Все права защищены.'
+                'nav.products': 'Продукты', 'nav.applications': 'Применение', 'nav.about': 'О Нас', 'nav.inquiry': 'Запрос', 'nav.contact': 'Контакты',
+                'hero.title': 'Промышленные Адсорбенты и Решения для Сушки', 'hero.subtitle': 'Профессиональный поставщик молекулярных сит и активированного глинозема для систем PSA кислорода, разделения воздуха, осушки природного газа и промышленной очистки.', 'hero.getQuote': 'Получить Предложение', 'hero.whatsapp': 'WhatsApp',
+                'products.title': 'Наши Продукты', 'products.subtitle': 'Высокоэффективные адсорбенты и осушители для промышленной сушки, очистки и применения в газоразделении.',
+                'products.3a': 'Подходит для осушки ненасыщенных углеводородов, дегидратации этанола и нефтехимических применений.', 
+                'products.4a': 'Широко используется для осушки воздуха, хладагентов, растворителей и систем осушки газов.', 
+                'products.5a': 'Применяется в системах водорода PSA, очистке воздуха и промышленной осушке газов.', 
+                'products.13x': 'Идеально для установок разделения воздуха, удаления CO₂ и очистки природного газа.', 
+                'products.alumina': 'Активированный глинозем с высокой адсорбцией для сжатого воздуха и систем PSA.',
+                'products.ceramic': 'Используется как катализаторная подложка и покрывающий материал в реакторах и насадках колонн.',
+                'products.viewTDS': 'Смотреть TDS →', 'products.requestQuote': 'Запросить Цену →',
+                'products.more': 'Ищете другие спецификации или индивидуальные решения? Свяжитесь с нами для получения дополнительных продуктов и услуг OEM.',
+                'applications.title': 'Применение', 'applications.subtitle': 'Наши продукты широко используются в различных промышленных областях по всему миру.',
+                'applications.psa': 'Генерация кислорода и системы разделения воздуха.', 'applications.gas': 'Решения для глубокой осушки и десульфурации.', 'applications.air': 'Системы очистки промышленного сжатого воздуха.', 'applications.petro': 'Очистка газа и применение каталитической сушки.',
+                'about.title': 'О China Adsorbents', 'about.p1': 'China Adsorbents — профессиональный поставщик молекулярных сит и продуктов из активированного глинозема для промышленной сушки, очистки и разделения газов.', 'about.p2': 'Наши продукты широко используются в системах PSA кислорода, генераторах азота, осушителях сжатого воздуха, нефтехимических установках и системах дегидратации природного газа.', 'about.feature1': '✔ Стабильный Контроль Качества', 'about.feature2': '✔ Быстрая Доставка по Миру', 'about.feature3': '✔ OEM и Индивидуальная Упаковка', 'about.feature4': '✔ Профессиональная Техническая Поддержка',
+                'inquiry.title': 'Отправить Запрос', 'inquiry.subtitle': 'Свяжитесь с нами для получения цен, технической поддержки и решений по продуктам.',
+                'form.name': 'Ваше Имя', 'form.email': 'Адрес Электронной Почты', 'form.whatsapp': 'WhatsApp', 'form.product': 'Интересующий Продукт', 'form.message': 'Детали Запроса', 'form.submit': 'Отправить Запрос',
+                'contact.title': 'Свяжитесь с Нами', 'contact.question': 'Ищете надежные адсорбенты и решения для сушки?', 'contact.whatsapp': 'Чат в WhatsApp',
+                'footer': '© 2026 China Adsorbents. Все Права Защищены.'
             }
         };
 
-        // 语言切换功能
         function switchLanguage(lang) {
             if (!translations[lang]) return;
+            localStorage.setItem('preferredLang', lang);
+            document.documentElement.lang = lang;
             
-            // 更新所有有data-key属性的元素
-            document.querySelectorAll('[data-key]').forEach(element => {
-                const key = element.getAttribute('data-key');
+            document.querySelectorAll('[data-key]').forEach(el => {
+                const key = el.getAttribute('data-key');
                 if (translations[lang][key]) {
-                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                        element.setAttribute('placeholder', translations[lang][key]);
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        el.placeholder = translations[lang][key];
                     } else {
-                        element.textContent = translations[lang][key];
+                        el.textContent = translations[lang][key];
                     }
                 }
             });
             
-            // 更新下拉菜单选择
             document.getElementById('languageSelect').value = lang;
-            
-            // 更新HTML语言属性
-            document.documentElement.setAttribute('lang', lang);
-            
-            // 保存语言偏好
-            localStorage.setItem('preferredLang', lang);
         }
 
-        // 初始化语言切换
         document.addEventListener('DOMContentLoaded', () => {
-            const languageSelect = document.getElementById('languageSelect');
-            
-            // 监听下拉菜单变化
-            languageSelect.addEventListener('change', (e) => {
-                const lang = e.target.value;
-                switchLanguage(lang);
+            document.getElementById('languageSelect').addEventListener('change', (e) => {
+                switchLanguage(e.target.value);
             });
             
-            // 从localStorage加载语言偏好
             const savedLang = localStorage.getItem('preferredLang') || 'en';
-            languageSelect.value = savedLang;
             switchLanguage(savedLang);
         });
     </script>
