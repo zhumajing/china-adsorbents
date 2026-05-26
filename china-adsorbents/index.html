@@ -3,829 +3,349 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>China Adsorbents | Molecular Sieve & Activated Alumina Supplier</title>
+    <title data-i18n="site_title">China Adsorbents | Molecular Sieve & Activated Alumina Supplier</title>
     <meta name="description" content="Professional supplier of molecular sieve and activated alumina for PSA oxygen, air separation, natural gas drying and industrial purification systems.">
     <link rel="preconnect" href="https://googleapis.com">
-    <link rel="stylesheet" href="https://googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://googleapis.com">
     <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:'Inter',sans-serif;
-    background:#f4f7fb;
-    color:#222;
-    line-height:1.6;
-}
-
-a{
-    text-decoration:none;
-}
-
-img{
-    max-width:100%;
-    display:block;
-}
-.about-image img {
-    width: 100% !important;
-    height: auto !important;
-    display: block !important;
-    max-width: 500px !important;
-    margin: 0 auto;
-}
-/* 限制所有产品卡片内的表格图片，使其完美缩进框内 */
-.product-card img {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    display: block !important;
-    margin: 0 auto 15px auto;
-}
-   
-.container{
-    width:90%;
-    max-width:1300px;
-    margin:auto;
-}
-
-/* HEADER */
-
-header{
-    background:#071926;
-    position:sticky;
-    top:0;
-    z-index:999;
-    box-shadow:0 2px 10px rgba(0,0,0,0.2);
-}
-
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 0;
-}
-
-.logo{
-    color:#fff;
-    font-size:28px;
-    font-weight:800;
-}
-
-.logo span{
-    color:#2ec4ff;
-}
-
-.nav-links{
-    display:flex;
-    gap:30px;
-}
-
-.nav-links a{
-    color:#fff;
-    font-weight:500;
-    transition:0.3s;
-}
-
-.nav-links a:hover{
-    color:#2ec4ff;
-}
-
-/* HERO */
-
-.hero{
-    background:
-    linear-gradient(rgba(6,20,34,0.82),rgba(6,20,34,0.82)),
-    url("./banner.png");
-    background-size:cover;
-    background-position:center;
-    color:#fff;
-    padding:140px 0;
-}
-
-.hero-content{
-    max-width:760px;
-}
-
-.hero h1{
-    font-size:64px;
-    line-height:1.1;
-    margin-bottom:25px;
-    font-weight:800;
-}
-
-.hero p{
-    color:#d9e4ee;
-    font-size:20px;
-    margin-bottom:40px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    padding:16px 32px;
-    border-radius:10px;
-    font-weight:700;
-    display:inline-block;
-    transition:0.3s;
-}
-
-.btn-primary{
-    background:#2ec4ff;
-    color:#071926;
-}
-
-.btn-primary:hover{
-    background:#fff;
-}
-
-.btn-outline{
-    border:2px solid #fff;
-    color:#fff;
-}
-
-.btn-outline:hover{
-    background:#fff;
-    color:#071926;
-}
-
-/* SECTION */
-
-section{
-    padding:90px 0;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:60px;
-}
-
-.section-title h2{
-    font-size:42px;
-    margin-bottom:15px;
-    color:#071926;
-}
-
-.section-title p{
-    color:#666;
-    max-width:700px;
-    margin:auto;
-}
-
-/* PRODUCTS */
-
-.products-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
-}
-
-.product-card{
-    background:#fff;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 5px 25px rgba(0,0,0,0.08);
-    transition:0.3s;
-}
-
-.product-card:hover{
-    transform:translateY(-8px);
-}
-
-.product-card img{
-    width:100%;
-    height:240px;
-    object-fit:cover;
-}
-
-.product-content{
-    padding:25px;
-}
-
-.product-content h3{
-    margin-bottom:12px;
-    color:#071926;
-}
-
-.product-content p{
-    color:#666;
-    font-size:15px;
-}
-
-/* APPLICATIONS */
-
-.applications{
-    background:#071926;
-    color:#fff;
-}
-
-.applications .section-title h2{
-    color:#fff;
-}
-
-.applications .section-title p{
-    color:#c1d0db;
-}
-
-.app-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-}
-
-.app-card{
-    background:#10293d;
-    border-radius:16px;
-    padding:30px;
-    transition:0.3s;
-}
-
-.app-card:hover{
-    background:#15364f;
-}
-
-.app-card h4{
-    color:#2ec4ff;
-    margin-bottom:12px;
-}
-
-/* ABOUT */
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:center;
-}
-
-.about-image img{
-    border-radius:18px;
-}
-
-.about-text h2{
-    font-size:42px;
-    margin-bottom:20px;
-    color:#071926;
-}
-
-.about-text p{
-    margin-bottom:18px;
-    color:#555;
-}
-
-.feature{
-    margin-bottom:12px;
-    font-weight:600;
-}
-
-/* INQUIRY */
-
-.inquiry-wrapper{
-    max-width:850px;
-    margin:auto;
-    background:#fff;
-    padding:50px;
-    border-radius:20px;
-    box-shadow:0 5px 25px rgba(0,0,0,0.08);
-}
-
-.form-group{
-    margin-bottom:22px;
-}
-
-.form-group label{
-    display:block;
-    margin-bottom:8px;
-    font-weight:600;
-}
-
-.form-control{
-    width:100%;
-    padding:15px;
-    border:1px solid #d9d9d9;
-    border-radius:10px;
-    font-size:16px;
-}
-
-textarea.form-control{
-    resize:none;
-}
-
-.submit-btn{
-    background:#071926;
-    color:#fff;
-    border:none;
-    padding:16px 34px;
-    border-radius:10px;
-    font-size:16px;
-    font-weight:700;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.submit-btn:hover{
-    background:#0f2f47;
-}
-
-/* CONTACT */
-
-.contact-box{
-    background:#071926;
-    color:#fff;
-    border-radius:20px;
-    padding:60px;
-    text-align:center;
-}
-
-.contact-box h2{
-    font-size:42px;
-    margin-bottom:20px;
-}
-
-.contact-box p{
-    margin-bottom:12px;
-    font-size:18px;
-}
-
-/* FOOTER */
-
-footer{
-    background:#05131d;
-    color:#c4d0d9;
-    text-align:center;
-    padding:25px 0;
-    font-size:14px;
-}
-
-/* WHATSAPP */
-
-.whatsapp{
-    position:fixed;
-    right:25px;
-    bottom:25px;
-    width:65px;
-    height:65px;
-    border-radius:50%;
-    background:#25d366;
-    color:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:30px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.25);
-    z-index:999;
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-    .hero h1{
-        font-size:42px;
-    }
-
-    .about-grid{
-        grid-template-columns:1fr;
-    }
-
-    .nav-links{
-        display:none;
-    }
-
-    .contact-box{
-        padding:40px 25px;
-    }
-
-    .inquiry-wrapper{
-        padding:35px 25px;
-    }
-
-}
-
-</style>
-
+        /* ==========================================
+           1. 基础全局样式（保留你原本的所有排版）
+           ========================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f4f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* 🛠️ 彻底修复：限制产品网格中超宽参数表格图，防止手机端溢出 */
+        .product-card img {
+            width: 100% !important;
+            max-width: 100% !important;
+            height: auto !important;
+            display: block !important;
+            margin: 0 auto 15px auto;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        /* ==========================================
+           2. 顶部导航与六国语言下拉菜单美化
+           ========================================== */
+        header {
+            background: #071926;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+        }
+        .logo {
+            color: #fff;
+            font-size: 28px;
+            font-weight: 800;
+        }
+        .logo span {
+            color: #2ec4ff;
+        }
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        .nav-links a {
+            color: #fff;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        .nav-links a:hover {
+            color: #2ec4ff;
+        }
+
+        /* 🌟 高级多国语言下拉选择框美化 */
+        .lang-select-box select {
+            padding: 6px 12px;
+            border-radius: 6px;
+            background: #10293d;
+            color: #fff;
+            border: 1px solid #2ec4ff;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            outline: none;
+            transition: 0.2s;
+        }
+        .lang-select-box select:hover {
+            background: #15364f;
+            border-color: #fff;
+        }
+
+        /* ==========================================
+           3. 主体板块样式
+           ========================================== */
+        .hero {
+            background: linear-gradient(rgba(6,20,34,0.82),rgba(6,20,34,0.82)), url("./banner.png");
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 140px 0;
+        }
+        .hero-content {
+            max-width: 760px;
+        }
+        .hero h1 {
+            font-size: 64px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            font-weight: 800;
+        }
+        .hero p {
+            color: #d9e4ee;
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 16px 32px;
+            border-radius: 10px;
+            font-weight: 700;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .btn-primary {
+            background: #2ec4ff;
+            color: #071926;
+        }
+        .btn-primary:hover {
+            background: #fff;
+        }
+        .btn-outline {
+            border: 2px solid #fff;
+            color: #fff;
+        }
+        .btn-outline:hover {
+            background: #fff;
+            color: #071926;
+        }
+
+        section {
+            padding: 90px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .section-title h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: #071926;
+        }
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* 产品展示网格 */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+            gap: 30px;
+        }
+        .product-card {
+            background: #fff;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+        }
+        .product-content {
+            padding: 25px;
+        }
+        .product-content h3 {
+            margin-bottom: 12px;
+            color: #071926;
+        }
+        .product-content p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        /* 行业应用 */
+        .applications {
+            background: #071926;
+            color: #fff;
+        }
+        .applications .section-title h2 { color: #fff; }
+        .applications .section-title p { color: #c1d0db; }
+        
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+            gap: 25px;
+        }
+        .app-card {
+            background: #10293d;
+            border-radius: 16px;
+            padding: 30px;
+            transition: 0.3s;
+        }
+        .app-card:hover { background: #15364f; }
+        .app-card h4 { color: #2ec4ff; margin-bottom: 12px; }
+
+        /* 关于我们区域 */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .about-image img {
+            border-radius: 18px;
+            width: 100% !important;
+            height: auto !important;
+            max-width: 500px !important;
+            margin: 0 auto;
+        }
+        .about-text h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #071926;
+        }
+        .about-text p {
+            margin-bottom: 18px;
+            color: #555;
+        }
+        .feature {
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        /* 询盘表单 */
+        .inquiry-wrapper {
+            max-width: 850px;
+            margin: auto;
+            background: #fff;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+        .form-group { margin-bottom: 22px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; }
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #d9d9d9;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+        textarea.form-control { resize: none; }
+        .submit-btn {
+            background: #071926;
+            color: #fff;
+            border: none;
+            padding: 16px 34px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .submit-btn:hover { background: #0f2f47; }
+
+        /* 联系卡片与页脚 */
+        .contact-box {
+            background: #071926;
+            color: #fff;
+            border-radius: 20px;
+            padding: 60px;
+            text-align: center;
+        }
+        .contact-box h2 { font-size: 42px; margin-bottom: 20px; }
+        .contact-box p { margin-bottom: 12px; font-size: 18px; }
+        
+        footer {
+            background: #05131d;
+            color: #c4d0d9;
+            text-align: center;
+            padding: 25px 0;
+            font-size: 14px;
+        }
+        .whatsapp {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: #25d366;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+            z-index: 999;
+        }
+
+        /* 移动端自适应 */
+        @media(max-width:900px){
+            .hero h1 { font-size: 42px; }
+            .about-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .contact-box { padding: 40px 25px; }
+            .inquiry-wrapper { padding: 35px 25px; }
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- HEADER -->
-
-<header>
-
-<div class="container navbar">
-
-<div class="logo">
-China<span>Adsorbents</span>
-</div>
-
-<div class="nav-links">
-<a href="#products">Products</a>
-<a href="#applications">Applications</a>
-<a href="#about">About</a>
-<a href="#inquiry">Inquiry</a>
-<a href="#contact">Contact</a>
-</div>
-
-</div>
-
-</header>
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="container">
-
-<div class="hero-content">
-
-<h1>
-Industrial Adsorbents & Drying Solutions
-</h1>
-
-<p>
-Professional supplier of Molecular Sieve and Activated Alumina
-for PSA Oxygen, Air Separation, Natural Gas Drying and
-Industrial Purification Systems.
-</p>
-
-<div class="hero-buttons">
-
-<a href="#inquiry" class="btn btn-primary">
-Get A Quote
-</a>
-
-<a href="https://wa.me/8613701931410" class="btn btn-outline">
-WhatsApp Us
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- PRODUCTS -->
-
-<section id="products">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Our Products</h2>
-
-<p>
-High performance adsorbents and desiccants for industrial drying,
-purification and gas separation applications.
-</p>
-
-</div>
-
-<div class="products-grid">
-
-<div class="product-card">
-
-<img src="3A.png" alt="3A Molecular Sieve">
-
-<div class="product-content">
-
-<h3>3A Molecular Sieve</h3>
-
-<p>
-Suitable for drying unsaturated hydrocarbons,
-ethanol dehydration and petrochemical applications.
-</p>
-
-</div>
-
-</div>
-
-<div class="product-card">
-
-<img src="4A.png" alt="4A Molecular Sieve">
-
-<div class="product-content">
-
-<h3>4A Molecular Sieve</h3>
-
-<p>
-Widely used for air drying, refrigerants,
-solvents and gas dehydration systems.
-</p>
-
-</div>
-
-</div>
-
-<div class="product-card">
-
-<img src="5A.png" alt="5A Molecular Sieve">
-
-<div class="product-content">
-
-<h3>5A Molecular Sieve</h3>
-
-<p>
-Applied in PSA hydrogen systems,
-air purification and industrial gas drying.
-</p>
-
-</div>
-
-</div>
-
-<div class="product-card">
-
-<img src="13X.png" alt="13X Molecular Sieve">
-
-<div class="product-content">
-
-<h3>13X Molecular Sieve</h3>
-
-<p>
-Ideal for air separation plants,
-CO₂ removal and natural gas purification.
-</p>
-
-</div>
-
-</div>
-
-<div class="product-card">
-
-<img src="alumina.png" alt="Activated Alumina">
-
-<div class="product-content">
-
-<h3>Activated Alumina</h3>
-
-<p>
-High adsorption activated alumina
-for compressed air and PSA systems.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- APPLICATIONS -->
-
-<section class="applications" id="applications">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Applications</h2>
-
-<p>
-Our products are widely used in multiple industrial fields worldwide.
-</p>
-
-</div>
-
-<div class="app-grid">
-
-<div class="app-card">
-<h4>PSA Oxygen</h4>
-<p>Oxygen generation and air separation systems.</p>
-</div>
-
-<div class="app-card">
-<h4>Natural Gas Drying</h4>
-<p>Deep dehydration and desulfurization solutions.</p>
-</div>
-
-<div class="app-card">
-<h4>Compressed Air</h4>
-<p>Industrial compressed air purification systems.</p>
-</div>
-
-<div class="app-card">
-<h4>Petrochemical</h4>
-<p>Gas purification and catalytic drying applications.</p>
-</div>
-
-<div class="app-card">
-<h4>Hydrogen Purification</h4>
-<p>PSA hydrogen and industrial gas separation.</p>
-</div>
-
-<div class="app-card">
-<h4>Electronics Industry</h4>
-<p>Moisture control and drying for precision industries.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section id="about">
-
-<div class="container">
-
-<div class="about-grid">
-
-<div class="about-image">
-<img src="./banner.png" alt="China Adsorbents">
-</div>
-
-<div class="about-text">
-
-<h2>About China Adsorbents</h2>
-
-<p>
-China Adsorbents is a professional supplier of
-molecular sieve and activated alumina products
-for industrial drying, purification and gas separation.
-</p>
-
-<p>
-Our products are widely used in PSA oxygen systems,
-nitrogen generators, compressed air dryers,
-petrochemical plants and natural gas dehydration systems.
-</p>
-
-<p>
-We provide stable quality, competitive pricing,
-OEM support and worldwide delivery for global customers.
-</p>
-
-<div class="feature">✔ Stable Quality Control</div>
-<div class="feature">✔ Fast Worldwide Delivery</div>
-<div class="feature">✔ OEM & Custom Packaging</div>
-<div class="feature">✔ Professional Technical Support</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- INQUIRY -->
-
-<section id="inquiry">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Send Inquiry</h2>
-
-<p>
-Contact us for pricing, technical support and product solutions.
-</p>
-
-</div>
-
-<div class="inquiry-wrapper">
-
-<form action="https://formsubmit.co/zhumajing@gmail.com" method="POST">
-
-<input type="hidden" name="_captcha" value="false">
-
-<input type="hidden" name="_subject"
-value="New Inquiry From China Adsorbents Website">
-
-<div class="form-group">
-
-<label>Your Name</label>
-
-<input type="text" name="name" class="form-control" required>
-
-</div>
-
-<div class="form-group">
-
-<label>Email Address</label>
-
-<input type="email" name="email" class="form-control" required>
-
-</div>
-
-<div class="form-group">
-
-<label>WhatsApp</label>
-
-<input type="text" name="whatsapp" class="form-control">
-
-</div>
-
-<div class="form-group">
-
-<label>Product Interested</label>
-
-<select name="product" class="form-control">
-
-<option>3A Molecular Sieve</option>
-<option>4A Molecular Sieve</option>
-<option>5A Molecular Sieve</option>
-<option>13X Molecular Sieve</option>
-<option>Activated Alumina</option>
-
-</select>
-
-</div>
-
-<div class="form-group">
-
-<label>Inquiry Details</label>
-
-<textarea
-name="message"
-rows="6"
-class="form-control"
-required></textarea>
-
-</div>
-
-<button type="submit" class="submit-btn">
-Send Inquiry
-</button>
-
-</form>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-<div class="container">
-
-<div class="contact-box">
-
-<h2>Contact Us</h2>
-
-<p>
-Looking for reliable adsorbents and drying solutions?
-</p>
-
-<p>
-WhatsApp: +86 13701931410
-</p>
-
-<p>
-Email: zhumajing@gmail.com
-</p>
-
-<br>
-
-<a href="https://wa.me/8613701931410"
-class="btn btn-primary">
-Chat On WhatsApp
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-© 2026 China Adsorbents. All Rights Reserved.
-
-</footer>
-
-<!-- WHATSAPP -->
-
-<a class="whatsapp"
-href="https://wa.me/8613701931410">
-☎
-</a>
-
-</body>
-
-</html>
+    <!-- 导航栏区域 -->
+    <header>
+        <div class="container navbar">
+            <div class="logo">
+                China<span>Adsorbents</span>
+            </div>
+            <div class="nav-container">
+                <div class="nav-links">
+                    <a href="#products" data-i18n="nav_prod">Products</a>
+                    <a href="#applications" data-i18n="nav_app">Applications</a>
+                    <a href="#about" data-i18n="nav_about">About</a>
+                    <a href="#inquiry" data-i18n="nav_inq">Inquiry</a>
+                    <a href="#contact" data-i18n="nav_cont">Contact</a>
+                </div>
