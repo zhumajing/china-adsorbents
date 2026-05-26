@@ -38,36 +38,63 @@ th{padding:12px 14px;background:#2ec4ff;color:#fff;text-align:center}
 th[scope="row"]{background:none;color:#222;text-align:left}
 td{padding:12px 14px;text-align:center;border:1px solid #d9e1ea}
 tr:nth-child(even) td{background:#f4f7fa}
+/* 保持样式一致，为新增的H2和列表配置基础外观 */
+h2{font-size:20px;color:#071926;margin:36px 0 12px;border-left:4px solid #2ec4ff;padding-left:10px}
+ul{padding-left:20px;margin-bottom:20px;}
+li{margin-bottom:8px;}
 </style>
 </head>
 <body>
 <div class="container">
   <a class="back" href="/#products">← Back to Products</a>
   <h1>13X Molecular Sieve JZ‑ZMS9 — Technical Data Sheet</h1>
-  <p class="sub">Sodium aluminosilicate; pore opening ≤ <strong>9 Å</strong>. Ideal for air separation plants, <strong>CO₂ removal</strong>, natural gas purification.</p>
+  <p class="sub">Sodium aluminosilicate; pore opening ≤ <strong>9 Å</strong>. Description: JZ-ZMS9 is Sodium aluminosilicate. It could absorb the molecular which diameter is not more than 9 angstroms.</p>
 
+  <!-- 优化双层表头的 TDS 表格 -->
   <table>
     <caption>Typical Physical Properties</caption>
     <thead>
       <tr>
-        <th scope="col">Property</th>
-        <th scope="col">Unit</th>
-        <th scope="col">Sphere 1.6–2.5 mm</th>
-        <th scope="col">Sphere 3–5 mm</th>
-        <th scope="col">Cylinder 1/16″</th>
-        <th scope="col">Cylinder 1/8″</th>
+        <th scope="col" rowspan="2">Property</th>
+        <th scope="col" rowspan="2">Unit</th>
+        <th scope="col" colspan="2">Sphere</th>
+        <th scope="col" colspan="2">Cylinder</th>
+      </tr>
+      <tr>
+        <th scope="col">1.6–2.5 mm</th>
+        <th scope="col">3–5 mm</th>
+        <th scope="col">1/16″</th>
+        <th scope="col">1/8″</th>
       </tr>
     </thead>
     <tbody>
       <tr><th scope="row">Diameter</th><td>mm</td><td>1.6–2.5</td><td>3–5</td><td>1/16″</td><td>1/8″</td></tr>
-      <tr><th scope="row">Static Water Adsorption (RT)</th><td>≥ %</td><td>26.5</td><td>26.5</td><td>26</td><td>26</td></tr>
-      <tr><th scope="row">CO₂ Adsorption (25°C, 0.1 bar)</th><td>≥ %</td><td>17.5</td><td>17.5</td><td>17.5</td><td>17.5</td></tr>
-      <tr><th scope="row">Bulk Density</th><td>≥ g/ml</td><td>0.64</td><td>0.62</td><td>0.62</td><td>0.62</td></tr>
-      <tr><th scope="row">Crushing Strength</th><td>≥ N/pc</td><td>25</td><td>80</td><td>25</td><td>50</td></tr>
-      <tr><th scope="row">Attrition Rate</th><td>≤ %</td><td>0.2</td><td>0.2</td><td>0.2</td><td>0.2</td></tr>
-      <tr><th scope="row">Package Moisture</th><td>≤ %</td><td>1.5</td><td>1.5</td><td>1.5</td><td>1.5</td></tr>
+      <tr><th scope="row">Static Water Adsorption (RT)</th><td>&ge; %</td><td>26.5</td><td>26.5</td><td>26</td><td>26</td></tr>
+      <tr><th scope="row">CO₂ Adsorption (25°C, 0.1 bar)</th><td>&ge; %</td><td>17.5</td><td>17.5</td><td>17.5</td><td>17.5</td></tr>
+      <tr><th scope="row">Bulk Density</th><td>&ge; g/ml</td><td>0.64</td><td>0.62</td><td>0.62</td><td>0.62</td></tr>
+      <tr><th scope="row">Crushing Strength</th><td>&ge; N/pc</td><td>25</td><td>80</td><td>25</td><td>50</td></tr>
+      <tr><th scope="row">Attrition Rate</th><td>&le; %</td><td>0.2</td><td>0.2</td><td>0.2</td><td>0.2</td></tr>
+      <tr><th scope="row">Package Moisture</th><td>&le; %</td><td>1.5</td><td>1.5</td><td>1.5</td><td>1.5</td></tr>
     </tbody>
   </table>
+
+  <!-- 应用说明 -->
+  <h2>Typical Applications</h2>
+  <ul>
+    <li>Purification of gas in air separation plant, removal of H₂O, CO₂ and hydrocarbons.</li>
+    <li>Dehydration and desulfurization (removal of H₂S and mercaptan, etc.) of natural gas, LNG, and liquid alkanes (propane, butane, etc.).</li>
+    <li>Deep drying of general gases (e.g. compressed air, permanent gas).</li>
+    <li>Drying and purification of synthetic ammonia.</li>
+    <li>Desulfurization and deodorization of Aerosol.</li>
+    <li>CO₂ removal from pyrolysis gas.</li>
+  </ul>
+
+  <!-- 包装信息 -->
+  <h2>Packaging Options</h2>
+  <ul>
+    <li><strong>25 KG Composite Paper Bags:</strong> Standard option for general industrial orders, easy to handle, store, and stack in warehouses.</li>
+    <li><strong>140 KG Galvanized Iron Drums:</strong> Highly recommended for long-term storage or transoceanic export shipments to provide ultimate protection against moisture, air ingress, and physical damage during transit.</li>
+  </ul>
 </div>
 </body>
 </html>
