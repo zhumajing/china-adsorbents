@@ -13,33 +13,36 @@
         img { max-width: 100%; display: block; }
         .container { width: 90%; max-width: 1300px; margin: auto; }
         
-        /* Language Switcher */
+        /* Language Switcher - Dropdown */
         .lang-switcher {
             position: fixed;
             top: 20px;
             right: 20px;
             z-index: 1000;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            max-width: 300px;
-            justify-content: flex-end;
+            min-width: 120px;
         }
-        .lang-btn {
-            padding: 6px 12px;
+        .lang-select {
+            width: 100%;
+            padding: 10px 15px;
             background: #071926;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
             cursor: pointer;
-            font-weight: 500;
-            font-size: 12px;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            text-align: center;
             transition: 0.3s;
-            white-space: nowrap;
         }
-        .lang-btn:hover, .lang-btn.active {
-            background: #2ec4ff;
-            color: #071926;
+        .lang-select:hover {
+            background: #0f2f47;
+        }
+        .lang-select:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(46, 196, 255, 0.3);
         }
         
         /* Header */
@@ -213,21 +216,23 @@
             .nav-links { display: none; }
             .contact-box { padding: 40px 25px; }
             .inquiry-wrapper { padding: 35px 25px; }
-            .lang-switcher { top: 10px; right: 10px; flex-wrap: wrap; }
-            .lang-btn { padding: 4px 8px; font-size: 11px; }
+            .lang-switcher { top: 10px; right: 10px; min-width: 110px; }
+            .lang-select { padding: 8px 12px; font-size: 13px; }
         }
     </style>
 </head>
 
 <body>
-    <!-- Language Switcher -->
+    <!-- Language Switcher - Dropdown -->
     <div class="lang-switcher">
-        <button class="lang-btn active" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="zh">中文</button>
-        <button class="lang-btn" data-lang="es">ES</button>
-        <button class="lang-btn" data-lang="de">DE</button>
-        <button class="lang-btn" data-lang="fr">FR</button>
-        <button class="lang-btn" data-lang="ru">RU</button>
+        <select class="lang-select" id="languageSelect">
+            <option value="en" selected>English</option>
+            <option value="zh">中文</option>
+            <option value="es">Español</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
+            <option value="ru">Русский</option>
+        </select>
     </div>
 
     <!-- Header -->
@@ -435,7 +440,7 @@
 
     <!-- JavaScript -->
     <script>
-        // 多语言内容定义
+        // 多语言内容定义（保持不变）
         const translations = {
             en: {
                 'nav.products': 'Products',
@@ -716,13 +721,8 @@
         };
 
         // 语言切换功能
-        let currentLang = 'en';
-        
-        // 切换语言
         function switchLanguage(lang) {
             if (!translations[lang]) return;
-            
-            currentLang = lang;
             
             // 更新所有有data-key属性的元素
             document.querySelectorAll('[data-key]').forEach(element => {
@@ -730,21 +730,14 @@
                 if (translations[lang][key]) {
                     if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                         element.setAttribute('placeholder', translations[lang][key]);
-                    } else if (element.tagName === 'OPTION') {
-                        // 保持产品选项不变
                     } else {
                         element.textContent = translations[lang][key];
                     }
                 }
             });
             
-            // 更新语言按钮状态
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.getAttribute('data-lang') === lang) {
-                    btn.classList.add('active');
-                }
-            });
+            // 更新下拉菜单选择
+            document.getElementById('languageSelect').value = lang;
             
             // 更新HTML语言属性
             document.documentElement.setAttribute('lang', lang);
@@ -753,19 +746,19 @@
             localStorage.setItem('preferredLang', lang);
         }
 
-        // 初始化语言切换按钮
+        // 初始化语言切换
         document.addEventListener('DOMContentLoaded', () => {
-            const langButtons = document.querySelectorAll('.lang-btn');
+            const languageSelect = document.getElementById('languageSelect');
             
-            langButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const lang = button.getAttribute('data-lang');
-                    switchLanguage(lang);
-                });
+            // 监听下拉菜单变化
+            languageSelect.addEventListener('change', (e) => {
+                const lang = e.target.value;
+                switchLanguage(lang);
             });
             
             // 从localStorage加载语言偏好
             const savedLang = localStorage.getItem('preferredLang') || 'en';
+            languageSelect.value = savedLang;
             switchLanguage(savedLang);
         });
     </script>
