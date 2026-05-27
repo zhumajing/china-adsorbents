@@ -3,37 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>China Adsorbents | Molecular Sieve & Activated Alumina Supplier</title>
-    <meta name="description" content="Professional supplier of molecular sieve and activated alumina for PSA oxygen, air separation, natural gas drying and industrial purification systems.">
     
+    <!-- ✅ SEO 核心优化 START -->
+    <title>China Adsorbents | Molecular Sieve & Activated Alumina Supplier</title>
+    <meta name="description" content="Professional supplier of 3A 4A 5A 13X molecular sieve and activated alumina for PSA oxygen, air separation, natural gas drying and industrial purification systems.">
+    <meta name="keywords" content="molecular sieve, activated alumina, psa oxygen, 13x molecular sieve, china supplier, gas drying">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    
+    <!-- Canonical URL (记得换成你的真实域名) -->
+    <link rel="canonical" href="https://yourdomain.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="China Adsorbents | Molecular Sieve Supplier">
+    <meta property="og:description" content="Professional supplier for PSA oxygen and gas drying. Get a free quote.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:image" content="https://yourdomain.com/banner.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://yourdomain.com/banner.png">
+    <!-- ✅ SEO 核心优化 END -->
+
     <style>
+        /* --- 样式部分保持不变，仅做微小优化 --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body { font-family: sans-serif; background: #f4f7fb; color: #222; line-height: 1.6; }
+        body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f4f7fb; color: #222; line-height: 1.6; }
         a { text-decoration: none; }
         img { max-width: 100%; display: block; }
         .container { width: 90%; max-width: 1300px; margin: auto; }
         
-        /* Language Switcher - 合并成单个下拉框 */
-        .lang-switcher {
-            position: fixed; top: 20px; right: 20px; z-index: 1000;
-        }
-        .lang-select {
-            padding: 8px 30px 8px 12px;
-            background: #071926;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-weight: 500;
-            font-size: 14px;
-            cursor: pointer;
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 8px center;
-        }
+        /* Language Switcher */
+        .lang-switcher { position: fixed; top: 20px; right: 20px; z-index: 1000; }
+        .lang-select { padding: 8px 30px 8px 12px; background: #071926; color: white; border: none; border-radius: 6px; font-weight: 500; font-size: 14px; cursor: pointer; appearance: none; -webkit-appearance: none; -moz-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 8px center; }
         
         /* Header */
         header { background: #071926; position: sticky; top: 0; z-index: 999; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
@@ -45,13 +48,7 @@
         .nav-links a:hover { color: #2ec4ff; }
         
         /* Hero */
-        .hero {
-            background: linear-gradient(rgba(6,20,34,0.82), rgba(6,20,34,0.82)), url("./banner.png");
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            padding: 140px 0;
-        }
+        .hero { background: linear-gradient(rgba(6,20,34,0.82), rgba(6,20,34,0.82)), url("./banner.png"); background-size: cover; background-position: center; color: #fff; padding: 140px 0; }
         .hero-content { max-width: 760px; }
         .hero h1 { font-size: 64px; line-height: 1.1; margin-bottom: 25px; font-weight: 800; }
         .hero p { color: #d9e4ee; font-size: 20px; margin-bottom: 40px; }
@@ -68,56 +65,23 @@
         .section-title h2 { font-size: 42px; margin-bottom: 15px; color: #071926; }
         .section-title p { color: #666; max-width: 700px; margin: auto; }
         
-        /* Products - 核心优化：图片完整显示 */
+        /* Products */
         .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
-        .product-card { 
-            background: #fff; 
-            border-radius: 18px; 
-            overflow: hidden; 
-            box-shadow: 0 5px 25px rgba(0,0,0,0.08); 
-            transition: 0.3s; 
-            display: flex; 
-            flex-direction: column;
-        }
+        .product-card { background: #fff; border-radius: 18px; overflow: hidden; box-shadow: 0 5px 25px rgba(0,0,0,0.08); transition: 0.3s; display: flex; flex-direction: column; }
         .product-card:hover { transform: translateY(-8px); }
-        
-        /* 关键优化：图片完整显示，不裁切 */
-        .product-card img { 
-            width: 100%; 
-            height: auto; 
-            max-height: 240px; /* 限制最大高度，避免过高 */
-            object-fit: contain; /* 完整显示图片，不裁切 */
-            object-position: center; /* 图片居中 */
-            margin: 0 auto; /* 水平居中 */
-            padding: 15px; /* 增加内边距，避免贴边 */
-            background: #f8f9fa; /* 浅色背景，突出图片 */
-        }
-        
-        .product-content { 
-            padding: 25px; 
-            flex-grow: 1; /* 让内容区域填充剩余空间 */
-            display: flex; 
-            flex-direction: column; 
-        }
+        .product-card img { width: 100%; height: auto; max-height: 240px; object-fit: contain; object-position: center; margin: 0 auto; padding: 15px; background: #f8f9fa; }
+        .product-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
         .product-content h3 { margin-bottom: 12px; color: #071926; }
         .product-content p { color: #666; font-size: 15px; flex-grow: 1; }
-        .tds-link { color: #2ec4ff; font-weight: 600; display: inline-block; margin-top: 15px; }
         
+        /* ✅ TDS Link 样式强化 */
+        .tds-link { color: #2ec4ff; font-weight: 600; display: inline-flex; align-items: center; margin-top: 15px; transition: 0.3s; }
+        .tds-link:hover { color: #071926; text-decoration: underline; }
+        .tds-link::before { content: "📄"; margin-right: 8px; } /* 添加文档图标 */
+
         /* More Products Notice */
-        .more-products-notice {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            background: #e8f4fc;
-            border-radius: 12px;
-            color: #071926;
-            font-weight: 600;
-            font-size: 18px;
-        }
-        .more-products-notice a {
-            color: #2ec4ff;
-            text-decoration: underline;
-        }
+        .more-products-notice { text-align: center; margin-top: 40px; padding: 20px; background: #e8f4fc; border-radius: 12px; color: #071926; font-weight: 600; font-size: 18px; }
+        .more-products-notice a { color: #2ec4ff; text-decoration: underline; }
         
         /* Applications */
         .applications { background: #071926; color: #fff; }
@@ -130,13 +94,7 @@
         
         /* About */
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-        .about-image img { 
-            border-radius: 18px; 
-            width: 100%; 
-            height: auto; 
-            object-fit: contain; /* 关于我们图片也完整显示 */
-            max-height: 400px; /* 限制高度 */
-        }
+        .about-image img { border-radius: 18px; width: 100%; height: auto; object-fit: contain; max-height: 400px; }
         .about-text h2 { font-size: 42px; margin-bottom: 20px; color: #071926; }
         .about-text p { margin-bottom: 18px; color: #555; }
         .feature { margin-bottom: 12px; font-weight: 600; }
@@ -156,9 +114,9 @@
         
         /* Footer & WhatsApp */
         footer { background: #05131d; color: #c4d0d9; text-align: center; padding: 25px 0; font-size: 14px; }
-        .whatsapp { position: fixed; right: 25px; bottom: 25px; width: 65px; height: 65px; border-radius: 50%; background: #25d366; color: #fff; display: flex; justify-content: center; align-items: center; font-size: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.25); z-index: 999; }
+        .whatsapp { position: fixed; right: 25px; bottom: 25px; width: 65px; height: 65px; border-radius: 50%; background: #25d366; color: #fff; display: flex; justify-content: center; align-items: center; font-size: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.25); z-index: 999; text-decoration: none;}
         
-        /* Responsive - 小屏幕优化 */
+        /* Responsive */
         @media (max-width: 900px) {
             .hero h1 { font-size: 42px; }
             .about-grid { grid-template-columns: 1fr; }
@@ -166,15 +124,8 @@
             .contact-box { padding: 40px 25px; }
             .inquiry-wrapper { padding: 35px 25px; }
             .lang-switcher { top: 10px; right: 10px; }
-            
-            /* 小屏幕下图片高度调整 */
-            .product-card img {
-                max-height: 180px;
-                padding: 10px;
-            }
-            .about-image img {
-                max-height: 300px;
-            }
+            .product-card img { max-height: 180px; padding: 10px; }
+            .about-image img { max-height: 300px; }
         }
     </style>
 </head>
@@ -234,6 +185,7 @@
                     <div class="product-content">
                         <h3>3A Molecular Sieve</h3>
                         <p data-key="products.3a">Suitable for drying unsaturated hydrocarbons, ethanol dehydration and petrochemical applications.</p>
+                        <!-- ✅ TDS 链接保留 -->
                         <a href="products/3a.html" class="tds-link" data-key="products.viewTDS">View TDS →</a>
                     </div>
                 </div>
@@ -274,19 +226,18 @@
                     </div>
                 </div>
                 <!-- Inert Ceramic Balls -->
-                <!-- Inert Ceramic Balls -->
-<div class="product-card">
-    <img src="inert-ceramic-balls.jpg" alt="Inert Ceramic Balls for Catalyst Support">
-    <div class="product-content">
-        <h3>Inert Ceramic Balls</h3>
-        <p data-key="products.ceramic">Used as catalyst support and covering materials in reactors and tower packing.</p>
-        <!-- ★ 已修改为指向 TDS 页面 -->
-        <a href="products/inert-ceramic-balls-tds.html" class="tds-link" data-key="products.viewTDS">View TDS →</a>
-    </div>
-</div>
+                <div class="product-card">
+                    <img src="inert-ceramic-balls.jpg" alt="Inert Ceramic Balls for Catalyst Support">
+                    <div class="product-content">
+                        <h3>Inert Ceramic Balls</h3>
+                        <p data-key="products.ceramic">Used as catalyst support and covering materials in reactors and tower packing.</p>
+                        <!-- ✅ 修正链接：指向具体的 TDS 页面 -->
+                        <a href="products/inert-ceramic-balls-tds.html" class="tds-link" data-key="products.viewTDS">View TDS →</a>
+                    </div>
+                </div>
             </div>
             
-            <!-- 更多产品请联系我们 -->
+            <!-- 更多产品提示 -->
             <div class="more-products-notice" data-key="products.more">
                 Looking for other specifications or custom solutions? <a href="#inquiry">Contact us</a> for more products and OEM services.
             </div>
@@ -393,7 +344,7 @@
         <span data-key="footer">© 2026 China Adsorbents. All Rights Reserved.</span>
     </footer>
 
-    <a class="whatsapp" href="https://wa.me/8613701931410">☎</a>
+    <a class="whatsapp" href="https://wa.me/8613701931410" aria-label="Chat on WhatsApp">☎</a>
 
     <!-- JavaScript -->
     <script>
@@ -438,8 +389,8 @@
                 'contact.title': '联系我们', 'contact.question': '寻找可靠的吸附剂和干燥解决方案？', 'contact.whatsapp': 'WhatsApp聊天',
                 'footer': '© 2026 中国吸附剂 版权所有'
             },
-            es: {
-                'nav.products': 'Productos', 'nav.applications': 'Aplicaciones', 'nav.about': 'Sobre Nosotros', 'nav.inquiry': 'Consulta', 'nav.contact': 'Contacto',
+            // ... (西班牙语、德语、法语、俄语翻译对象保持不变，为了节省篇幅这里省略，实际使用时请保留你原来的翻译数据) ...
+            es: {'nav.products': 'Productos', 'nav.applications': 'Aplicaciones', 'nav.about': 'Sobre Nosotros', 'nav.inquiry': 'Consulta', 'nav.contact': 'Contacto',
                 'hero.title': 'Soluciones Industriales de Adsorción y Secado', 'hero.subtitle': 'Proveedor profesional de tamices moleculares y alúmina activada para oxígeno PSA, separación de aire, secado de gas natural y sistemas de purificación industrial.', 'hero.getQuote': 'Obtener Cotización', 'hero.whatsapp': 'WhatsApp',
                 'products.title': 'Nuestros Productos', 'products.subtitle': 'Adsorbentes y desecantes de alto rendimiento para aplicaciones de secado, purificación y separación de gases industriales.',
                 'products.3a': 'Adecuado para secado de hidrocarburos insaturados, deshidratación de etanol y aplicaciones petroquímicas.', 
@@ -456,10 +407,7 @@
                 'inquiry.title': 'Enviar Consulta', 'inquiry.subtitle': 'Contáctenos para precios, soporte técnico y soluciones de productos.',
                 'form.name': 'Su Nombre', 'form.email': 'Correo Electrónico', 'form.whatsapp': 'WhatsApp', 'form.product': 'Producto de Interés', 'form.message': 'Detalles de la Consulta', 'form.submit': 'Enviar Consulta',
                 'contact.title': 'Contáctenos', 'contact.question': '¿Busca soluciones confiables de adsorción y secado?', 'contact.whatsapp': 'Chatear por WhatsApp',
-                'footer': '© 2026 China Adsorbents. Todos los derechos reservados.'
-            },
-            de: {
-                'nav.products': 'Produkte', 'nav.applications': 'Anwendungen', 'nav.about': 'Über Uns', 'nav.inquiry': 'Anfrage', 'nav.contact': 'Kontakt',
+                'footer': '© 2026 China Adsorbents. Todos los derechos reservados.'}, de: {'nav.products': 'Produkte', 'nav.applications': 'Anwendungen', 'nav.about': 'Über Uns', 'nav.inquiry': 'Anfrage', 'nav.contact': 'Kontakt',
                 'hero.title': 'Industrielle Adsorbentien & Trocknungslösungen', 'hero.subtitle': 'Professioneller Lieferant von Molekularsieben und aktiviertem Aluminiumoxid für PSA-Sauerstoff, Luftzerlegung, Erdgastrocknung und industrielle Reinigungssysteme.', 'hero.getQuote': 'Angebot Anfordern', 'hero.whatsapp': 'WhatsApp',
                 'products.title': 'Unsere Produkte', 'products.subtitle': 'Hochleistungs-Adsorbentien und Trocknungsmittel für industrielle Trocknung, Reinigung und Gasseparationsanwendungen.',
                 'products.3a': 'Geeignet für die Trocknung ungesättigter Kohlenwasserstoffe, Ethanol-Dehydratation und petrochemische Anwendungen.', 
@@ -476,10 +424,7 @@
                 'inquiry.title': 'Anfrage Senden', 'inquiry.subtitle': 'Kontaktieren Sie uns für Preise, technischen Support und Produktlösungen.',
                 'form.name': 'Ihr Name', 'form.email': 'E-Mail-Adresse', 'form.whatsapp': 'WhatsApp', 'form.product': 'Interessiertes Produkt', 'form.message': 'Anfragedetails', 'form.submit': 'Anfrage Senden',
                 'contact.title': 'Kontaktieren Sie Uns', 'contact.question': 'Suchen Sie nach zuverlässigen Adsorbentien und Trocknungslösungen?', 'contact.whatsapp': 'Über WhatsApp Chatten',
-                'footer': '© 2026 China Adsorbents. Alle Rechte vorbehalten.'
-            },
-            fr: {
-                'nav.products': 'Produits', 'nav.applications': 'Applications', 'nav.about': 'À Propos', 'nav.inquiry': 'Demande de Devis', 'nav.contact': 'Contact',
+                'footer': '© 2026 China Adsorbents. Alle Rechte vorbehalten.'}, fr: {'nav.products': 'Produits', 'nav.applications': 'Applications', 'nav.about': 'À Propos', 'nav.inquiry': 'Demande de Devis', 'nav.contact': 'Contact',
                 'hero.title': 'Solutions d\'Adsorption Industrielle & de Séchage', 'hero.subtitle': 'Fournisseur professionnel de tamis moléculaires et d\'alumine activée pour l\'oxygène PSA, la séparation de l\'air, le séchage du gaz naturel et les systèmes de purification industrielle.', 'hero.getQuote': 'Obtenir un Devis', 'hero.whatsapp': 'WhatsApp',
                 'products.title': 'Nos Produits', 'products.subtitle': 'Adsorbants et dessicants haute performance pour les applications de séchage industriel, de purification et de séparation de gaz.',
                 'products.3a': 'Convient au séchage des hydrocarbures insaturés, à la déshydratation de l\'éthanol et aux applications pétrochimiques.', 
@@ -496,10 +441,7 @@
                 'inquiry.title': 'Envoyer une Demande', 'inquiry.subtitle': 'Contactez-nous pour les prix, le support technique et les solutions de produits.',
                 'form.name': 'Votre Nom', 'form.email': 'Adresse E-mail', 'form.whatsapp': 'WhatsApp', 'form.product': 'Produit Intéressé', 'form.message': 'Détails de la Demande', 'form.submit': 'Envoyer la Demande',
                 'contact.title': 'Contactez-Nous', 'contact.question': 'Cherchez-vous des solutions fiables d\'adsorption et de séchage?', 'contact.whatsapp': 'Discuter sur WhatsApp',
-                'footer': '© 2026 China Adsorbents. Tous Droits Réservés.'
-            },
-            ru: {
-                'nav.products': 'Продукты', 'nav.applications': 'Применение', 'nav.about': 'О Нас', 'nav.inquiry': 'Запрос', 'nav.contact': 'Контакты',
+                'footer': '© 2026 China Adsorbents. Tous Droits Réservés.'}, ru: {'nav.products': 'Продукты', 'nav.applications': 'Применение', 'nav.about': 'О Нас', 'nav.inquiry': 'Запрос', 'nav.contact': 'Контакты',
                 'hero.title': 'Промышленные Адсорбенты и Решения для Сушки', 'hero.subtitle': 'Профессиональный поставщик молекулярных сит и активированного глинозема для систем PSA кислорода, разделения воздуха, осушки природного газа и промышленной очистки.', 'hero.getQuote': 'Получить Предложение', 'hero.whatsapp': 'WhatsApp',
                 'products.title': 'Наши Продукты', 'products.subtitle': 'Высокоэффективные адсорбенты и осушители для промышленной сушки, очистки и применения в газоразделении.',
                 'products.3a': 'Подходит для осушки ненасыщенных углеводородов, дегидратации этанола и нефтехимических применений.', 
@@ -516,9 +458,15 @@
                 'inquiry.title': 'Отправить Запрос', 'inquiry.subtitle': 'Свяжитесь с нами для получения цен, технической поддержки и решений по продуктам.',
                 'form.name': 'Ваше Имя', 'form.email': 'Адрес Электронной Почты', 'form.whatsapp': 'WhatsApp', 'form.product': 'Интересующий Продукт', 'form.message': 'Детали Запроса', 'form.submit': 'Отправить Запрос',
                 'contact.title': 'Свяжитесь с Нами', 'contact.question': 'Ищете надежные адсорбенты и решения для сушки?', 'contact.whatsapp': 'Чат в WhatsApp',
-                'footer': '© 2026 China Adsorbents. Все Права Защищены.'
-            }
+                'footer': '© 2026 China Adsorbents. Все Права Защищены.'}
         };
+
+        // 补全翻译对象（防止报错）
+        ['es', 'de', 'fr', 'ru'].forEach(lang => {
+            if (!translations[lang] || Object.keys(translations[lang]).length === 0) {
+                translations[lang] = translations['en']; // 如果没填，暂时用英文兜底
+            }
+        });
 
         function switchLanguage(lang) {
             if (!translations[lang]) return;
@@ -531,7 +479,7 @@
                     if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
                         el.placeholder = translations[lang][key];
                     } else {
-                        el.textContent = translations[lang][key];
+                        el.innerHTML = translations[lang][key];
                     }
                 }
             });
