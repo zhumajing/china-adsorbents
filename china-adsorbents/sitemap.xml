@@ -1,38 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- 首页（核心页面，优先级最高） -->
   <url>
     <loc>https://adsorb.ccwu.cc/</loc>
-    <lastmod>2026-05-27</lastmod>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- 产品TDS页（独立可抓取页面，优先级次之） -->
   <url>
-    <loc>https://adsorb.ccwu.cc/#products</loc>
-    <lastmod>2026-05-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://adsorb.ccwu.cc/#applications</loc>
-    <lastmod>2026-05-27</lastmod>
+    <loc>https://adsorb.ccwu.cc/products/3a.html</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://adsorb.ccwu.cc/#about</loc>
-    <lastmod>2026-05-27</lastmod>
+    <loc>https://adsorb.ccwu.cc/products/4a.html</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://adsorb.ccwu.cc/#inquiry</loc>
-    <lastmod>2026-05-27</lastmod>
+    <loc>https://adsorb.ccwu.cc/products/5a.html</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://adsorb.ccwu.cc/#contact</loc>
-    <lastmod>2026-05-27</lastmod>
+    <loc>https://adsorb.ccwu.cc/products/13x.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adsorb.ccwu.cc/products/alumina.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adsorb.ccwu.cc/products/inert-ceramic-balls-tds.html</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
