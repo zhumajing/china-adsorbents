@@ -208,8 +208,8 @@
                 <div class="product-card">
                     <img src="3A.png" alt="3A Molecular Sieve for Ethanol Dehydration">
                     <div class="product-content">
-                        <h3>3A Molecular Sieve</h3>
-                        <p data-key="products.3a">Suitable for drying unsaturated hydrocarbons, ethanol dehydration and petrochemical applications.</p>
+                        <h3 data-key="products.3a.title">3A Molecular Sieve</h3>
+                        <p data-key="products.3a.desc">Suitable for drying unsaturated hydrocarbons, ethanol dehydration and petrochemical applications.</p>
                         <a href="products/3a.html" class="tds-link" data-key="products.viewTDS">View TDS →</a>
                     </div>
                 </div>
@@ -217,8 +217,8 @@
                 <div class="product-card">
                     <img src="4A.png" alt="4A Molecular Sieve for Air Drying">
                     <div class="product-content">
-                        <h3>4A Molecular Sieve</h3>
-                        <p data-key="products.4a">Widely used for air drying, refrigerants, solvents and gas dehydration systems.</p>
+                        <h3 data-key="products.4a.title">4A Molecular Sieve</h3>
+                        <p data-key="products.4a.desc">Widely used for air drying, refrigerants, solvents and gas dehydration systems.</p>
                         <a href="products/4a.html" class="tds-link" data-key="products.viewTDS">View TDS →</a>
                     </div>
                 </div>
@@ -226,8 +226,8 @@
                 <div class="product-card">
                     <img src="5A.png" alt="5A Molecular Sieve for PSA Hydrogen">
                     <div class="product-content">
-                        <h3>5A Molecular Sieve</h3>
-                        <p data-key="products.5a">Applied in PSA hydrogen systems, air purification and industrial gas drying.</p>
+                        <h3 data-key="products.5a.title">5A Molecular Sieve</h3>
+                        <p data-key="products.5a.desc">Applied in PSA hydrogen systems, air purification and industrial gas drying.</p>
                         <a href="products/5a.html" class="tds-link" data-key="products.viewTDS">View TDS →</a>
                     </div>
                 </div>
@@ -235,8 +235,8 @@
                 <div class="product-card">
                     <img src="13X.png" alt="13X Molecular Sieve for CO2 Removal">
                     <div class="product-content">
-                        <h3>13X Molecular Sieve</h3>
-                        <p data-key="products.13x">Ideal for air separation plants, CO₂ removal and natural gas purification.</p>
+                        <h3 data-key="products.13x.title">13X Molecular Sieve</h3>
+                        <p data-key="products.13x.desc">Ideal for air separation plants, CO₂ removal and natural gas purification.</p>
                         <a href="products/13x.html" class="tds-link" data-key="products.viewTDS">View TDS →</a>
                     </div>
                 </div>
@@ -244,8 +244,8 @@
                 <div class="product-card">
                     <img src="alumina.png" alt="Activated Alumina for Compressed Air">
                     <div class="product-content">
-                        <h3>Activated Alumina</h3>
-                        <p data-key="products.alumina">High adsorption activated alumina for compressed air and PSA systems.</p>
+                        <h3 data-key="products.alumina.title">Activated Alumina</h3>
+                        <p data-key="products.alumina.desc">High adsorption activated alumina for compressed air and PSA systems.</p>
                         <a href="products/alumina.html" class="tds-link" data-key="products.viewTDS">View TDS →</a>
                     </div>
                 </div>
@@ -253,8 +253,8 @@
                 <div class="product-card">
                     <img src="inert-ceramic-balls.jpg" alt="Inert Ceramic Balls for Catalyst Support">
                     <div class="product-content">
-                        <h3>Inert Ceramic Balls</h3>
-                        <p data-key="products.ceramic">Used as catalyst support and covering materials in reactors and tower packing.</p>
+                        <h3 data-key="products.ceramic.title">Inert Ceramic Balls</h3>
+                        <p data-key="products.ceramic.desc">Used as catalyst support and covering materials in reactors and tower packing.</p>
                         <a href="products/inert-ceramic-balls-tds.html" class="tds-link" data-key="products.viewTDS">View TDS →</a>
                     </div>
                 </div>
@@ -329,13 +329,13 @@
                     </div>
                     <div class="form-group">
                         <label data-key="form.product">Product Interested</label>
-                        <select name="product" class="form-control">
-                            <option>3A Molecular Sieve</option>
-                            <option>4A Molecular Sieve</option>
-                            <option>5A Molecular Sieve</option>
-                            <option>13X Molecular Sieve</option>
-                            <option>Activated Alumina</option>
-                            <option>Inert Ceramic Balls</option>
+                        <select name="product" class="form-control" id="productSelect">
+                            <option data-key="products.3a.title">3A Molecular Sieve</option>
+                            <option data-key="products.4a.title">4A Molecular Sieve</option>
+                            <option data-key="products.5a.title">5A Molecular Sieve</option>
+                            <option data-key="products.13x.title">13X Molecular Sieve</option>
+                            <option data-key="products.alumina.title">Activated Alumina</option>
+                            <option data-key="products.ceramic.title">Inert Ceramic Balls</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -375,12 +375,12 @@
                 'nav.products': 'Products', 'nav.applications': 'Applications', 'nav.about': 'About', 'nav.inquiry': 'Inquiry', 'nav.contact': 'Contact',
                 'hero.title': 'Industrial Adsorbents & Drying Solutions', 'hero.subtitle': 'Professional supplier of Molecular Sieve and Activated Alumina for PSA Oxygen, Air Separation, Natural Gas Drying and Industrial Purification Systems.', 'hero.getQuote': 'Get A Quote', 'hero.whatsapp': 'WhatsApp Us',
                 'products.title': 'Our Products', 'products.subtitle': 'High performance adsorbents and desiccants for industrial drying, purification and gas separation applications.',
-                'products.3a': 'Suitable for drying unsaturated hydrocarbons, ethanol dehydration and petrochemical applications.', 
-                'products.4a': 'Widely used for air drying, refrigerants, solvents and gas dehydration systems.', 
-                'products.5a': 'Applied in PSA hydrogen systems, air purification and industrial gas drying.', 
-                'products.13x': 'Ideal for air separation plants, CO₂ removal and natural gas purification.', 
-                'products.alumina': 'High adsorption activated alumina for compressed air and PSA systems.',
-                'products.ceramic': 'Used as catalyst support and covering materials in reactors and tower packing.',
+                'products.3a.title': '3A Molecular Sieve', 'products.3a.desc': 'Suitable for drying unsaturated hydrocarbons, ethanol dehydration and petrochemical applications.',
+                'products.4a.title': '4A Molecular Sieve', 'products.4a.desc': 'Widely used for air drying, refrigerants, solvents and gas dehydration systems.',
+                'products.5a.title': '5A Molecular Sieve', 'products.5a.desc': 'Applied in PSA hydrogen systems, air purification and industrial gas drying.',
+                'products.13x.title': '13X Molecular Sieve', 'products.13x.desc': 'Ideal for air separation plants, CO₂ removal and natural gas purification.',
+                'products.alumina.title': 'Activated Alumina', 'products.alumina.desc': 'High adsorption activated alumina for compressed air and PSA systems.',
+                'products.ceramic.title': 'Inert Ceramic Balls', 'products.ceramic.desc': 'Used as catalyst support and covering materials in reactors and tower packing.',
                 'products.viewTDS': 'View TDS →', 'products.requestQuote': 'Request Quote →',
                 'products.more': 'Looking for other specifications or custom solutions? <a href="#inquiry">Contact us</a> for more products and OEM services.',
                 'applications.title': 'Applications', 'applications.subtitle': 'Our products are widely used in multiple industrial fields worldwide.',
@@ -398,12 +398,12 @@
                 'nav.products': '产品中心', 'nav.applications': '应用领域', 'nav.about': '关于我们', 'nav.inquiry': '在线询价', 'nav.contact': '联系我们',
                 'hero.title': '工业吸附剂与干燥解决方案', 'hero.subtitle': '专业供应分子筛和活性氧化铝，用于PSA制氧、空分、天然气干燥和工业净化系统。', 'hero.getQuote': '获取报价', 'hero.whatsapp': 'WhatsApp咨询',
                 'products.title': '我们的产品', 'products.subtitle': '高性能吸附剂和干燥剂，适用于工业干燥、净化和气体分离应用。',
-                'products.3a': '适用于不饱和烃干燥、乙醇脱水及石化应用。', 
-                'products.4a': '广泛用于空气干燥、制冷剂、溶剂和气体脱水系统。', 
-                'products.5a': '应用于PSA氢气系统、空气净化和工业气体干燥。', 
-                'products.13x': '适用于空分装置、CO₂去除和天然气净化。', 
-                'products.alumina': '高吸附性能活性氧化铝，适用于压缩空气和PSA系统。',
-                'products.ceramic': '用作反应器和塔填料中的催化剂支撑和覆盖材料。',
+                'products.3a.title': '3A分子筛', 'products.3a.desc': '适用于不饱和烃干燥、乙醇脱水及石化应用。',
+                'products.4a.title': '4A分子筛', 'products.4a.desc': '广泛用于空气干燥、制冷剂、溶剂和气体脱水系统。',
+                'products.5a.title': '5A分子筛', 'products.5a.desc': '应用于PSA氢气系统、空气净化和工业气体干燥。',
+                'products.13x.title': '13X分子筛', 'products.13x.desc': '适用于空分装置、CO₂去除和天然气净化。',
+                'products.alumina.title': '活性氧化铝', 'products.alumina.desc': '高吸附性能活性氧化铝，适用于压缩空气和PSA系统。',
+                'products.ceramic.title': '惰性瓷球', 'products.ceramic.desc': '用作反应器和塔填料中的催化剂支撑和覆盖材料。',
                 'products.viewTDS': '查看TDS →', 'products.requestQuote': '获取报价 →',
                 'products.more': '寻找其他规格或定制方案？<a href="#inquiry">联系我们</a>获取更多产品和OEM服务。',
                 'applications.title': '应用领域', 'applications.subtitle': '我们的产品广泛应用于全球多个工业领域。',
@@ -421,12 +421,12 @@
                 'nav.products': 'Productos', 'nav.applications': 'Aplicaciones', 'nav.about': 'Sobre Nosotros', 'nav.inquiry': 'Consulta', 'nav.contact': 'Contacto',
                 'hero.title': 'Soluciones Industriales de Adsorción y Secado', 'hero.subtitle': 'Proveedor profesional de tamices moleculares y alúmina activada para oxígeno PSA, separación de aire, secado de gas natural y sistemas de purificación industrial.', 'hero.getQuote': 'Obtener Cotización', 'hero.whatsapp': 'WhatsApp',
                 'products.title': 'Nuestros Productos', 'products.subtitle': 'Adsorbentes y desecantes de alto rendimiento para aplicaciones de secado, purificación y separación de gases industriales.',
-                'products.3a': 'Adecuado para secado de hidrocarburos insaturados, deshidratación de etanol y aplicaciones petroquímicas.', 
-                'products.4a': 'Ampliamente utilizado para secado de aire, refrigerantes, solventes y sistemas de deshidratación de gas.', 
-                'products.5a': 'Aplicado en sistemas PSA de hidrógeno, purificación de aire y secado de gases industriales.', 
-                'products.13x': 'Ideal para plantas de separación de aire, eliminación de CO₂ y purificación de gas natural.', 
-                'products.alumina': 'Alúmina activada de alta adsorción para aire comprimido y sistemas PSA.',
-                'products.ceramic': 'Utilizado como soporte de catalizador y material de recubrimiento en reactores y empaquetado de torres.',
+                'products.3a.title': 'Tamiz Molecular 3A', 'products.3a.desc': 'Adecuado para secado de hidrocarburos insaturados, deshidratación de etanol y aplicaciones petroquímicas.',
+                'products.4a.title': 'Tamiz Molecular 4A', 'products.4a.desc': 'Ampliamente utilizado para secado de aire, refrigerantes, solventes y sistemas de deshidratación de gas.',
+                'products.5a.title': 'Tamiz Molecular 5A', 'products.5a.desc': 'Aplicado en sistemas PSA de hidrógeno, purificación de aire y secado de gases industriales.',
+                'products.13x.title': 'Tamiz Molecular 13X', 'products.13x.desc': 'Ideal para plantas de separación de aire, eliminación de CO₂ y purificación de gas natural.',
+                'products.alumina.title': 'Alúmina Activada', 'products.alumina.desc': 'Alúmina activada de alta adsorción para aire comprimido y sistemas PSA.',
+                'products.ceramic.title': 'Bolas Cerámicas Inertes', 'products.ceramic.desc': 'Utilizado como soporte de catalizador y material de recubrimiento en reactores y empaquetado de torres.',
                 'products.viewTDS': 'Ver TDS →', 'products.requestQuote': 'Solicitar Cotización →',
                 'products.more': '¿Busca otras especificaciones o soluciones personalizadas? <a href="#inquiry">Contáctenos</a> para más productos y servicios OEM.',
                 'applications.title': 'Aplicaciones', 'applications.subtitle': 'Nuestros productos se utilizan ampliamente en múltiples campos industriales en todo el mundo.',
@@ -444,12 +444,12 @@
                 'nav.products': 'Produkte', 'nav.applications': 'Anwendungen', 'nav.about': 'Über Uns', 'nav.inquiry': 'Anfrage', 'nav.contact': 'Kontakt',
                 'hero.title': 'Industrielle Adsorbentien & Trocknungslösungen', 'hero.subtitle': 'Professioneller Lieferant von Molekularsieben und aktiviertem Aluminiumoxid für PSA-Sauerstoff, Luftzerlegung, Erdgastrocknung und industrielle Reinigungssysteme.', 'hero.getQuote': 'Angebot Anfordern', 'hero.whatsapp': 'WhatsApp',
                 'products.title': 'Unsere Produkte', 'products.subtitle': 'Hochleistungs-Adsorbentien und Trocknungsmittel für industrielle Trocknung, Reinigung und Gasseparationsanwendungen.',
-                'products.3a': 'Geeignet für die Trocknung ungesättigter Kohlenwasserstoffe, Ethanol-Dehydratation und petrochemische Anwendungen.', 
-                'products.4a': 'Wird häufig für Lufttrocknung, Kältemittel, Lösungsmittel und Gastrocknungssysteme eingesetzt.', 
-                'products.5a': 'Angewendet für PSA-Wasserstoffsysteme, Luftreinigung und industrielle Gastrocknung.', 
-                'products.13x': 'Ideal für Luftzerlegungsanlagen, CO₂-Entfernung und Erdgasreinigung.', 
-                'products.alumina': 'Hochadsorbierendes aktiviertes Aluminiumoxid für Druckluft und PSA-Systeme.',
-                'products.ceramic': 'Als Katalysatorträger und Abdeckmaterial in Reaktoren und Kolonnenpackungen verwendet.',
+                'products.3a.title': '3A Molekularsieb', 'products.3a.desc': 'Geeignet für die Trocknung ungesättigter Kohlenwasserstoffe, Ethanol-Dehydratation und petrochemische Anwendungen.',
+                'products.4a.title': '4A Molekularsieb', 'products.4a.desc': 'Wird häufig für Lufttrocknung, Kältemittel, Lösungsmittel und Gastrocknungssysteme eingesetzt.',
+                'products.5a.title': '5A Molekularsieb', 'products.5a.desc': 'Angewendet für PSA-Wasserstoffsysteme, Luftreinigung und industrielle Gastrocknung.',
+                'products.13x.title': '13X Molekularsieb', 'products.13x.desc': 'Ideal für Luftzerlegungsanlagen, CO₂-Entfernung und Erdgasreinigung.',
+                'products.alumina.title': 'Aktivierte Aluminium', 'products.alumina.desc': 'Hochadsorbierendes aktiviertes Aluminiumoxid für Druckluft und PSA-Systeme.',
+                'products.ceramic.title': 'Inertkeramikkugeln', 'products.ceramic.desc': 'Als Katalysatorträger und Abdeckmaterial in Reaktoren und Kolonnenpackungen verwendet.',
                 'products.viewTDS': 'TDS Ansehen →', 'products.requestQuote': 'Angebot Anfordern →',
                 'products.more': 'Suchen Sie nach anderen Spezifikationen oder kundenspezifischen Lösungen? <a href="#inquiry">Kontaktieren Sie uns</a> für weitere Produkte und OEM-Dienstleistungen.',
                 'applications.title': 'Anwendungen', 'applications.subtitle': 'Unsere Produkte werden weltweit in mehreren industriellen Bereichen eingesetzt.',
@@ -467,12 +467,12 @@
                 'nav.products': 'Produits', 'nav.applications': 'Applications', 'nav.about': 'À Propos', 'nav.inquiry': 'Demande de Devis', 'nav.contact': 'Contact',
                 'hero.title': 'Solutions d\'Adsorption Industrielle & de Séchage', 'hero.subtitle': 'Fournisseur professionnel de tamis moléculaires et d\'alumine activée pour l\'oxygène PSA, la séparation de l\'air, le séchage du gaz naturel et les systèmes de purification industrielle.', 'hero.getQuote': 'Obtenir un Devis', 'hero.whatsapp': 'WhatsApp',
                 'products.title': 'Nos Produits', 'products.subtitle': 'Adsorbants et dessicants haute performance pour les applications de séchage industriel, de purification et de séparation de gaz.',
-                'products.3a': 'Convient au séchage des hydrocarbures insaturés, à la déshydratation de l\'éthanol et aux applications pétrochimiques.', 
-                'products.4a': 'Utilisé pour le séchage de l\'air, les réfrigérants, les solvants et les systèmes de déshydratation des gaz.', 
-                'products.5a': 'Appliqué dans les systèmes d\'hydrogène PSA, la purification de l\'air et le séchage des gaz industriels.', 
-                'products.13x': 'Idéal pour les usines de séparation de l\'air, l\'élimination du CO₂ et la purification du gaz naturel.', 
-                'products.alumina': 'Alumine activée à haute adsorption pour l\'air comprimé et les systèmes PSA.',
-                'products.ceramic': 'Utilisé comme support de catalyseur et matériau de recouvrement dans les réacteurs et les garnissages de colonnes.',
+                'products.3a.title': 'Tamise Moléculaire 3A', 'products.3a.desc': 'Convient au séchage des hydrocarbures insaturés, à la déshydratation de l\'éthanol et aux applications pétrochimiques.',
+                'products.4a.title': 'Tamise Moléculaire 4A', 'products.4a.desc': 'Utilisé pour le séchage de l\'air, les réfrigérants, les solvants et les systèmes de déshydratation des gaz.',
+                'products.5a.title': 'Tamise Moléculaire 5A', 'products.5a.desc': 'Appliqué dans les systèmes d\'hydrogène PSA, la purification de l\'air et le séchage des gaz industriels.',
+                'products.13x.title': 'Tamise Moléculaire 13X', 'products.13x.desc': 'Idéal pour les usines de séparation de l\'air, l\'élimination du CO₂ et la purification du gaz naturel.',
+                'products.alumina.title': 'Alumine Activée', 'products.alumina.desc': 'Alumine activée à haute adsorption pour l\'air comprimé et les systèmes PSA.',
+                'products.ceramic.title': 'Boules Céramiques Inertes', 'products.ceramic.desc': 'Utilisé comme support de catalyseur et matériau de recouvrement dans les réacteurs et les garnissages de colonnes.',
                 'products.viewTDS': 'Voir TDS →', 'products.requestQuote': 'Demander un Devis →',
                 'products.more': 'Vous cherchez d\'autres spécifications ou solutions personnalisées? <a href="#inquiry">Contactez-nous</a> pour plus de produits et services OEM.',
                 'applications.title': 'Applications', 'applications.subtitle': 'Nos produits sont largement utilisés dans plusieurs domaines industriels à travers le monde.',
@@ -490,12 +490,12 @@
                 'nav.products': 'Продукты', 'nav.applications': 'Применение', 'nav.about': 'О Нас', 'nav.inquiry': 'Запрос', 'nav.contact': 'Контакты',
                 'hero.title': 'Промышленные Адсорбенты и Решения для Сушки', 'hero.subtitle': 'Профессиональный поставщик молекулярных сит и активированного глинозема для систем PSA кислорода, разделения воздуха, осушки природного газа и промышленной очистки.', 'hero.getQuote': 'Получить Предложение', 'hero.whatsapp': 'WhatsApp',
                 'products.title': 'Наши Продукты', 'products.subtitle': 'Высокоэффективные адсорбенты и осушители для промышленной сушки, очистки и применения в газоразделении.',
-                'products.3a': 'Подходит для осушки ненасыщенных углеводородов, дегидратации этанола и нефтехимических применений.', 
-                'products.4a': 'Широко используется для осушки воздуха, хладагентов, растворителей и систем осушки газов.', 
-                'products.5a': 'Применяется в системах водорода PSA, очистке воздуха и промышленной осушке газов.', 
-                'products.13x': 'Идеально для установок разделения воздуха, удаления CO₂ и очистки природного газа.', 
-                'products.alumina': 'Активированный глинозем с высокой адсорбцией для сжатого воздуха и систем PSA.',
-                'products.ceramic': 'Используется как катализаторная подложка и покрывающий материал в реакторах и насадках колонн.',
+                'products.3a.title': '3A Молекулярное Сито', 'products.3a.desc': 'Подходит для осушки ненасыщенных углеводородов, дегидратации этанола и нефтехимических применений.',
+                'products.4a.title': '4A Молекулярное Сито', 'products.4a.desc': 'Широко используется для осушки воздуха, хладагентов, растворителей и систем осушки газов.',
+                'products.5a.title': '5A Молекулярное Сито', 'products.5a.desc': 'Применяется в системах водорода PSA, очистке воздуха и промышленной осушке газов.',
+                'products.13x.title': '13X Молекулярное Сито', 'products.13x.desc': 'Идеально для установок разделения воздуха, удаления CO₂ и очистки природного газа.',
+                'products.alumina.title': 'Активированный Глинозем', 'products.alumina.desc': 'Активированный глинозем с высокой адсорбцией для сжатого воздуха и систем PSA.',
+                'products.ceramic.title': 'Инертные Керамические Шары', 'products.ceramic.desc': 'Используется как катализаторная подложка и покрывающий материал в реакторах и насадках колонн.',
                 'products.viewTDS': 'Смотреть TDS →', 'products.requestQuote': 'Запросить Цену →',
                 'products.more': 'Ищете другие спецификации или индивидуальные решения? <a href="#inquiry">Свяжитесь с нами</a> для получения дополнительных продуктов и услуг OEM.',
                 'applications.title': 'Применение', 'applications.subtitle': 'Наши продукты широко используются в различных промышленных областях по всему миру.',
@@ -516,6 +516,7 @@
             localStorage.setItem('preferredLang', lang);
             document.getElementById('html-root').setAttribute('lang', lang);
             
+            // Update all elements with data-key
             document.querySelectorAll('[data-key]').forEach(el => {
                 const key = el.getAttribute('data-key');
                 if (translations[lang][key]) {
@@ -526,6 +527,17 @@
                     }
                 }
             });
+            
+            // Update select options specifically
+            const select = document.getElementById('productSelect');
+            if (select) {
+                Array.from(select.options).forEach(option => {
+                    const key = option.getAttribute('data-key');
+                    if (key && translations[lang][key]) {
+                        option.textContent = translations[lang][key];
+                    }
+                });
+            }
             
             document.getElementById('languageSelect').value = lang;
         }
