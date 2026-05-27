@@ -1,38 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html-root">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Inert Ceramic Balls JZ-ICB – Technical Data Sheet (TDS) | China Adsorbents</title>
 <meta name="description" content="Download JZ-ICB Inert Ceramic Balls TDS: specifications for common porcelain, low alumina, medium alumina, high alumina. Includes crushing strength, bulk density, water absorption, and chemical composition.">
-<link rel="canonical" href="https://www.china-adsorbents.com/products/inert-ceramic-balls-tds.html">
+<link rel="canonical" href="https://adsorb.ccwu.cc/products/inert-ceramic-balls-tds.html">
 
-<!-- BreadcrumbList Schema -->
+<!-- BreadcrumbList -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.china-adsorbents.com/"},
-    {"@type": "ListItem", "position": 2, "name": "Products", "item": "https://www.china-adsorbents.com/#products"},
-    {"@type": "ListItem", "position": 3, "name": "Inert Ceramic Balls JZ-ICB TDS", "item": "https://www.china-adsorbents.com/products/inert-ceramic-balls-tds.html"}
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://adsorb.ccwu.cc/"},
+    {"@type": "ListItem", "position": 2, "name": "Products", "item": "https://adsorb.ccwu.cc/#products"},
+    {"@type": "ListItem", "position": 3, "name": "Inert Ceramic Balls JZ-ICB TDS", "item": "https://adsorb.ccwu.cc/products/inert-ceramic-balls-tds.html"}
   ]
 }
 </script>
 
-<!-- Product + Dataset Schema -->
+<!-- Product + Dataset -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "Inert Ceramic Balls JZ-ICB",
   "description": "High purity inert ceramic balls for catalyst support and tower packing. Various alumina contents available for high temperature and pressure applications.",
-  "brand": {"@type": "Brand", "name": "China Adsorbents"},
-  "mainEntity": {
-    "@type": "Dataset",
-    "name": "JZ-ICB Inert Ceramic Balls Technical Data Sheet",
-    "description": "Physical properties include Al2O3 20-90%, Bulk Density 1300-1800 kg/m³, Crushing Strength 0.2-25.0 kN/pc."
-  }
+  "brand": {"@type": "Brand", "name": "China Adsorbents"}
 }
 </script>
 
@@ -51,8 +46,8 @@
   h2 { font-size: 20px; color: #071926; margin: 36px 0 12px; border-left: 4px solid #2ec4ff; padding-left: 10px; }
   ul { padding-left: 20px; } 
   li { margin-bottom: 8px; }
-  
-  /* 响应式优化：小屏幕下表格可横向滚动 */
+  .lang-switcher{margin-bottom:20px;text-align:right;}
+  .lang-switcher select{padding:6px 12px;border-radius:4px;border:1px solid #ccc;font-size:14px;}
   @media (max-width: 768px) {
     table { display: block; overflow-x: auto; white-space: nowrap; }
     body { font-size: 14px; }
@@ -62,82 +57,232 @@
 <body>
 <div class="container">
 
-  <!-- 面包屑导航 -->
+  <!-- 语言切换器 -->
+  <div class="lang-switcher">
+    <select id="languageSelect" onchange="switchLanguage(this.value)">
+      <option value="en">English</option>
+      <option value="zh">中文 (Chinese)</option>
+      <option value="es">Español (Spanish)</option>
+      <option value="de">Deutsch (German)</option>
+      <option value="fr">Français (French)</option>
+      <option value="ru">Русский (Russian)</option>
+    </select>
+  </div>
+
+  <!-- 面包屑 -->
   <nav aria-label="breadcrumb">
-    <a class="back" href="/#products">← Back to Products</a>
-    <span style="color:#888; font-size:13px; display:block; margin-top:-10px; margin-bottom:18px;">
-      <a href="/" style="color:#888;">Home</a> › <a href="/#products" style="color:#888;">Products</a> › Inert Ceramic Balls TDS
+    <a class="back" href="/#products" data-i18n="backLink">← Back to Products</a>
+    <span style="color:#888;font-size:13px;display:block;margin-top:-10px;margin-bottom:18px">
+      <a href="/" style="color:#888" data-i18n="home">Home</a> › <a href="/#products" style="color:#888" data-i18n="products">Products</a> › <span data-i18n="breadcrumb">Inert Ceramic Balls TDS</span>
     </span>
   </nav>
 
-  <h1>Inert Ceramic Balls JZ‑ICB — Technical Data Sheet</h1>
-  <p class="sub">
+  <h1 data-i18n="title">Inert Ceramic Balls JZ‑ICB — Technical Data Sheet</h1>
+  <p class="sub" data-i18n="desc">
     Made from high grade alumina & silica. Widely used as support & covering layer for catalysts, 
     tower packing in refineries, petrochemical, and chemical processing industries.
   </p>
 
-  <!-- 核心技术参数表 -->
   <table>
-    <caption>Typical Physical & Chemical Properties (Representative Values)</caption>
+    <caption data-i18n="tableCaption">Typical Physical & Chemical Properties (Representative Values)</caption>
     <thead>
       <tr>
-        <th scope="col">Property</th>
-        <th scope="col">Unit</th>
-        <th scope="col">Common Porcelain</th>
-        <th scope="col">Low Alumina</th>
-        <th scope="col">Medium Alumina</th>
-        <th scope="col">High Alumina</th>
-        <th scope="col">Corundum</th>
+        <th scope="col" data-i18n="prop">Property</th>
+        <th scope="col" data-i18n="unit">Unit</th>
+        <th scope="col" data-i18n="common">Common Porcelain</th>
+        <th scope="col" data-i18n="low">Low Alumina</th>
+        <th scope="col" data-i18n="medium">Medium Alumina</th>
+        <th scope="col" data-i18n="high">High Alumina</th>
+        <th scope="col" data-i18n="corundum">Corundum</th>
       </tr>
     </thead>
     <tbody>
-      <!-- 化学成分 -->
-      <tr><th scope="row" colspan="7" style="background:#e9ecef; text-align:left; padding-left:10px; color:#071926;">Chemical Composition</th></tr>
-      <tr><th scope="row">Al₂O₃</th><td>%</td><td>20-30</td><td>31-45</td><td>46-70</td><td>71-90</td><td>&gt;90</td></tr>
-      <tr><th scope="row">Al₂O₃ + SiO₂</th><td>&ge; %</td><td colspan="5">&ge;90</td></tr>
-      <tr><th scope="row">Fe₂O₃</th><td>&le; %</td><td colspan="5">&le;1</td></tr>
+      <tr><th scope="row" colspan="7" style="background:#e9ecef; text-align:left; padding-left:10px; color:#071926;" data-i18n="chem_comp">Chemical Composition</th></tr>
+      <tr><th scope="row" data-i18n="al2o3">Al₂O₃</th><td>%</td><td>20-30</td><td>31-45</td><td>46-70</td><td>71-90</td><td>&gt;90</td></tr>
+      <tr><th scope="row" data-i18n="al2o3_sio2">Al₂O₃ + SiO₂</th><td>&ge; %</td><td colspan="5">&ge;90</td></tr>
+      <tr><th scope="row" data-i18n="fe2o3">Fe₂O₃</th><td>&le; %</td><td colspan="5">&le;1</td></tr>
       
-      <!-- 物理性能 -->
-      <tr><th scope="row" colspan="7" style="background:#e9ecef; text-align:left; padding-left:10px; color:#071926;">Physical Properties</th></tr>
-      <tr><th scope="row">Water Absorption</th><td>&le; %</td><td colspan="2">&le;5</td><td colspan="3">&le;8</td></tr>
-      <tr><th scope="row">Acid Resistance</th><td>&ge; %</td><td colspan="5">&ge;90</td></tr>
-      <tr><th scope="row">Alkali Resistance</th><td>&ge; %</td><td colspan="5">&ge;85</td></tr>
+      <tr><th scope="row" colspan="7" style="background:#e9ecef; text-align:left; padding-left:10px; color:#071926;" data-i18n="phys_prop">Physical Properties</th></tr>
+      <tr><th scope="row" data-i18n="water_abs">Water Absorption</th><td>&le; %</td><td colspan="2">&le;5</td><td colspan="3">&le;8</td></tr>
+      <tr><th scope="row" data-i18n="acid_res">Acid Resistance</th><td>&ge; %</td><td colspan="5">&ge;90</td></tr>
+      <tr><th scope="row" data-i18n="alkali_res">Alkali Resistance</th><td>&ge; %</td><td colspan="5">&ge;85</td></tr>
       
-      <!-- 抗压强度 (按直径分组) -->
-      <tr><th scope="row" colspan="7" style="background:#e9ecef; text-align:left; padding-left:10px; color:#071926;">Crushing Strength (&ge; kN/pc)</th></tr>
-      <tr><th scope="row">&Phi; 3mm</th><td>kN/pc</td><td>&ge; 0.20</td><td>&ge; 0.25</td><td>&ge; 0.30</td><td>&ge; 0.35</td><td>&ge; 0.40</td></tr>
-      <tr><th scope="row">&Phi; 6mm</th><td>kN/pc</td><td>&ge; 0.50</td><td>&ge; 0.60</td><td>&ge; 0.65</td><td>&ge; 0.70</td><td>&ge; 0.80</td></tr>
-      <tr><th scope="row">&Phi; 8mm</th><td>kN/pc</td><td>&ge; 0.70</td><td>&ge; 0.80</td><td>&ge; 0.90</td><td>&ge; 1.00</td><td>&ge; 1.20</td></tr>
-      <tr><th scope="row">&Phi; 10mm</th><td>kN/pc</td><td>&ge; 0.85</td><td>&ge; 1.00</td><td>&ge; 1.20</td><td>&ge; 1.50</td><td>&ge; 1.90</td></tr>
-      <tr><th scope="row">&Phi; 13mm</th><td>kN/pc</td><td>&ge; 1.80</td><td>&ge; 2.30</td><td>&ge; 3.00</td><td>&ge; 4.00</td><td>&ge; 5.80</td></tr>
-      <tr><th scope="row">&Phi; 16mm</th><td>kN/pc</td><td>&ge; 2.30</td><td>&ge; 3.00</td><td>&ge; 4.50</td><td>&ge; 6.00</td><td>&ge; 7.00</td></tr>
-      <tr><th scope="row">&Phi; 20mm</th><td>kN/pc</td><td>&ge; 4.30</td><td>&ge; 5.00</td><td>&ge; 6.00</td><td>&ge; 7.50</td><td>&ge; 9.00</td></tr>
-      <tr><th scope="row">&Phi; 25mm</th><td>kN/pc</td><td>&ge; 6.20</td><td>&ge; 7.00</td><td>&ge; 8.00</td><td>&ge; 10.0</td><td>&ge; 12.0</td></tr>
-      <tr><th scope="row">&Phi; 30mm</th><td>kN/pc</td><td>&ge; 7.00</td><td>&ge; 8.00</td><td>&ge; 10.0</td><td>&ge; 12.0</td><td>&ge; 14.0</td></tr>
-      <tr><th scope="row">&Phi; 38mm</th><td>kN/pc</td><td>&ge; 8.80</td><td>&ge; 10.0</td><td>&ge; 12.0</td><td>&ge; 16.0</td><td>&ge; 18.0</td></tr>
-      <tr><th scope="row">&Phi; 50mm</th><td>kN/pc</td><td>&ge; 12.0</td><td>&ge; 13.0</td><td>&ge; 15.0</td><td>&ge; 18.0</td><td>&ge; 21.50</td></tr>
-      <tr><th scope="row">&Phi; 76mm</th><td>kN/pc</td><td>&ge; 16.00</td><td>&ge; 18.0</td><td>&ge; 20.0</td><td>&ge; 22.0</td><td>&ge; 25.0</td></tr>
+      <tr><th scope="row" colspan="7" style="background:#e9ecef; text-align:left; padding-left:10px; color:#071926;" data-i18n="crush_strength_title">Crushing Strength (&ge; kN/pc)</th></tr>
+      <tr><th scope="row">&Phi; 3mm</th><td>kN/pc</td><td data-i18n="cs_3">≥ 0.20</td><td data-i18n="cs_3">≥ 0.25</td><td data-i18n="cs_3">≥ 0.30</td><td data-i18n="cs_3">≥ 0.35</td><td data-i18n="cs_3">≥ 0.40</td></tr>
+      <tr><th scope="row">&Phi; 6mm</th><td>kN/pc</td><td data-i18n="cs_6">≥ 0.50</td><td data-i18n="cs_6">≥ 0.60</td><td data-i18n="cs_6">≥ 0.65</td><td data-i18n="cs_6">≥ 0.70</td><td data-i18n="cs_6">≥ 0.80</td></tr>
+      <tr><th scope="row">&Phi; 8mm</th><td>kN/pc</td><td data-i18n="cs_8">≥ 0.70</td><td data-i18n="cs_8">≥ 0.80</td><td data-i18n="cs_8">≥ 0.90</td><td data-i18n="cs_8">≥ 1.00</td><td data-i18n="cs_8">≥ 1.20</td></tr>
+      <tr><th scope="row">&Phi; 10mm</th><td>kN/pc</td><td data-i18n="cs_10">≥ 0.85</td><td data-i18n="cs_10">≥ 1.00</td><td data-i18n="cs_10">≥ 1.20</td><td data-i18n="cs_10">≥ 1.50</td><td data-i18n="cs_10">≥ 1.90</td></tr>
+      <tr><th scope="row">&Phi; 13mm</th><td>kN/pc</td><td data-i18n="cs_13">≥ 1.80</td><td data-i18n="cs_13">≥ 2.30</td><td data-i18n="cs_13">≥ 3.00</td><td data-i18n="cs_13">≥ 4.00</td><td data-i18n="cs_13">≥ 5.80</td></tr>
+      <tr><th scope="row">&Phi; 16mm</th><td>kN/pc</td><td data-i18n="cs_16">≥ 2.30</td><td data-i18n="cs_16">≥ 3.00</td><td data-i18n="cs_16">≥ 4.50</td><td data-i18n="cs_16">≥ 6.00</td><td data-i18n="cs_16">≥ 7.00</td></tr>
+      <tr><th scope="row">&Phi; 20mm</th><td>kN/pc</td><td data-i18n="cs_20">≥ 4.30</td><td data-i18n="cs_20">≥ 5.00</td><td data-i18n="cs_20">≥ 6.00</td><td data-i18n="cs_20">≥ 7.50</td><td data-i18n="cs_20">≥ 9.00</td></tr>
+      <tr><th scope="row">&Phi; 25mm</th><td>kN/pc</td><td data-i18n="cs_25">≥ 6.20</td><td data-i18n="cs_25">≥ 7.00</td><td data-i18n="cs_25">≥ 8.00</td><td data-i18n="cs_25">≥ 10.0</td><td data-i18n="cs_25">≥ 12.0</td></tr>
+      <tr><th scope="row">&Phi; 30mm</th><td>kN/pc</td><td data-i18n="cs_30">≥ 7.00</td><td data-i18n="cs_30">≥ 8.00</td><td data-i18n="cs_30">≥ 10.0</td><td data-i18n="cs_30">≥ 12.0</td><td data-i18n="cs_30">≥ 14.0</td></tr>
+      <tr><th scope="row">&Phi; 38mm</th><td>kN/pc</td><td data-i18n="cs_38">≥ 8.80</td><td data-i18n="cs_38">≥ 10.0</td><td data-i18n="cs_38">≥ 12.0</td><td data-i18n="cs_38">≥ 16.0</td><td data-i18n="cs_38">≥ 18.0</td></tr>
+      <tr><th scope="row">&Phi; 50mm</th><td>kN/pc</td><td data-i18n="cs_50">≥ 12.0</td><td data-i18n="cs_50">≥ 13.0</td><td data-i18n="cs_50">≥ 15.0</td><td data-i18n="cs_50">≥ 18.0</td><td data-i18n="cs_50">≥ 21.50</td></tr>
+      <tr><th scope="row">&Phi; 76mm</th><td>kN/pc</td><td data-i18n="cs_76">≥ 16.00</td><td data-i18n="cs_76">≥ 18.0</td><td data-i18n="cs_76">≥ 20.0</td><td data-i18n="cs_76">≥ 22.0</td><td data-i18n="cs_76">≥ 25.0</td></tr>
       
-      <!-- 堆积重度 -->
-      <tr><th scope="row">Bulk Density</th><td>kg/m³</td><td>1300-1400</td><td>1400-1500</td><td>1500-1600</td><td>1600-1800</td><td>&gt;1800</td></tr>
+      <tr><th scope="row" data-i18n="bulk">Bulk Density</th><td>kg/m³</td><td>1300-1400</td><td>1400-1500</td><td>1500-1600</td><td>1600-1800</td><td>&gt;1800</td></tr>
     </tbody>
   </table>
 
-  <!-- 应用说明（SEO深度语义化重构，拦截海外高价值长尾工程词） -->
-  <h2>Typical Applications</h2>
+  <h2 data-i18n="appTitle">Typical Applications</h2>
   <ul>
-    <li><strong>Catalyst Support & Bed Covering Layer:</strong> Widely used as the underlying support media and covering layer for catalysts in hydrocracking, ammonia synthesis, and reforming reactors.</li>
-    <li><strong>Tower Packing & Mass Transfer:</strong> Acts as premium column packing and gas/liquid distribution media in refineries, petrochemical plants, and chemical processing facilities.</li>
-    <li><strong>Thermal and Chemical Stability:</strong> Engineered to withstand extreme chemical corrosion, high temperatures, and severe mechanical stress under high-pressure environments.</li>
+    <li><strong data-i18n="app1_title">Catalyst Support & Bed Covering Layer:</strong> <span data-i18n="app1_desc">Widely used as the underlying support media and covering layer for catalysts in hydrocracking, ammonia synthesis, and reforming reactors.</span></li>
+    <li><strong data-i18n="app2_title">Tower Packing & Mass Transfer:</strong> <span data-i18n="app2_desc">Acts as premium column packing and gas/liquid distribution media in refineries, petrochemical plants, and chemical processing facilities.</span></li>
+    <li><strong data-i18n="app3_title">Thermal and Chemical Stability:</strong> <span data-i18n="app3_desc">Engineered to withstand extreme chemical corrosion, high temperatures, and severe mechanical stress under high-pressure environments.</span></li>
   </ul>
 
-  <!-- 包装信息 -->
-  <h2>Packaging Options</h2>
+  <h2 data-i18n="packTitle">Packaging Options</h2>
   <ul>
-    <li><strong>25 KG Composite Paper Bags:</strong> Standard option for general industrial orders, easy to handle, store, and stack in warehouses.</li>
-    <li><strong>150 KG Galvanized Iron Drums:</strong> Highly recommended for long-term storage or transoceanic export shipments to provide ultimate protection against moisture, air ingress, and physical damage during transit.</li>
+    <li><strong data-i18n="pack1_title">25 KG Composite Paper Bags:</strong> <span data-i18n="pack1_desc">Standard option for general industrial orders, easy to handle, store, and stack in warehouses.</span></li>
+    <li><strong data-i18n="pack2_title">150 KG Galvanized Iron Drums:</strong> <span data-i18n="pack2_desc">Highly recommended for long-term storage or transoceanic export shipments to provide ultimate protection against moisture, air ingress, and physical damage during transit.</span></li>
   </ul>
-
 </div>
+
+<script>
+const translations = {
+  en: {
+    backLink: "← Back to Products", home: "Home", products: "Products", breadcrumb: "Inert Ceramic Balls TDS",
+    title: "Inert Ceramic Balls JZ‑ICB — Technical Data Sheet",
+    desc: "Made from high grade alumina & silica. Widely used as support & covering layer for catalysts, tower packing in refineries, petrochemical, and chemical processing industries.",
+    tableCaption: "Typical Physical & Chemical Properties (Representative Values)",
+    prop: "Property", unit: "Unit", common: "Common Porcelain", low: "Low Alumina", medium: "Medium Alumina", high: "High Alumina", corundum: "Corundum",
+    chem_comp: "Chemical Composition", al2o3: "Al₂O₃", al2o3_sio2: "Al₂O₃ + SiO₂", fe2o3: "Fe₂O₃",
+    phys_prop: "Physical Properties", water_abs: "Water Absorption", acid_res: "Acid Resistance", alkali_res: "Alkali Resistance",
+    crush_strength_title: "Crushing Strength (≥ kN/pc)",
+    cs_3: "≥ 0.20", cs_6: "≥ 0.50", cs_8: "≥ 0.70", cs_10: "≥ 0.85", cs_13: "≥ 1.80", cs_16: "≥ 2.30", cs_20: "≥ 4.30", cs_25: "≥ 6.20", cs_30: "≥ 7.00", cs_38: "≥ 8.80", cs_50: "≥ 12.0", cs_76: "≥ 16.00",
+    bulk: "Bulk Density",
+    appTitle: "Typical Applications",
+    app1_title: "Catalyst Support & Bed Covering Layer:", app1_desc: "Widely used as the underlying support media and covering layer for catalysts in hydrocracking, ammonia synthesis, and reforming reactors.",
+    app2_title: "Tower Packing & Mass Transfer:", app2_desc: "Acts as premium column packing and gas/liquid distribution media in refineries, petrochemical plants, and chemical processing facilities.",
+    app3_title: "Thermal and Chemical Stability:", app3_desc: "Engineered to withstand extreme chemical corrosion, high temperatures, and severe mechanical stress under high-pressure environments.",
+    packTitle: "Packaging Options",
+    pack1_title: "25 KG Composite Paper Bags:", pack1_desc: "Standard option for general industrial orders, easy to handle, store, and stack in warehouses.",
+    pack2_title: "150 KG Galvanized Iron Drums:", pack2_desc: "Highly recommended for long-term storage or transoceanic export shipments to provide ultimate protection against moisture, air ingress, and physical damage during transit."
+  },
+  zh: {
+    backLink: "← 返回产品页", home: "首页", products: "产品中心", breadcrumb: "惰性陶瓷球技术参数表",
+    title: "惰性陶瓷球 JZ‑ICB — 技术数据表 (TDS)",
+    desc: "采用优质氧化铝和二氧化硅制成。广泛用作炼油厂、石油化工和化工行业中催化剂的支撑层和覆盖层，以及塔填料。",
+    tableCaption: "典型物理化学性质（代表值）",
+    prop: "指标名称", unit: "单位", common: "普通瓷球", low: "低铝球", medium: "中铝球", high: "高铝球", corundum: "刚玉球",
+    chem_comp: "化学成分", al2o3: "Al₂O₃", al2o3_sio2: "Al₂O₃ + SiO₂", fe2o3: "Fe₂O₃",
+    phys_prop: "物理性能", water_abs: "吸水率", acid_res: "耐酸度", alkali_res: "耐碱度",
+    crush_strength_title: "抗压强度 (≥ kN/颗)",
+    cs_3: "≥ 0.20", cs_6: "≥ 0.50", cs_8: "≥ 0.70", cs_10: "≥ 0.85", cs_13: "≥ 1.80", cs_16: "≥ 2.30", cs_20: "≥ 4.30", cs_25: "≥ 6.20", cs_30: "≥ 7.00", cs_38: "≥ 8.80", cs_50: "≥ 12.0", cs_76: "≥ 16.00",
+    bulk: "堆积密度",
+    appTitle: "典型应用",
+    app1_title: "催化剂支撑与床层覆盖层：", app1_desc: "广泛用作加氢裂化、氨合成和重整反应器中催化剂的底层支撑介质和覆盖层。",
+    app2_title: "塔填料与传质：", app2_desc: "在炼油厂、石化厂和化工厂中充当优质塔填料和气/液分布介质。",
+    app3_title: "热稳定性和化学稳定性：", app3_desc: "设计用于承受高压环境下的极端化学腐蚀、高温和严重机械应力。",
+    packTitle: "包装规格",
+    pack1_title: "25 KG 复合纸袋：", pack1_desc: "通用工业订单标准选项，便于搬运、存储及仓库堆叠。",
+    pack2_title: "150 KG 镀锌铁桶：", pack2_desc: "强烈推荐用于长期储存或跨洋出口运输，提供极致的防潮、防气及防损保护。"
+  },
+  es: {
+    backLink: "← Volver a Productos", home: "Inicio", products: "Productos", breadcrumb: "Ficha Técnica Bolas de Cerámica",
+    title: "Bolas de Cerámica Inerte JZ‑ICB — Ficha de Datos Técnicos",
+    desc: "Fabricado con alúmina y sílice de alta calidad. Ampliamente utilizado como soporte y capa de cubierta para catalizadores, empaquetaduras de torre en refinerías, industrias petroquímicas y de procesamiento químico.",
+    tableCaption: "Propiedades Físicas y Químicas Típicas (Valores Representativos)",
+    prop: "Propiedades", unit: "Unidad", common: "Porcelana Común", low: "Baja Alúmina", medium: "Alúmina Media", high: "Alta Alúmina", corundum: "Corindón",
+    chem_comp: "Composición Química", al2o3: "Al₂O₃", al2o3_sio2: "Al₂O₃ + SiO₂", fe2o3: "Fe₂O₃",
+    phys_prop: "Propiedades Físicas", water_abs: "Absorción de Agua", acid_res: "Resistencia al Ácido", alkali_res: "Resistencia al Álcali",
+    crush_strength_title: "Resistencia al Aplastamiento (≥ kN/pieza)",
+    cs_3: "≥ 0.20", cs_6: "≥ 0.50", cs_8: "≥ 0.70", cs_10: "≥ 0.85", cs_13: "≥ 1.80", cs_16: "≥ 2.30", cs_20: "≥ 4.30", cs_25: "≥ 6.20", cs_30: "≥ 7.00", cs_38: "≥ 8.80", cs_50: "≥ 12.0", cs_76: "≥ 16.00",
+    bulk: "Densidad Aparente",
+    appTitle: "Aplicaciones Típicas",
+    app1_title: "Soporte de Catalizador y Capa de Cubierta:", app1_desc: "Ampliamente utilizado como medio de soporte subyacente y capa de cubierta para catalizadores en reactores de hidrocraqueo, síntesis de amoníaco y reformado.",
+    app2_title: "Empaquetaduras de Torre y Transferencia de Masa:", app2_desc: "Actúa como empaquetadura premium para columnas y medio de distribución de gas/líquido en refinerías, plantas petroquímicas y facilidades de procesamiento químico.",
+    app3_title: "Estabilidad Térmica y Química:", app3_desc: "Diseñado para soportar corrosión química extrema, altas temperaturas y estrés mecánico severo en entornos de alta presión.",
+    packTitle: "Opciones de Empaque",
+    pack1_title: "Bolsas de Papel Compuesto de 25 KG:", pack1_desc: "Opción estándar para pedidos industriales generales, fácil de manejar, almacenar y apilar en almacenes.",
+    pack2_title: "Tambores de Hierro Galvanizado de 150 KG:", pack2_desc: "Altamente recomendado para almacenamiento a largo plazo o envíos de exportación transoceánica para proporcionar protección definitiva contra la humedad, la entrada de aire y los daños físicos durante el tránsito."
+  },
+  de: {
+    backLink: "← Zurück zu Produkte", home: "Startseite", products: "Produkte", breadcrumb: "Technisches Datenblatt Inerte Keramikkugeln",
+    title: "Inerte Keramikkugeln JZ‑ICB — Technisches Datenblatt",
+    desc: "Hergestellt aus hochwertigem Aluminiumoxid und Siliziumdioxid. Weit verbreitet als Stütz- und Deckschicht für Katalysatoren, Kolonnenpackungen in Raffinerien, petrochemischen und chemischen Verarbeitungsindustrien.",
+    tableCaption: "Typische physikalische und chemische Eigenschaften (Repräsentative Werte)",
+    prop: "Eigenschaften", unit: "Einheit", common: "Gemeines Porzellan", low: "Niedriger Aluminiumgehalt", medium: "Mittlerer Aluminiumgehalt", high: "Hoher Aluminiumgehalt", corundum: "Korund",
+    chem_comp: "Chemische Zusammensetzung", al2o3: "Al₂O₃", al2o3_sio2: "Al₂O₃ + SiO₂", fe2o3: "Fe₂O₃",
+    phys_prop: "Physikalische Eigenschaften", water_abs: "Wasseraufnahme", acid_res: "Säurebeständigkeit", alkali_res: "Laugenbeständigkeit",
+    crush_strength_title: "Druckfestigkeit (≥ kN/Stk)",
+    cs_3: "≥ 0,20", cs_6: "≥ 0,50", cs_8: "≥ 0,70", cs_10: "≥ 0,85", cs_13: "≥ 1,80", cs_16: "≥ 2,30", cs_20: "≥ 4,30", cs_25: "≥ 6,20", cs_30: "≥ 7,00", cs_38: "≥ 8,80", cs_50: "≥ 12,0", cs_76: "≥ 16,00",
+    bulk: "Schüttdichte",
+    appTitle: "Typische Anwendungen",
+    app1_title: "Katalysatorstützung & Bettabdeckungsschicht:", app1_desc: "Weit verbreitet als unterstützendes Medium und Abdeckungsschicht für Katalysatoren in Hydrocracken, Ammoniaksynthese und Reformierreaktoren.",
+    app2_title: "Turmfüllkörper & Stoffübertragung:", app2_desc: "Dient als Premium-Kolonnenfüllkörper und Gas/Flüssigkeitsverteilungsmedium in Raffinerien, petrochemischen Anlagen und chemischen Verarbeitungsanlagen.",
+    app3_title: "Thermische und chemische Stabilität:", app3_desc: "Konstruiert, um extremen chemischen Korrosionen, hohen Temperaturen und schweren mechanischen Belastungen unter Hochdruckumgebungen standzuhalten.",
+    packTitle: "Verpackungsoptionen",
+    pack1_title: "25 KG Verbundpapiersäcke:", pack1_desc: "Standardoption für allgemeine Industrieaufträge, leicht zu handhaben, lagern und stapeln in Lagern.",
+    pack2_title: "150 KG verzinkte Eisentrommeln:", pack2_desc: "Sehr empfohlen für Langzeitlagerung oder transozeanische Exportlieferungen, um maximalen Schutz gegen Feuchtigkeit, Luftzutritt und physische Beschädigung während des Transports zu bieten."
+  },
+  fr: {
+    backLink: "← Retour aux Produits", home: "Accueil", products: "Produits", breadcrumb: "Fiche Technique Billes de Céramique Inerte",
+    title: "Billes de Céramique Inerte JZ‑ICB — Fiche Technique",
+    desc: "Fabriqué à partir d'alumine et de silice de haute qualité. Couramment utilisé comme support et couche de recouvrement pour les catalyseurs, garnissage de tours dans les raffineries, les industries pétrochimiques et de transformation chimique.",
+    tableCaption: "Propriétés Physiques et Chimiques Typiques (Valeurs Représentatives)",
+    prop: "Propriétés", unit: "Unité", common: "Porcelaine Commune", low: "Faible Alumine", medium: "Alumine Moyenne", high: "Haute Alumine", corundum: "Corindon",
+    chem_comp: "Composition Chimique", al2o3: "Al₂O₃", al2o3_sio2: "Al₂O₃ + SiO₂", fe2o3: "Fe₂O₃",
+    phys_prop: "Propriétés Physiques", water_abs: "Absorption d'Eau", acid_res: "Résistance à l'Acide", alkali_res: "Résistance à l'Alcali",
+    crush_strength_title: "Résistance au Concassage (≥ kN/pc)",
+    cs_3: "≥ 0,20", cs_6: "≥ 0,50", cs_8: "≥ 0,70", cs_10: "≥ 0,85", cs_13: "≥ 1,80", cs_16: "≥ 2,30", cs_20: "≥ 4,30", cs_25: "≥ 6,20", cs_30: "≥ 7,00", cs_38: "≥ 8,80", cs_50: "≥ 12,0", cs_76: "≥ 16,00",
+    bulk: "Densité Apparente",
+    appTitle: "Applications Typiques",
+    app1_title: "Support de Catalyseur et Couche de Recouvrement :", app1_desc: "Couramment utilisé comme support sous-jacent et couche de recouvrement pour les catalyseurs dans les réacteurs d'hydrocraquage, de synthèse de l'ammoniac et de reformage.",
+    app2_title: "Garnissage de Tour et Transfert de Masse :", app2_desc: "Agit comme garnissage de colonne premium et milieu de distribution gaz/liquide dans les raffineries, les usines pétrochimiques et les installations de transformation chimique.",
+    app3_title: "Stabilité Thermique et Chimique :", app3_desc: "Conçu pour résister à une corrosion chimique extrême, à des températures élevées et à des contraintes mécaniques sévères dans des environnements haute pression.",
+    packTitle: "Options d'Emballage",
+    pack1_title: "Sacs en Papier Composite de 25 KG :", pack1_desc: "Option standard pour les commandes industrielles générales, facile à manipuler, stocker et empiler dans les entrepôts.",
+    pack2_title: "Fûts en Fer Galvanisé de 150 KG :", pack2_desc: "Fortement recommandé pour le stockage à long terme ou les expéditions d'exportation transocéaniques afin d'offrir une protection ultime contre l'humidité, l'infiltration d'air et les dommages physiques pendant le transit."
+  },
+  ru: {
+    backLink: "← Назад к Продуктам", home: "Главная", products: "Продукты", breadcrumb: "Технические данные Инертные керамические шары",
+    title: "Инертные Керамические Шары JZ‑ICB — Технический Паспорт (TDS)",
+    desc: "Изготовлены из высококачественной окиси алюминия и кремния. Широко используются в качестве опорного и покровного слоя для катализаторов, насадки колонн в нефтеперерабатывающих, нефтехимических и химических предприятиях.",
+    tableCaption: "Типичные физические и химические свойства (Представительные значения)",
+    prop: "Свойства", unit: "Единица", common: "Обычный фарфор", low: "Низкое содержание Al₂O₃", medium: "Среднее содержание Al₂O₃", high: "Высокое содержание Al₂O₃", corundum: "Корунд",
+    chem_comp: "Химический состав", al2o3: "Al₂O₃", al2o3_sio2: "Al₂O₃ + SiO₂", fe2o3: "Fe₂O₃",
+    phys_prop: "Физические свойства", water_abs: "Водопоглощение", acid_res: "Кислотостойкость", alkali_res: "Щелочестойкость",
+    crush_strength_title: "Прочность на раздавливание (≥ кН/шт)",
+    cs_3: "≥ 0,20", cs_6: "≥ 0,50", cs_8: "≥ 0,70", cs_10: "≥ 0,85", cs_13: "≥ 1,80", cs_16: "≥ 2,30", cs_20: "≥ 4,30", cs_25: "≥ 6,20", cs_30: "≥ 7,00", cs_38: "≥ 8,80", cs_50: "≥ 12,0", cs_76: "≥ 16,00",
+    bulk: "Насыпная плотность",
+    appTitle: "Типичные применения",
+    app1_title: "Поддержка катализатора и покровный слой:", app1_desc: "Широко используется в качестве нижнего опорного слоя и покровного слоя для катализаторов в реакторах гидрокрекинга, синтеза аммиака и риформинга.",
+    app2_title: "Насадка колонн и массопередача:", app2_desc: "Выступает в качестве премиальной насадки колонн и среды для распределения газа/жидкости на нефтеперерабатывающих заводах, нефтехимических предприятиях и объектах химической переработки.",
+    app3_title: "Термическая и химическая стабильность:", app3_desc: "Разработано для противостояния экстремальной химической коррозии, высоким температурам и сильным механическим напряжениям в условиях высокого давления.",
+    packTitle: "Варианты упаковки",
+    pack1_title: "Бумажные мешки по 25 кг:", pack1_desc: "Стандартный вариант для обычных промышленных заказов, удобны в обращении, хранении и штабелировании на складах.",
+    pack2_title: "Оцинкованные железные барабаны по 150 кг:", pack2_desc: "Настоятельно рекомендуется для долгосрочного хранения или трансокеанских экспортных перевозок для обеспечения максимальной защиты от влаги, проникновения воздуха и физических повреждений во время транзита."
+  }
+};
+
+function switchLanguage(lang) {
+  document.getElementById('html-root').setAttribute('lang', lang);
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang] && translations[lang][key]) {
+      if (['desc', 'app1_desc', 'app2_desc', 'app3_desc', 'pack1_desc', 'pack2_desc'].includes(key)) {
+         el.innerHTML = translations[lang][key];
+      } else {
+         el.textContent = translations[lang][key];
+      }
+    }
+  });
+  localStorage.setItem('preferredLang', lang);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const urlLang = urlParams.get('lang');
+  const savedLang = localStorage.getItem('preferredLang');
+  let currentLang = 'en';
+  if (urlLang && translations[urlLang]) currentLang = urlLang;
+  else if (savedLang && translations[savedLang]) currentLang = savedLang;
+  
+  document.getElementById('languageSelect').value = currentLang;
+  switchLanguage(currentLang);
+});
+</script>
 </body>
 </html>
