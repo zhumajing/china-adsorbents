@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html-root">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +7,21 @@
     <!-- ✅ SEO 核心优化 (已绑定 adsorb.ccwu.cc) -->
     <title>China Adsorbents | Molecular Sieve & Activated Alumina Supplier</title>
     <meta name="description" content="Professional supplier of 3A 4A 5A 13X molecular sieve and activated alumina for PSA oxygen, air separation, natural gas drying and industrial purification systems.">
-    <meta name="keywords" content="molecular sieve, activated alumina, psa oxygen, 13x molecular sieve, china supplier, gas drying">
+    <meta name="keywords" content="3A molecular sieve, 4A molecular sieve, 5A molecular sieve, 13X molecular sieve, activated alumina, inert ceramic balls, PSA oxygen, gas drying, China adsorbents supplier">
     <meta name="robots" content="index, follow, max-image-preview:large">
     
     <!-- ✅ 关键修复：Canonical URL 改为你的真实域名 -->
     <link rel="canonical" href="https://adsorb.ccwu.cc/">
     
+    <!-- ✅ 新增：Hreflang 多语言标签 (告诉谷歌不同语言版本的对应关系) -->
+    <link rel="alternate" hreflang="en" href="https://adsorb.ccwu.cc/" />
+    <link rel="alternate" hreflang="zh" href="https://adsorb.ccwu.cc/?lang=zh" />
+    <link rel="alternate" hreflang="es" href="https://adsorb.ccwu.cc/?lang=es" />
+    <link rel="alternate" hreflang="de" href="https://adsorb.ccwu.cc/?lang=de" />
+    <link rel="alternate" hreflang="fr" href="https://adsorb.ccwu.cc/?lang=fr" />
+    <link rel="alternate" hreflang="ru" href="https://adsorb.ccwu.cc/?lang=ru" />
+    <link rel="alternate" hreflang="x-default" href="https://adsorb.ccwu.cc/" />
+
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="China Adsorbents | Molecular Sieve Supplier">
     <meta property="og:description" content="Professional supplier for PSA oxygen and gas drying. Get a free quote.">
@@ -23,6 +32,38 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://adsorb.ccwu.cc/banner.png">
+    
+    <!-- ✅ 新增：Organization 结构化数据 (提升企业信任度) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "China Adsorbents",
+      "url": "https://adsorb.ccwu.cc/",
+      "logo": "https://adsorb.ccwu.cc/logo.png",
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+86-137-0193-1410",
+        "contactType": "sales"
+      }],
+      "sameAs": ["https://wa.me/8613701931410"]
+    }
+    </script>
+    
+    <!-- ✅ 新增：Website 结构化数据 (提升搜索结果显示) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "China Adsorbents",
+      "url": "https://adsorb.ccwu.cc/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://adsorb.ccwu.cc/#products?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
     <!-- ✅ SEO 核心优化 END -->
 
     <style>
@@ -410,7 +451,7 @@
                 'products.title': 'Unsere Produkte', 'products.subtitle': 'Hochleistungs-Adsorbentien und Trocknungsmittel für industrielle Trocknung, Reinigung und Gasseparationsanwendungen.',
                 'products.3a': 'Geeignet für die Trocknung ungesättigter Kohlenwasserstoffe, Ethanol-Dehydratation und petrochemische Anwendungen.', 
                 'products.4a': 'Wird häufig für Lufttrocknung, Kältemittel, Lösungsmittel und Gastrocknungssysteme eingesetzt.', 
-                'products.5a': 'Angewandt in PSA-Wasserstoffsystemen, Luftreinigung und industrieller Gastrocknung.', 
+                'products.5a': 'Angewendet für PSA-Wasserstoffsysteme, Luftreinigung und industrielle Gastrocknung.', 
                 'products.13x': 'Ideal für Luftzerlegungsanlagen, CO₂-Entfernung und Erdgasreinigung.', 
                 'products.alumina': 'Hochadsorbierendes aktiviertes Aluminiumoxid für Druckluft und PSA-Systeme.',
                 'products.ceramic': 'Als Katalysatorträger und Abdeckmaterial in Reaktoren und Kolonnenpackungen verwendet.',
@@ -471,6 +512,8 @@
         function switchLanguage(lang) {
             if (!translations[lang]) return;
             localStorage.setItem('preferredLang', lang);
+            // ✅ 新增：更新 html 的 lang 属性，与 TDS 页面保持一致
+            document.getElementById('html-root').setAttribute('lang', lang);
             document.documentElement.lang = lang;
             
             document.querySelectorAll('[data-key]').forEach(el => {
