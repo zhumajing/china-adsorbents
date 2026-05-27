@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# 禁止抓取无SEO价值的页面
+Disallow: /thank-you.html
+
+# 告诉Google你的网站地图
+Sitemap: https://adsorb.ccwu.cc/sitemap.xml
