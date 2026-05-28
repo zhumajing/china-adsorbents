@@ -1,5 +1,11 @@
+# ==============================
+# Robots.txt for Industrial B2B Site
+# ==============================
+
 User-agent: *
-Allow: /
 Disallow: /thank-you.html
 Disallow: /assets/private/
+Allow: /
+
+# 指向 sitemap
 Sitemap: https://adsorb.ccwu.cc/sitemap.xml
