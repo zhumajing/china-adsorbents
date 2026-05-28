@@ -1,8 +1,5 @@
 User-agent: *
 Allow: /
-
-# 禁止抓取无SEO价值的感谢页面
 Disallow: /thank-you.html
-
-# 指向网站地图
+Disallow: /assets/private/
 Sitemap: https://adsorb.ccwu.cc/sitemap.xml
