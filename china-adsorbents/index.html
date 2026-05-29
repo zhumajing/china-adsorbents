@@ -181,9 +181,17 @@
         .section-title h2 { font-size: 36px; margin-bottom: 12px; font-weight: 700; color: white; letter-spacing: -0.01em; text-shadow: 0 1px 3px rgba(0,0,0,0.3); }
         .section-title p { color: #cbd8e6; font-size: 18px; max-width: 640px; margin: auto; }
         
+        /* 产品网格：桌面3列，平板2列，手机2列 */
         .products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
         @media (max-width: 1000px) { .products-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 640px) { .products-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 640px) { 
+            .products-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+            .product-card img { height: 160px; padding: 16px; }
+            .product-content { padding: 16px; }
+            .product-content h3 { font-size: 18px; }
+            .product-content p { font-size: 13px; margin-bottom: 12px; }
+            .tds-link { font-size: 12px; }
+        }
         
         .product-card { background: var(--card-bg); backdrop-filter: blur(12px); border: 1px solid var(--glass-border); border-radius: 24px; transition: var(--transition); display: flex; flex-direction: column; overflow: hidden; }
         .product-card:hover { transform: translateY(-6px); border-color: var(--accent); box-shadow: var(--shadow-md); background: rgba(40,60,80,0.85); }
@@ -278,6 +286,12 @@
             .hero h1 { font-size: 32px; }
             .section-title h2 { font-size: 28px; }
             .contact-box { padding: 40px 20px; }
+            .hero { padding: 80px 0 60px; min-height: auto; }
+            .hero-buttons .btn { padding: 10px 20px; font-size: 14px; }
+            .feature-item { padding: 16px 12px; }
+            .feature-icon { font-size: 28px; }
+            .feature-item h4 { font-size: 16px; }
+            .app-card { padding: 20px; }
         }
     </style>
 </head>
@@ -381,7 +395,6 @@
                     <img src="./banner1.png" alt="China Adsorbents Factory" width="600" height="400" loading="lazy">
                 </div>
             </div>
-            <!-- 核心优势区域：移动至关于我们下方 -->
             <div class="core-features">
                 <div class="features-grid">
                     <div class="feature-item"><div class="feature-icon">⚡</div><h4 data-key="hero.feature1.title">HIGH ADSORPTION</h4><p data-key="hero.feature1.desc">Efficient removal of moisture and impurities</p></div>
@@ -438,7 +451,7 @@
     <a class="whatsapp" href="https://wa.me/8613701931410" aria-label="Chat on WhatsApp">☎</a>
 
     <script>
-        // 完整多语言翻译库 (en, zh, es, de, fr, ru)
+        // 完整多语言翻译库 (en, zh, es, de, fr, ru) 已包含所有键
         const translations = {
             en: {
                 'nav.products': 'Products', 'nav.applications': 'Applications', 'nav.about': 'About', 'nav.contact': 'Contact',
