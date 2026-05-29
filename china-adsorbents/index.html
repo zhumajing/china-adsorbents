@@ -2,7 +2,7 @@
 <html lang="en" id="html-root">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     
     <!-- SEO 核心优化 -->
     <title>3A 4A 5A 13X Molecular Sieve & Activated Alumina Supplier | China Adsorbents</title>
@@ -72,8 +72,6 @@
       }]
     }
     </script>
-    
-    <!-- Product Schema (修正活性氧化铝URL) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -93,19 +91,17 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         
-        /* 全局背景：工业风格，提升清晰度 */
         body { 
             font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif; 
             background: linear-gradient(125deg, rgba(8, 20, 32, 0.55), rgba(18, 35, 48, 0.68)), url("./banner.png") no-repeat center center fixed;
             background-size: cover;
             color: #eef2f5; 
             line-height: 1.5;
-            position: relative;
             min-height: 100vh;
         }
         
         a { text-decoration: none; color: inherit; }
-        img { max-width: 100%; display: block; }
+        img { max-width: 100%; display: block; height: auto; }
         .container { width: 90%; max-width: 1280px; margin: auto; }
         
         :root {
@@ -154,10 +150,10 @@
             z-index: 999; 
             border-bottom: 1px solid var(--glass-border);
         }
-        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; flex-wrap: wrap; gap: 16px; }
         .logo { color: white; font-size: 28px; font-weight: 700; letter-spacing: -0.02em; }
         .logo span { color: var(--accent); font-weight: 800; }
-        .nav-links { display: flex; gap: 40px; }
+        .nav-links { display: flex; gap: 32px; flex-wrap: wrap; justify-content: center; }
         .nav-links a { color: #eef2f5; font-weight: 500; transition: var(--transition); border-bottom: 2px solid transparent; padding: 4px 0; }
         .nav-links a:hover { color: var(--accent); border-bottom-color: var(--accent); }
         
@@ -168,7 +164,6 @@
             align-items: center;
             justify-content: center;
             padding: 120px 0 80px;
-            position: relative;
         }
         .hero-content { max-width: 800px; margin: 0 auto; text-align: center; color: white; }
         .hero-badge { color: var(--accent); font-weight: 600; letter-spacing: 2px; margin-bottom: 16px; background: rgba(0,0,0,0.35); display: inline-block; padding: 4px 16px; border-radius: 40px; font-size: 14px; backdrop-filter: blur(4px); }
@@ -181,18 +176,15 @@
         .btn-outline { border: 1px solid white; background: transparent; color: white; }
         .btn-outline:hover { background: rgba(255,255,255,0.12); transform: translateY(-2px); border-color: var(--accent); }
         
-        .hero-features { display: flex; flex-wrap: wrap; justify-content: center; gap: 32px; margin-top: 20px; }
-        .feature-item { text-align: center; max-width: 220px; background: rgba(0,0,0,0.45); backdrop-filter: blur(8px); padding: 12px 16px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.15); }
-        .feature-icon { font-size: 28px; margin-bottom: 8px; }
-        .feature-item h4 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
-        .feature-item p { font-size: 12px; opacity: 0.85; margin: 0; }
-        
         section { padding: 80px 0; background: transparent; }
         .section-title { text-align: center; margin-bottom: 56px; }
         .section-title h2 { font-size: 36px; margin-bottom: 12px; font-weight: 700; color: white; letter-spacing: -0.01em; text-shadow: 0 1px 3px rgba(0,0,0,0.3); }
         .section-title p { color: #cbd8e6; font-size: 18px; max-width: 640px; margin: auto; }
         
-        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
+        .products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        @media (max-width: 1000px) { .products-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 640px) { .products-grid { grid-template-columns: 1fr; } }
+        
         .product-card { background: var(--card-bg); backdrop-filter: blur(12px); border: 1px solid var(--glass-border); border-radius: 24px; transition: var(--transition); display: flex; flex-direction: column; overflow: hidden; }
         .product-card:hover { transform: translateY(-6px); border-color: var(--accent); box-shadow: var(--shadow-md); background: rgba(40,60,80,0.85); }
         .product-card img { width: 100%; height: 200px; object-fit: contain; padding: 24px; background: rgba(255,255,255,0.04); transition: transform 0.3s; }
@@ -205,15 +197,7 @@
         .tds-link:hover { gap: 12px; color: white; }
         .tds-link:hover::before { transform: translateX(4px); }
         
-        .more-products-notice {
-            text-align: center;
-            margin-top: 48px;
-            padding: 20px;
-            background: var(--card-bg);
-            backdrop-filter: blur(8px);
-            border-radius: 24px;
-            border: 1px solid var(--glass-border);
-        }
+        .more-products-notice { text-align: center; margin-top: 48px; padding: 20px; background: var(--card-bg); backdrop-filter: blur(8px); border-radius: 24px; border: 1px solid var(--glass-border); }
         .more-products-notice a { color: var(--accent); font-weight: 500; text-decoration: underline; }
         
         .app-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px; }
@@ -235,6 +219,16 @@
         .stat-label { font-size: 13px; color: #cbd8e6; }
         .about-image img { border-radius: 24px; width: 100%; height: auto; box-shadow: var(--shadow-sm); border: 1px solid var(--glass-border); background: rgba(0,0,0,0.2); }
         
+        .core-features { margin: 40px 0 0; }
+        .features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 32px; }
+        @media (max-width: 900px) { .features-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 540px) { .features-grid { grid-template-columns: 1fr; } }
+        .feature-item { text-align: center; background: rgba(0,0,0,0.45); backdrop-filter: blur(8px); padding: 20px 16px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.15); transition: var(--transition); }
+        .feature-item:hover { transform: translateY(-3px); background: rgba(0,0,0,0.55); border-color: var(--accent); }
+        .feature-icon { font-size: 36px; margin-bottom: 12px; }
+        .feature-item h4 { font-size: 18px; font-weight: 700; margin-bottom: 8px; color: white; }
+        .feature-item p { font-size: 14px; opacity: 0.9; color: #cbd8e6; margin: 0; }
+        
         .contact-footer-section { background: transparent; margin-top: 40px; border-radius: 32px 32px 0 0; }
         .contact-box { text-align: center; padding: 60px 32px 40px; background: var(--card-bg); backdrop-filter: blur(12px); border-radius: 32px; margin-bottom: 40px; border: 1px solid var(--glass-border); }
         .contact-box h2 { font-size: 32px; font-weight: 700; margin-bottom: 16px; color: white; }
@@ -242,7 +236,7 @@
         .contact-buttons { display: flex; gap: 20px; justify-content: center; margin-bottom: 40px; flex-wrap: wrap; }
         .contact-buttons .btn-primary { background: white; color: var(--primary-dark); }
         .contact-buttons .btn-primary:hover { background: #e2e8f0; transform: translateY(-2px); }
-        .contact-channels { display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; margin-top: 16px; margin-bottom: 0; }
+        .contact-channels { display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; margin-top: 16px; }
         .channel-item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
         .channel-icon { font-size: 28px; }
         .channel-item a, .channel-item span { color: white; text-decoration: underline; text-underline-offset: 4px; font-weight: 500; }
@@ -274,12 +268,11 @@
             .hero h1 { font-size: 40px; }
             .about-grid { grid-template-columns: 1fr; gap: 40px; }
             .footer { grid-template-columns: 1fr; gap: 32px; }
-            .nav-links { display: none; }
             .contact-buttons { flex-direction: column; align-items: center; }
             .stats { justify-content: center; }
-            .hero-features { gap: 16px; }
             .contact-channels { gap: 24px; }
             .inquiry-merged { padding: 24px; }
+            .nav-links { gap: 20px; }
         }
         @media (max-width: 640px) {
             .hero h1 { font-size: 32px; }
@@ -322,12 +315,6 @@
                 <div class="hero-buttons">
                     <a href="#contact-footer" class="btn btn-primary" data-key="hero.getQuote">Get A Quote →</a>
                     <a href="https://wa.me/8613701931410" class="btn btn-outline" data-key="hero.whatsapp">WhatsApp Us</a>
-                </div>
-                <div class="hero-features">
-                    <div class="feature-item"><div class="feature-icon">⚡</div><h4 data-key="hero.feature1.title">HIGH ADSORPTION</h4><p data-key="hero.feature1.desc">Efficient removal of moisture and impurities</p></div>
-                    <div class="feature-item"><div class="feature-icon">✓</div><h4 data-key="hero.feature2.title">STABLE QUALITY</h4><p data-key="hero.feature2.desc">Strict quality control for consistent performance</p></div>
-                    <div class="feature-item"><div class="feature-icon">🌍</div><h4 data-key="hero.feature3.title">WIDE APPLICATION</h4><p data-key="hero.feature3.desc">Suitable for multiple industries and processes</p></div>
-                    <div class="feature-item"><div class="feature-icon">🚚</div><h4 data-key="hero.feature4.title">GLOBAL SUPPLY</h4><p data-key="hero.feature4.desc">Reliable supply chain and fast delivery worldwide</p></div>
                 </div>
             </div>
         </div>
@@ -394,6 +381,15 @@
                     <img src="./banner1.png" alt="China Adsorbents Factory" width="600" height="400" loading="lazy">
                 </div>
             </div>
+            <!-- 核心优势区域：移动至关于我们下方 -->
+            <div class="core-features">
+                <div class="features-grid">
+                    <div class="feature-item"><div class="feature-icon">⚡</div><h4 data-key="hero.feature1.title">HIGH ADSORPTION</h4><p data-key="hero.feature1.desc">Efficient removal of moisture and impurities</p></div>
+                    <div class="feature-item"><div class="feature-icon">✓</div><h4 data-key="hero.feature2.title">STABLE QUALITY</h4><p data-key="hero.feature2.desc">Strict quality control for consistent performance</p></div>
+                    <div class="feature-item"><div class="feature-icon">🌍</div><h4 data-key="hero.feature3.title">WIDE APPLICATION</h4><p data-key="hero.feature3.desc">Suitable for multiple industries and processes</p></div>
+                    <div class="feature-item"><div class="feature-icon">🚚</div><h4 data-key="hero.feature4.title">GLOBAL SUPPLY</h4><p data-key="hero.feature4.desc">Reliable supply chain and fast delivery worldwide</p></div>
+                </div>
+            </div>
         </div>
     </section>
     </main>
@@ -408,18 +404,9 @@
                     <a href="mailto:china-adsorbents@adsorb.ccwu.cc" class="btn btn-outline" data-key="contact.emailBtn">Email Us →</a>
                 </div>
                 <div class="contact-channels">
-                    <div class="channel-item">
-                        <span class="channel-icon">📞</span>
-                        <a href="https://wa.me/8613701931410" data-key="contact.whatsappNum">+86 13701931410</a>
-                    </div>
-                    <div class="channel-item">
-                        <span class="channel-icon">💬</span>
-                        <span data-key="contact.wechatNum">WeChat: Tan-M1</span>
-                    </div>
-                    <div class="channel-item">
-                        <span class="channel-icon">✉️</span>
-                        <a href="mailto:china-adsorbents@adsorb.ccwu.cc" data-key="contact.email">china-adsorbents@adsorb.ccwu.cc</a>
-                    </div>
+                    <div class="channel-item"><span class="channel-icon">📞</span><a href="https://wa.me/8613701931410" data-key="contact.whatsappNum">+86 13701931410</a></div>
+                    <div class="channel-item"><span class="channel-icon">💬</span><span data-key="contact.wechatNum">WeChat: Tan-M1</span></div>
+                    <div class="channel-item"><span class="channel-icon">✉️</span><a href="mailto:china-adsorbents@adsorb.ccwu.cc" data-key="contact.email">china-adsorbents@adsorb.ccwu.cc</a></div>
                 </div>
             </div>
 
@@ -440,27 +427,9 @@
             </div>
 
             <div class="footer">
-                <div class="footer-brand">
-                    <div class="logo" style="color:white; font-size:24px;">China<span style="color:var(--accent);">Adsorbents</span></div>
-                    <p data-key="footer.brandDesc">Professional supplier of molecular sieve and activated alumina for industrial applications worldwide.</p>
-                </div>
-                <div class="footer-links">
-                    <h4 data-key="footer.quickLinks">Quick Links</h4>
-                    <ul>
-                        <li><a href="#products" data-key="nav.products">Products</a></li>
-                        <li><a href="#applications" data-key="nav.applications">Applications</a></li>
-                        <li><a href="#about" data-key="nav.about">About</a></li>
-                        <li><a href="#contact-footer" data-key="nav.contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4 data-key="footer.contactTitle">Contact</h4>
-                    <ul>
-                        <li><a href="https://wa.me/8613701931410">+86 13701931410</a></li>
-                        <li><span>WeChat: Tan-M1</span></li>
-                        <li><a href="mailto:china-adsorbents@adsorb.ccwu.cc">china-adsorbents@adsorb.ccwu.cc</a></li>
-                    </ul>
-                </div>
+                <div class="footer-brand"><div class="logo" style="color:white; font-size:24px;">China<span style="color:var(--accent);">Adsorbents</span></div><p data-key="footer.brandDesc">Professional supplier of molecular sieve and activated alumina for industrial applications worldwide.</p></div>
+                <div class="footer-links"><h4 data-key="footer.quickLinks">Quick Links</h4><ul><li><a href="#products" data-key="nav.products">Products</a></li><li><a href="#applications" data-key="nav.applications">Applications</a></li><li><a href="#about" data-key="nav.about">About</a></li><li><a href="#contact-footer" data-key="nav.contact">Contact</a></li></ul></div>
+                <div class="footer-contact"><h4 data-key="footer.contactTitle">Contact</h4><ul><li><a href="https://wa.me/8613701931410">+86 13701931410</a></li><li><span>WeChat: Tan-M1</span></li><li><a href="mailto:china-adsorbents@adsorb.ccwu.cc">china-adsorbents@adsorb.ccwu.cc</a></li></ul></div>
             </div>
             <div class="copyright" data-key="footer.copyright">© 2026 China Adsorbents. All rights reserved.</div>
         </div>
@@ -469,7 +438,7 @@
     <a class="whatsapp" href="https://wa.me/8613701931410" aria-label="Chat on WhatsApp">☎</a>
 
     <script>
-        // 完整多语言翻译库 (en, zh, es, de, fr, ru) - 全局邮箱统一更新
+        // 完整多语言翻译库 (en, zh, es, de, fr, ru)
         const translations = {
             en: {
                 'nav.products': 'Products', 'nav.applications': 'Applications', 'nav.about': 'About', 'nav.contact': 'Contact',
@@ -591,7 +560,7 @@
             de: {
                 'nav.products': 'Produkte', 'nav.applications': 'Anwendungen', 'nav.about': 'Über Uns', 'nav.contact': 'Kontakt',
                 'hero.badge': 'HOHE LEISTUNG. ZUVERLÄSSIGE QUALITÄT.',
-                'hero.title': 'Industrielle Adsorbentien<br>& Trocknungslösungen',
+                'hero.title': 'Industrielle Adsorbentien<br>und Trocknungslösungen',
                 'hero.subtitle': 'Professioneller Lieferant von Molekularsieben und aktiviertem Aluminiumoxid für PSA-Sauerstoff, Luftzerlegung, Erdgastrocknung und industrielle Reinigungssysteme.',
                 'hero.getQuote': 'Angebot Anfordern →', 'hero.whatsapp': 'WhatsApp',
                 'hero.feature1.title': 'HOHE ADSORPTION', 'hero.feature1.desc': 'Effiziente Entfernung von Feuchtigkeit und Verunreinigungen',
@@ -630,7 +599,7 @@
             fr: {
                 'nav.products': 'Produits', 'nav.applications': 'Applications', 'nav.about': 'À Propos', 'nav.contact': 'Contact',
                 'hero.badge': 'HAUTE PERFORMANCE. QUALITÉ FIABLE.',
-                'hero.title': 'Adsorbants Industriels<br>& Solutions de Séchage',
+                'hero.title': 'Adsorbants Industriels<br>et Solutions de Séchage',
                 'hero.subtitle': 'Fournisseur professionnel de tamis moléculaires et d\'alumine activée pour l\'oxygène PSA, la séparation de l\'air, le séchage du gaz naturel et les systèmes de purification industrielle.',
                 'hero.getQuote': 'Demander un Devis →', 'hero.whatsapp': 'WhatsApp',
                 'hero.feature1.title': 'HAUTE ADSORPTION', 'hero.feature1.desc': 'Élimination efficace de l\'humidité et des impuretés',
