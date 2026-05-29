@@ -446,30 +446,30 @@
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_subject" value="New Inquiry From China Adsorbents Website">
                     <input type="hidden" name="_redirect" value="https://adsorb.ccwu.cc/thank-you.html">
-                    <!-- 姓名 -->
+                    <!-- 姓名（必填） -->
                     <div class="form-group">
                         <label data-key="form.name">Your Name <span class="required-star">*</span></label>
                         <input type="text" name="name" class="form-control" required>
                     </div>
-                    <!-- 联系方式 -->
+                    <!-- 联系方式（必填） -->
                     <div class="form-group">
                         <label data-key="form.whatsapp">WhatsApp / Phone <span class="required-star">*</span></label>
                         <input type="text" name="whatsapp" class="form-control" required>
                     </div>
-                    <!-- 邮箱 -->
+                    <!-- 邮箱（必填） -->
                     <div class="form-group">
                         <label data-key="form.email">Email Address <span class="required-star">*</span></label>
                         <input type="email" name="email" class="form-control" required>
                     </div>
-                    <!-- 产品规格 -->
+                    <!-- 产品规格（必填） -->
                     <div class="form-group">
                         <label data-key="form.product">Product / Specification <span class="required-star">*</span></label>
                         <input type="text" name="product" class="form-control" required>
                     </div>
-                    <!-- 其他问题 -->
+                    <!-- 其他问题（非必填） -->
                     <div class="form-group">
-                        <label data-key="form.message">Other Questions <span class="required-star">*</span></label>
-                        <textarea name="message" class="form-control" required></textarea>
+                        <label data-key="form.message">Other Questions</label>
+                        <textarea name="message" class="form-control"></textarea>
                     </div>
                     <button type="submit" class="submit-btn" data-key="form.submit">Send Inquiry →</button>
                 </form>
@@ -494,7 +494,7 @@
     <a class="whatsapp" href="https://wa.me/8613701931410" aria-label="Chat on WhatsApp">☎</a>
 
     <script>
-        // 完整多语言翻译库 (en, zh, es, de, fr, ru) - 已更新字段名称，星号由CSS统一添加，翻译中不包含*
+        // 完整多语言翻译库 (en, zh, es, de, fr, ru) - 表单标签不含星号，星号由CSS统一添加
         const translations = {
             en: {
                 'nav.products': 'Products', 'nav.applications': 'Applications', 'nav.about': 'About', 'nav.contact': 'Contact',
