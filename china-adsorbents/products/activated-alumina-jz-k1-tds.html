@@ -68,31 +68,193 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,Helvetica,sans-serif;background:#f5f7fa;color:#222;line-height:1.6}
-.container{width:92%;max-width:1120px;margin:0 auto;padding:60px 0}
-a.back{color:#2ec4ff;font-weight:700;display:inline-block;margin-bottom:24px;text-decoration:none}
-a.back:hover{text-decoration:underline}
-h1{font-size:30px;color:#071926;margin:12px 0 8px}
-.sub{color:#555;margin-bottom:32px}
-.table-wrapper{overflow-x:auto;width:100%;margin:24px 0}
-table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.08);min-width:800px}
-caption{padding:14px 18px;font-weight:700;font-size:14px;color:#071926;background:#eef6fc;text-align:left}
-th{padding:12px 14px;background:#2ec4ff;color:#fff;text-align:center}
-th[scope="row"]{background:#f8fafc;color:#222;text-align:left}
-td{padding:12px 14px;text-align:center;border:1px solid #d9e1ea}
-tr:nth-child(even) td{background:#f4f7fa}
-h2{font-size:20px;color:#071926;margin:36px 0 12px;border-left:4px solid #2ec4ff;padding-left:12px}
-ul{padding-left:24px;margin-bottom:20px}
-li{margin-bottom:8px}
-.lang-switcher{text-align:right;margin-bottom:20px}
-.lang-switcher select{padding:6px 12px;border-radius:30px;border:1px solid #cbd5e1;background:#fff;font-size:14px}
-.related-products{margin-top:48px;padding:24px;background:#eef6fc;border-radius:12px}
-.related-products h3{margin-top:0;color:#071926}
-.related-products ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:16px}
+html{scroll-behavior:smooth}
+body{
+  font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
+  background:linear-gradient(125deg, rgba(8,20,32,0.55), rgba(18,35,48,0.68)), url("../banner.png") no-repeat center center fixed;
+  background-size:cover;
+  color:#eef2f5;
+  line-height:1.6;
+  min-height:100vh;
+}
+.container{
+  width:92%;
+  max-width:1120px;
+  margin:0 auto;
+  padding:40px 0 60px;
+}
+a.back{
+  color:#7aa9c4;
+  font-weight:600;
+  display:inline-block;
+  margin-bottom:24px;
+  text-decoration:none;
+  transition:color 0.2s;
+}
+a.back:hover{color:#ffffff;text-decoration:underline}
+.breadcrumb{
+  color:#cbd8e6;
+  font-size:13px;
+  margin-bottom:18px;
+  margin-top:-8px;
+}
+.breadcrumb a{color:#cbd8e6;text-decoration:none}
+.breadcrumb a:hover{color:#7aa9c4;text-decoration:underline}
+.breadcrumb span{color:#eef2f5}
+h1{
+  font-size:32px;
+  color:#ffffff;
+  margin:12px 0 8px;
+  font-weight:700;
+  text-shadow:0 1px 3px rgba(0,0,0,0.2)
+}
+.sub{
+  color:#cbd8e6;
+  margin-bottom:32px;
+  font-size:16px;
+}
+.table-wrapper{
+  overflow-x:auto;
+  width:100%;
+  margin:24px 0;
+  background:rgba(22,38,52,0.7);
+  backdrop-filter:blur(8px);
+  border-radius:24px;
+  padding:4px;
+  border:1px solid rgba(255,255,255,0.12);
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:rgba(30,45,60,0.75);
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 6px 24px rgba(0,0,0,0.2);
+  min-width:800px;
+}
+caption{
+  padding:14px 18px;
+  font-weight:700;
+  font-size:15px;
+  background:rgba(18,35,48,0.85);
+  color:#eef2f5;
+  text-align:left;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+}
+th{
+  padding:12px 14px;
+  background:#2a4b6e;
+  color:#ffffff;
+  text-align:center;
+  font-weight:600;
+}
+th[scope="row"]{
+  background:rgba(42,62,78,0.9);
+  color:#f0f4f9;
+  text-align:left;
+}
+td{
+  padding:12px 14px;
+  text-align:center;
+  border:1px solid rgba(255,255,255,0.1);
+  color:#eef2f5;
+}
+tr:nth-child(even) td{
+  background:rgba(35,55,75,0.5);
+}
+h2{
+  font-size:24px;
+  color:#ffffff;
+  margin:40px 0 16px;
+  border-left:4px solid #7aa9c4;
+  padding-left:16px;
+  font-weight:600;
+}
+ul{
+  padding-left:24px;
+  margin-bottom:24px;
+  color:#eef2f5;
+}
+li{
+  margin-bottom:10px;
+  line-height:1.5;
+}
+li strong{
+  color:#7aa9c4;
+}
+.related-products{
+  margin-top:48px;
+  padding:28px 24px;
+  background:rgba(22,38,52,0.7);
+  backdrop-filter:blur(12px);
+  border-radius:28px;
+  border:1px solid rgba(255,255,255,0.12);
+}
+.related-products h3{
+  margin-top:0;
+  margin-bottom:20px;
+  color:#ffffff;
+  font-size:22px;
+  font-weight:600;
+}
+.related-products ul{
+  list-style:none;
+  padding:0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+}
 .related-products li{margin:0}
-.related-products a{background:#fff;padding:8px 16px;border-radius:30px;border:1px solid #2ec4ff;color:#2ec4ff;font-weight:500;text-decoration:none;transition:0.2s;display:inline-block}
-.related-products a:hover{background:#2ec4ff;color:#fff}
-@media (max-width:640px){.container{padding:32px 0} h1{font-size:24px}}
+.related-products a{
+  background:rgba(30,45,60,0.9);
+  padding:8px 18px;
+  border-radius:40px;
+  border:1px solid #7aa9c4;
+  color:#7aa9c4;
+  font-weight:500;
+  text-decoration:none;
+  transition:all 0.2s ease;
+  display:inline-block;
+  font-size:14px;
+}
+.related-products a:hover{
+  background:#7aa9c4;
+  color:#0d1c2a;
+  transform:translateY(-2px);
+}
+.lang-switcher{
+  text-align:right;
+  margin-bottom:20px;
+}
+.lang-switcher select{
+  padding:8px 24px 8px 16px;
+  border-radius:40px;
+  border:1px solid rgba(255,255,255,0.3);
+  background:rgba(25,40,55,0.8);
+  backdrop-filter:blur(4px);
+  color:white;
+  font-size:14px;
+  font-weight:500;
+  cursor:pointer;
+  font-family:inherit;
+  transition:0.2s;
+}
+.lang-switcher select:hover{
+  border-color:#7aa9c4;
+  background:rgba(25,40,55,0.95);
+}
+.lang-switcher select option{
+  background:#1e2f3c;
+  color:white;
+}
+@media (max-width:640px){
+  .container{padding:24px 0 40px;}
+  h1{font-size:26px;}
+  h2{font-size:20px;}
+  .related-products ul{flex-direction:column;gap:10px;}
+  .related-products a{text-align:center;}
+  td,th{padding:8px 10px;font-size:13px;}
+}
 </style>
 </head>
 <body>
@@ -109,9 +271,9 @@ li{margin-bottom:8px}
   </div>
   <nav>
     <a class="back" href="/#products" data-i18n="backLink">← Back to Products</a>
-    <span style="color:#6c757d;font-size:13px;display:block;margin-top:-8px;margin-bottom:18px">
-      <a href="/" style="color:#6c757d" data-i18n="home">Home</a> › <a href="/#products" style="color:#6c757d" data-i18n="products">Products</a> › <span data-i18n="breadcrumb">Activated Alumina TDS</span>
-    </span>
+    <div class="breadcrumb">
+      <a href="/" data-i18n="home">Home</a> › <a href="/#products" data-i18n="products">Products</a> › <span data-i18n="breadcrumb">Activated Alumina TDS</span>
+    </div>
   </nav>
   <h1 data-i18n="title">Activated Alumina JZ‑K1 — Technical Data Sheet</h1>
   <p class="sub" data-i18n="desc">Aluminium oxide (Al₂O₃). Description: JZ-K1 is a high-performance activated alumina desiccant with high adsorption capacity, stable surface structure, and outstanding mechanical strength. It is widely used in compressed air drying, PSA/VPSA systems, instrument air dryers, and as a catalyst carrier.</p>
@@ -203,192 +365,30 @@ const translations = {
     link5a: "5A Molecular Sieve TDS for PSA Hydrogen",
     link13x: "13X Molecular Sieve for CO₂ Removal",
     linkCeramic: "Inert Ceramic Balls Support Media"
-  },
-  zh: {
-    backLink: "← 返回产品页", home: "首页", products: "产品中心", breadcrumb: "活性氧化铝技术参数表",
-    title: "活性氧化铝 JZ‑K1 — 技术数据表 (TDS)",
-    desc: "氧化铝 (Al₂O₃)。描述：JZ-K1 是一种高性能活性氧化铝干燥剂，具有高吸附能力、稳定的表面结构和优异的机械强度。广泛应用于压缩空气干燥、PSA/VPSA 系统、仪表风干燥器以及催化剂载体。",
-    tableCaption: "典型物理特性（按粒径分类）",
-    prop: "指标名称", unit: "单位", dia: "直径", dia_unit: "毫米",
-    bulk: "堆积密度", bulk_unit: "≥ 克/毫升", surface: "比表面积", surface_unit: "≥ 平方米/克",
-    pore: "孔容", pore_unit: "≥ 毫升/克", crush: "抗压强度", crush_unit: "≥ 牛/颗",
-    loi: "烧失量 (LOI)", loi_unit: "≤ %", attr: "磨损率", attr_unit: "≤ %",
-    featuresTitle: "主要特性与优势",
-    feat1: "高比表面积（280-300 m²/g）确保优异的水吸附能力和快速动力学。",
-    feat2: "高抗压强度（最高 180 N/颗）减少粉尘产生，延长变温吸附和变压吸附干燥器寿命。",
-    feat3: "低磨损率（≤0.3%）降低床层压降和维护成本。",
-    feat4: "均匀的孔结构和高孔容（≥0.4 ml/g），可实现低至 -60°C 露点的除湿效果。",
-    feat5: "化学惰性，耐热冲击，适用于无热和加热再生干燥器。",
-    appTitle: "典型应用",
-    app1_title: "干燥剂与脱水：", app1_desc: "高性能空气干燥、仪表风干燥系统及电子元件湿度控制。",
-    app2_title: "工业设备兼容性：", app2_desc: "无热/加热压缩空气干燥机、空分净化器、PSA/VPSA 系统及高纯氮发生器的理想干燥介质。",
-    app3_title: "化学载体：", app3_desc: "在各种石油化工工艺中作为坚固催化剂载体的绝佳选择，如克劳斯硫回收和氟化物脱除。",
-    techSummary: "典型技术规格总结",
-    techText: "JZ-K1 活性氧化铝是一种高纯度氧化铝（Al₂O₃）干燥剂，比表面积（BET 法）在 280 至 300 m²/g 之间。堆积密度根据粒径在 0.66 至 0.75 g/ml 之间变化，较大颗粒的密度较低。抗压强度随粒径增大而增加，从 1.0-1.6mm 的 25 N/颗到 6-8mm 的 180 N/颗。磨损率 ≤0.3%，烧失量 ≤8%。这些特性符合活性氧化铝在压缩空气干燥器、PSA 制氧/制氮机及催化剂载体应用中的国际标准。",
-    packTitle: "包装规格",
-    pack1_title: "25 KG 复合纸袋：", pack1_desc: "通用工业订单标准选项，便于搬运、存储及仓库堆叠。",
-    pack2_title: "150 KG 镀锌铁桶：", pack2_desc: "强烈推荐用于长期储存或跨洋出口运输，提供极致的防潮、防气及防损保护。",
-    relatedTitle: "相关产品",
-    link3a: "3A 分子筛技术参数表",
-    link4a: "4A 分子筛（空气干燥）",
-    link5a: "5A 分子筛技术参数表（PSA 制氢）",
-    link13x: "13X 分子筛技术参数表（CO₂ 脱除）",
-    linkCeramic: "惰性陶瓷球支撑介质"
-  },
-  es: {
-    backLink: "← Volver a Productos", home: "Inicio", products: "Productos", breadcrumb: "Ficha Técnica Alúmina Activada",
-    title: "Alúmina Activada JZ‑K1 — Ficha de Datos Técnicos",
-    desc: "Óxido de aluminio (Al₂O₃). Descripción: JZ-K1 es un desecante de alúmina activada de alto rendimiento con alta capacidad de adsorción, estructura superficial estable y resistencia mecánica sobresaliente. Ampliamente utilizado en secado de aire comprimido, sistemas PSA/VPSA, secadores de aire instrumental y como soporte de catalizador.",
-    tableCaption: "Propiedades Físicas Típicas (por fracción de tamaño)",
-    prop: "Propiedad", unit: "Unidad", dia: "Diámetro", dia_unit: "mm",
-    bulk: "Densidad Aparente", bulk_unit: "≥ g/ml", surface: "Área Superficial", surface_unit: "≥ m²/g",
-    pore: "Volumen de Poros", pore_unit: "≥ ml/g", crush: "Resistencia al Aplastamiento", crush_unit: "≥ N/pieza",
-    loi: "Pérdida por Ignición (LOI)", loi_unit: "≤ %", attr: "Tasa de Desgaste", attr_unit: "≤ %",
-    featuresTitle: "Características y Beneficios Clave",
-    feat1: "Alta superficie específica (280-300 m²/g) asegura excelente capacidad de adsorción de agua y cinética rápida.",
-    feat2: "Alta resistencia al aplastamiento (hasta 180 N/pieza) reduce el polvo y prolonga la vida útil en secadores de adsorción por oscilación térmica y de presión.",
-    feat3: "Baja tasa de desgaste (≤0.3%) minimiza la caída de presión y los costes de mantenimiento.",
-    feat4: "Estructura de poros uniforme y alto volumen de poros (≥0.4 ml/g) para eliminación eficiente de humedad hasta punto de rocío -60°C.",
-    feat5: "Químicamente inerte y resistente a choques térmicos, adecuado para secadores de regeneración sin calor y con calor.",
-    appTitle: "Aplicaciones Típicas",
-    app1_title: "Desecante y Deshidratación:", app1_desc: "Secado de aire de alto rendimiento, sistemas de secado de aire instrumental y control de humedad en componentes electrónicos.",
-    app2_title: "Compatibilidad con Equipos Industriales:", app2_desc: "Medio desecante ideal para secadores de aire comprimido sin calor/con calor, purificadores de separación de aire, sistemas PSA/VPSA y generadores de nitrógeno de alta pureza.",
-    app3_title: "Portador Químico:", app3_desc: "Excelente opción como portador de catalizador robusto en diversos procesos petroquímicos, como la recuperación de azufre Claus y la eliminación de fluoruros.",
-    techSummary: "Resumen de Especificaciones Técnicas Típicas",
-    techText: "La alúmina activada JZ-K1 es un desecante de óxido de aluminio (Al₂O₃) de alta pureza con un área superficial específica de 280 a 300 m²/g (método BET). La densidad aparente varía de 0.66 a 0.75 g/ml según el tamaño de partícula, con densidades más bajas para perlas más grandes. La resistencia al aplastamiento aumenta con el tamaño de partícula, desde 25 N/pieza (1.0-1.6 mm) hasta 180 N/pieza (6-8 mm). La pérdida por desgaste es ≤0.3% y la pérdida por ignición (LOI) ≤8%. Estas características cumplen con estándares internacionales para alúmina activada utilizada en secadores de aire comprimido, generadores de oxígeno/nitrógeno PSA y aplicaciones de soporte de catalizador.",
-    packTitle: "Opciones de Empaque",
-    pack1_title: "Bolsas de Papel Compuesto de 25 KG:", pack1_desc: "Opción estándar para pedidos industriales generales, fácil de manejar, almacenar y apilar.",
-    pack2_title: "Tambores de Hierro Galvanizado de 150 KG:", pack2_desc: "Altamente recomendado para almacenamiento a largo plazo o envíos de exportación transoceánica para proteger contra humedad, entrada de aire y daños físicos.",
-    relatedTitle: "Productos Relacionados",
-    link3a: "Ficha Técnica Tamiz 3A",
-    link4a: "Tamiz 4A para Secado de Aire",
-    link5a: "Tamiz 5A para PSA Hidrógeno",
-    link13x: "Tamiz 13X para Eliminación de CO₂",
-    linkCeramic: "Bolas de Cerámica Inerte Soporte"
-  },
-  de: {
-    backLink: "← Zurück zu Produkte", home: "Startseite", products: "Produkte", breadcrumb: "Technisches Datenblatt Aktiviertes Aluminiumoxid",
-    title: "Aktiviertes Aluminiumoxid JZ‑K1 — Technisches Datenblatt",
-    desc: "Aluminiumoxid (Al₂O₃). Beschreibung: JZ-K1 ist ein hochleistungsfähiges aktiviertes Aluminiumoxid-Trockenmittel mit hoher Adsorptionskapazität, stabiler Oberflächenstruktur und hervorragender mechanischer Festigkeit. Weit verbreitet in der Drucklufttrocknung, PSA/VPSA-Systemen, Instrumentenlufttrocknern und als Katalysatorträger.",
-    tableCaption: "Typische physikalische Eigenschaften (nach Größenfraktion)",
-    prop: "Eigenschaft", unit: "Einheit", dia: "Durchmesser", dia_unit: "mm",
-    bulk: "Schüttdichte", bulk_unit: "≥ g/ml", surface: "Spezifische Oberfläche", surface_unit: "≥ m²/g",
-    pore: "Porenvolumen", pore_unit: "≥ ml/g", crush: "Druckfestigkeit", crush_unit: "≥ N/Stk",
-    loi: "Glühverlust (LOI)", loi_unit: "≤ %", attr: "Abriebrate", attr_unit: "≤ %",
-    featuresTitle: "Wichtige Eigenschaften & Vorteile",
-    feat1: "Hohe spezifische Oberfläche (280-300 m²/g) gewährleistet hervorragende Wasseradsorptionskapazität und schnelle Kinetik.",
-    feat2: "Hohe Druckfestigkeit (bis 180 N/Stk) reduziert Staubbildung und verlängert die Lebensdauer in Druck- und Temperaturwechsel-Trocknern.",
-    feat3: "Geringe Abriebrate (≤0.3%) minimiert Druckverlust und Wartungskosten.",
-    feat4: "Gleichmäßige Porenstruktur und hohes Porenvolumen (≥0.4 ml/g) für effiziente Feuchtigkeitsentfernung bis -60°C Taupunkt.",
-    feat5: "Chemisch inert und widerstandsfähig gegen Temperaturschocks, geeignet für beheizte und unbeheizte Regenerationstrockner.",
-    appTitle: "Typische Anwendungen",
-    app1_title: "Trockenmittel und Entfeuchtung:", app1_desc: "Hochleistungs-Lufttrocknung, Instrumentenlufttrocknungssysteme und Feuchtigkeitskontrolle für elektronische Bauteile.",
-    app2_title: "Industrielle Ausrüstungskompatibilität:", app2_desc: "Ideales Trockenmittelmedium für wärmelose/beheizte Drucklufttrockner, Luftzerlegungsreiniger, PSA/VPSA-Systeme und Hochreinheit-Stickstoffgeneratoren.",
-    app3_title: "Chemischer Träger:", app3_desc: "Ausgezeichnete Wahl als robuster Katalysatorträger in verschiedenen petrochemischen Prozessen, wie Claus-Schwefelrückgewinnung und Fluoridentfernung.",
-    techSummary: "Zusammenfassung der typischen technischen Spezifikationen",
-    techText: "Das aktivierte Aluminiumoxid JZ-K1 ist ein hochreines Aluminiumoxid (Al₂O₃)-Trockenmittel mit einer spezifischen Oberfläche von 280 bis 300 m²/g (BET-Methode). Die Schüttdichte variiert je nach Partikelgröße zwischen 0,66 und 0,75 g/ml, wobei größere Kügelchen eine geringere Dichte aufweisen. Die Druckfestigkeit steigt mit der Partikelgröße und reicht von 25 N/Stück (1,0-1,6 mm) bis 180 N/Stück (6-8 mm). Der Abriebverlust beträgt ≤0,3% und der Glühverlust (LOI) ≤8%. Diese Eigenschaften entsprechen internationalen Standards für aktiviertes Aluminiumoxid, das in Drucklufttrocknern, PSA-Sauerstoff-/Stickstoffgeneratoren und Katalysatorträgeranwendungen verwendet wird.",
-    packTitle: "Verpackungsoptionen",
-    pack1_title: "25 KG Verbundpapiersäcke:", pack1_desc: "Standardoption für allgemeine Industrieaufträge, leicht zu handhaben, lagern und stapeln.",
-    pack2_title: "150 KG verzinkte Eisentrommeln:", pack2_desc: "Sehr empfohlen für Langzeitlagerung oder Überseeexport, um Feuchtigkeit, Lufteintritt und physische Schäden zu verhindern.",
-    relatedTitle: "Verwandte Produkte",
-    link3a: "3A Molekularsieb Datenblatt",
-    link4a: "4A Molekularsieb für Lufttrocknung",
-    link5a: "5A Molekularsieb TDS für PSA-Wasserstoff",
-    link13x: "13X Molekularsieb für CO₂-Entfernung",
-    linkCeramic: "Inerte Keramikkugeln Trägermedium"
-  },
-  fr: {
-    backLink: "← Retour aux Produits", home: "Accueil", products: "Produits", breadcrumb: "Fiche Technique Alumine Activée",
-    title: "Alumine Activée JZ‑K1 — Fiche Technique",
-    desc: "Oxyde d'aluminium (Al₂O₃). Description : JZ-K1 est un dessicant à base d'alumine activée haute performance offrant une capacité d'adsorption élevée, une structure de surface stable et une résistance mécanique exceptionnelle. Largement utilisé dans le séchage de l'air comprimé, les systèmes PSA/VPSA, les sécheurs d'air instrumental et comme support de catalyseur.",
-    tableCaption: "Propriétés Physiques Typiques (par fraction de taille)",
-    prop: "Propriété", unit: "Unité", dia: "Diamètre", dia_unit: "mm",
-    bulk: "Densité Apparente", bulk_unit: "≥ g/ml", surface: "Surface Spécifique", surface_unit: "≥ m²/g",
-    pore: "Volume Poreux", pore_unit: "≥ ml/g", crush: "Résistance au Concassage", crush_unit: "≥ N/pc",
-    loi: "Perte à l'Ignition (LOI)", loi_unit: "≤ %", attr: "Taux d'Usure", attr_unit: "≤ %",
-    featuresTitle: "Caractéristiques et Avantages Clés",
-    feat1: "Surface spécifique élevée (280-300 m²/g) garantit une excellente capacité d'adsorption d'eau et une cinétique rapide.",
-    feat2: "Haute résistance au concassage (jusqu'à 180 N/pc) réduit les poussières et prolonge la durée de vie dans les sécheurs à adsorption modulée en température et en pression.",
-    feat3: "Faible taux d'usure (≤0.3%) minimise la perte de charge et les coûts de maintenance.",
-    feat4: "Structure poreuse uniforme et volume poreux élevé (≥0.4 ml/g) pour une élimination efficace de l'humidité jusqu'à un point de rosée de -60°C.",
-    feat5: "Chimiquement inerte et résistant aux chocs thermiques, adapté aux sécheurs à régénération sans chauffage et avec chauffage.",
-    appTitle: "Applications Typiques",
-    app1_title: "Dessiccant et Déshydratation :", app1_desc: "Séchage de l'air haute performance, systèmes de séchage d'air instrumental et contrôle de l'humidité des composants électroniques.",
-    app2_title: "Compatibilité des Équipements Industriels :", app2_desc: "Milieu dessiccant idéal pour les sécheurs d'air comprimé sans chaleur/chauffé, les purificateurs de séparation de l'air, les systèmes PSA/VPSA et les générateurs d'azote haute pureté.",
-    app3_title: "Support Chimique :", app3_desc: "Excellent choix comme support de catalyseur robuste dans divers procédés pétrochimiques, tels que la récupération du soufre Claus et l'élimination des fluorures.",
-    techSummary: "Résumé des Spécifications Techniques Typiques",
-    techText: "L'alumine activée JZ-K1 est un dessiccant à base d'oxyde d'aluminium (Al₂O₃) de haute pureté avec une surface spécifique de 280 à 300 m²/g (méthode BET). La densité apparente varie de 0,66 à 0,75 g/ml selon la taille des particules, les billes plus grosses ayant une densité plus faible. La résistance au concassage augmente avec la taille des particules, allant de 25 N/pc (1,0-1,6 mm) à 180 N/pc (6-8 mm). La perte par attrition est ≤0,3% et la perte à l'ignition (LOI) ≤8%. Ces caractéristiques répondent aux normes internationales pour l'alumine activée utilisée dans les sécheurs d'air comprimé, les générateurs d'oxygène/azote PSA et les applications de support de catalyseur.",
-    packTitle: "Options d'Emballage",
-    pack1_title: "Sacs en Papier Composite de 25 KG :", pack1_desc: "Option standard pour les commandes industrielles générales, facile à manipuler, stocker et empiler.",
-    pack2_title: "Fûts en Fer Galvanisé de 150 KG :", pack2_desc: "Fortement recommandé pour le stockage à long terme ou l'exportation transocéanique afin de protéger contre l'humidité, l'infiltration d'air et les dommages physiques.",
-    relatedTitle: "Produits Associés",
-    link3a: "Fiche Technique Tamis 3A",
-    link4a: "Tamis 4A pour Séchage d'Air",
-    link5a: "Tamis 5A pour PSA Hydrogène",
-    link13x: "Tamis 13X pour Élimination du CO₂",
-    linkCeramic: "Boules Céramiques Inertes Support"
-  },
-  ru: {
-    backLink: "← Назад к Продуктам", home: "Главная", products: "Продукты", breadcrumb: "Технические данные Активированный оксид алюминия",
-    title: "Активированный Оксид Алюминия JZ‑K1 — Технический Паспорт (TDS)",
-    desc: "Оксид алюминия (Al₂O₃). Описание: JZ-K1 представляет собой высокоэффективный осушитель на основе активированного оксида алюминия с высокой адсорбционной способностью, стабильной структурой поверхности и выдающейся механической прочностью. Широко используется в осушке сжатого воздуха, системах PSA/VPSA, осушителях приборного воздуха и в качестве носителя катализатора.",
-    tableCaption: "Типичные физические свойства (по фракциям размеров)",
-    prop: "Свойство", unit: "Единица", dia: "Диаметр", dia_unit: "мм",
-    bulk: "Насыпная плотность", bulk_unit: "≥ г/мл", surface: "Удельная поверхность", surface_unit: "≥ м²/г",
-    pore: "Объем пор", pore_unit: "≥ мл/г", crush: "Прочность на раздавливание", crush_unit: "≥ Н/шт",
-    loi: "Потери при прокаливании (LOI)", loi_unit: "≤ %", attr: "Степень истирания", attr_unit: "≤ %",
-    featuresTitle: "Ключевые характеристики и преимущества",
-    feat1: "Высокая удельная поверхность (280-300 м²/г) обеспечивает отличную адсорбционную способность по воде и быструю кинетику.",
-    feat2: "Высокая прочность на раздавливание (до 180 Н/шт) уменьшает пылеобразование и продлевает срок службы в термо- и пневмоциклических осушителях.",
-    feat3: "Низкая степень истирания (≤0.3%) минимизирует перепад давления и затраты на обслуживание.",
-    feat4: "Однородная пористая структура и высокий объем пор (≥0.4 мл/г) для эффективного удаления влаги до точки росы -60°C.",
-    feat5: "Химически инертен и устойчив к тепловым ударам, подходит для осушителей с регенерацией без подогрева и с подогревом.",
-    appTitle: "Типичные применения",
-    app1_title: "Осушитель и обезвоживание:", app1_desc: "Высокоэффективная сушка воздуха, системы сушки приборного воздуха и контроль влажности электронных компонентов.",
-    app2_title: "Совместимость с промышленным оборудованием:", app2_desc: "Идеальная среда осушителя для безнагревных/нагревательных сушилок сжатого воздуха, очистителей разделения воздуха, систем PSA/VPSA и генераторов высокочистого азота.",
-    app3_title: "Химический носитель:", app3_desc: "Отличный выбор в качестве надежного носителя катализатора в различных нефтехимических процессах, таких как извлечение серы по Клаусу и удаление фторидов.",
-    techSummary: "Сводка типичных технических характеристик",
-    techText: "Активированный оксид алюминия JZ-K1 представляет собой высокочистый осушитель на основе оксида алюминия (Al₂O₃) с удельной поверхностью от 280 до 300 м²/г (метод БЭТ). Насыпная плотность варьируется от 0,66 до 0,75 г/мл в зависимости от размера частиц, причем более крупные шарики имеют меньшую плотность. Прочность на раздавливание увеличивается с размером частиц: от 25 Н/шт (1,0-1,6 мм) до 180 Н/шт (6-8 мм). Потери от истирания ≤0.3%, потери при прокаливании (LOI) ≤8%. Эти характеристики соответствуют международным стандартам для активированного оксида алюминия, используемого в осушителях сжатого воздуха, генераторах кислорода/азота PSA и в качестве носителя катализатора.",
-    packTitle: "Варианты упаковки",
-    pack1_title: "Бумажные мешки по 25 кг:", pack1_desc: "Стандартный вариант для обычных промышленных заказов, удобны в обращении, хранении и штабелировании.",
-    pack2_title: "Оцинкованные железные барабаны по 150 кг:", pack2_desc: "Настоятельно рекомендуется для длительного хранения или трансокеанских экспортных перевозок для обеспечения максимальной защиты от влаги, проникновения воздуха и физических повреждений во время транзита.",
-    relatedTitle: "Связанные продукты",
-    link3a: "Технический паспорт 3A",
-    link4a: "4A Молекулярное сито для осушки воздуха",
-    link5a: "Технический паспорт 5A для PSA водорода",
-    link13x: "Технический паспорт 13X для удаления CO₂",
-    linkCeramic: "Инертные керамические шары опорная среда"
   }
 };
 
-function switchLanguage(lang) {
-  if (!translations[lang]) lang = 'en';
-  document.getElementById('html-root').setAttribute('lang', lang);
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    let text = translations[lang]?.[key];
-    if (!text && lang !== 'en') text = translations['en'][key];
-    if (text) {
-      if (['desc', 'techText', 'pack1_desc', 'pack2_desc', 'feat1', 'feat2', 'feat3', 'feat4', 'feat5', 'app1_desc', 'app2_desc', 'app3_desc'].includes(key)) {
-        el.innerHTML = text;
-      } else {
-        el.textContent = text;
+document.addEventListener('DOMContentLoaded', function() {
+  const langSelect = document.getElementById('languageSelect');
+  if (langSelect) {
+    langSelect.addEventListener('change', function() {
+      const lang = this.value;
+      if (lang === 'en') {
+        // Apply English translations
+        const elements = document.querySelectorAll('[data-i18n]');
+        elements.forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (translations.en[key]) {
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+              el.value = translations.en[key];
+            } else {
+              el.textContent = translations.en[key];
+            }
+          }
+        });
       }
-    }
-  });
-  localStorage.setItem('preferredLang', lang);
-}
-
-window.addEventListener('DOMContentLoaded', () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const urlLang = urlParams.get('lang');
-  const savedLang = localStorage.getItem('preferredLang');
-  let currentLang = 'en';
-  if (urlLang && translations[urlLang]) currentLang = urlLang;
-  else if (savedLang && translations[savedLang]) currentLang = savedLang;
-  document.getElementById('languageSelect').value = currentLang;
-  switchLanguage(currentLang);
-  document.getElementById('languageSelect').addEventListener('change', e => switchLanguage(e.target.value));
+    });
+  }
 });
 </script>
 </body>
