@@ -1,9 +1,35 @@
-# Allow all crawlers
+# 指定全站的 AI 内容信号 (允许搜索，禁止训练)
 User-agent: *
+Content-Signal: search=yes,ai-train=no
 Allow: /
 
-# Sitemap location
-Sitemap: https://adsorb.ccwu.cc/sitemap.xml
+# 明确禁止特定的 AI 爬虫
+User-agent: Amazonbot
+Disallow: /
 
-# Optional: Disallow admin or private directories (none exist currently)
-# Disallow: /private/
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CloudflareBrowserRenderingCrawler
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+# 站点地图索引
+Sitemap: https://adsorb.ccwu.cc/sitemap.xml
