@@ -32,4 +32,4 @@ User-agent: meta-externalagent
 Disallow: /
 
 # 站点地图索引
-Sitemap: https://adsorb.ccwu.cc/sitemap.xml
+Sitemap: https://adsorb.ccwu.cc/sitemap.txt
